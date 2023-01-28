@@ -1,3 +1,6 @@
+# Notice
+This is a work in progress theme, based on the theme described below. The readme will be updated to reflect numerous changes once it is complete.
+
 # Obsidian You 🎨
 ![Obsidian You Overview](https://github.com/selfire1/obsidian-you-theme/blob/main/theme-picker.png?raw=true)
 
