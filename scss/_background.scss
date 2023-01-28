@@ -1,0 +1,131 @@
+/* flat dark bg */
+body{
+    --divider-color: transparent;
+}
+
+.workspace-split.mod-horizontal.mod-left-split {
+    overflow: hidden;
+}
+
+.mod-left-split {
+   margin-right: 0.5px;
+}
+
+.menu {
+    background: var(--background-secondary) !important;
+}
+
+/* Tabs */
+.view-header-title-container:not(.mod-at-end):after {
+    display: none;
+}
+
+//Re-align tab sep
+.workspace .mod-root .workspace-tab-header-inner::after {
+    right: -1px;
+}
+
+.view-header {
+    background: var(--tab-background-active) !important;
+}
+.workspace-tab-header-container {
+    background: none;
+}
+
+.workspace-tab-header-container-inner{
+    margin-left: -15px;
+}
+
+body:not(.is-popout-window) .workspace-tab-header-container, .workspace-tabs, .mod-root, .app-container, 
+.horizontal-main-container, .workspace, .mod-left, .mod-right, .workspace-tab-container, .workspace-leaf:not(.nav-folder-title) {
+    background: none !important;
+}
+.workspace-tab-header {
+    border: none !important;
+}
+
+.workspace-ribbon.side-dock-ribbon.mod-left::before {
+    background: none;
+}
+
+.tooltip {
+    background: #222 !important;
+}
+
+body.theme-light {
+    background-color: var(--surfaceVariant);
+}
+body.theme-dark {
+    background-color: black;
+}
+body.mod-windows.main-window.enable-mica:not(.is-popout-window), body.mod-mac.enable-mica, body.mod-linux.enable-mica {
+    background-color: transparent !important;
+}
+
+
+body:not(.is-phone) {
+    --pane-separation: 6px;
+
+//V split separation
+    .mod-root {
+        .workspace-tabs:not(:only-of-type){
+            padding-right: var(--pane-separation);
+        }
+
+        .mod-horizontal .workspace-leaf {
+            border-bottom-left-radius:  var(--radius-m);
+            border-bottom-right-radius: var(--radius-m);
+            margin-bottom: -5px;
+        }
+
+    }
+
+    hr.workspace-leaf-resize-handle {
+        // right: 0 !important;
+        min-width:  var(--pane-separation);
+        min-height: var(--pane-separation);
+        // z-index: 999 !important;
+        // opacity: 0 !important;
+    }
+    
+    .mod-root {
+        margin-right: calc(var(--pane-separation) * -1);
+    }
+    .mod-root .view-content:last-child {
+        padding-right: var(--pane-separation) !important;
+    }
+    
+}
+
+
+// Stacked tabs
+.mod-stacked .workspace-tab-header {
+    background: var(--surfaceVariant) !important;
+    border-top-left-radius: var(--radius-m) !important;
+    border-bottom-left-radius: var(--radius-m) !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 5px !important;
+}
+
+.mod-stacked {
+    .workspace-leaf, .workspace-leaf-content {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: var(--radius-m) !important;
+        margin-right: 5px !important;
+    }
+    .view-header {
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: var(--radius-m) !important;
+    }
+}
+
+.internal-embed {
+    border: none !important;
+    // background-color: var(--background-secondary);
+}
+.markdown-embed-content {
+    background-color: var(--background-secondary);
+    border-radius: var(--radius-l);
+    padding: 0 20px;
+}

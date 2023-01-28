@@ -112,14 +112,14 @@ button.mod-cta {
   color: var(--background-primary);
 }
 
-/* Outlined buttons */
-.modal.mod-settings button:not(.mod-cta):not(.mod-warning),
-button:not(.mod-cta):not(.mod-warning),
-.is-mobile .empty-state-action:not(:nth-child(2)) {
-    background-color: transparent;
-    border: 1px solid var(--text-faint);
-    color: var(--primary);
-}
+// /* Outlined buttons */
+// .modal.mod-settings button:not(.mod-cta):not(.mod-warning),
+// button:not(.mod-cta):not(.mod-warning),
+// .is-mobile .empty-state-action:not(:nth-child(2)) {
+//     background-color: transparent;
+//     border: 1px solid var(--text-faint);
+//     color: var(--primary);
+// }
 
 .is-mobile button,
 .is-mobile .empty-state-action {

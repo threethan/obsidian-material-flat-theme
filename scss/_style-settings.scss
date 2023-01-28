@@ -1,9 +1,63 @@
 /* Style Settings */
 /* @settings
 
-name: Obsidian You
+name: Material Flat
 id: title
 settings:
+    -
+        id: patch-header
+        title: Behaviour
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: hide-toolbar-desktop
+        title: Hide left toolbar with left panel
+        description: Hides the left toolbar ("ribbon") when the left panel is closed. (Windows & Linux Only)
+        type: class-toggle
+        default: true
+    -  
+        id: more-drag-desktop
+        title: Drag window more easily
+        description: Allows you to drag the window by the tab title bar (if enabled) as well as the left sidebar (ribbon)
+        type: class-toggle
+        default: true
+    -
+        id: tab-drag-desktop
+        title: Drag window with active tab
+        description: When on, dragging the leftmost tab - when it is also the active tab - will drag the window instead
+        type: class-toggle
+        default: false
+    -
+        id: appearance-header
+        title: Appearance
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: space-above-headers
+        title: Add space above headers
+        description: Adds some space above headers. Bigger headers get bigger spaces. Intended to be used in place of new lines above headers.
+        type: class-toggle
+        default: false
+    - 
+        id: space-above-document
+        title: Add scroll space above document
+        description: Adds some space above documents, so you can scroll them a little further down. Similar to Dropbox Paper.
+        type: class-toggle
+        default: false
+    - 
+        id: enable-mica
+        title: Enable transparency support desktop
+        description: Make parts of the main window translucent. Both mac and windows require native frame to be set to system for this to work. Windows additionally requires Mica for Everyone, with the following settings for obsidian - Titlebar Color System, Backdrop Type Mica, Extend Frame into Client Area On
+        type: class-toggle
+        default: false
+    - 
+        id: hide-sidebar-header
+        title: Hide mobile sidebar header 
+        description: Hies the header that appears at the top of the left sidebar on mobile. This will remove the buttons for opening settings and switching vaults, so you'll have to do those using the command palette.
+        type: class-toggle
+        default: false
     - 
         id: font-header
         title: Fonts
@@ -29,31 +83,33 @@ settings:
         type: variable-text
         default: Menlo,"Roboto Mono",monospace,SFMono-Regular,Consolas;
     - 
-        id: plugin-header
-        title: Plugin settings
+        id: fab-header
+        title: Floating Action Button settings
         type: heading
         level: 2
         collapsed: true
+    -
+        id: fab-enabled-mobile
+        title: Enable FAB on mobile
+        description: Displays a floating button in the bottom right, on phones. Tab title bar must be on!
+        type: class-toggle
+        default: true
+    -
+        id: fab-enabled-desktop
+        title: Enable FAB on desktop
+        description: Displays a floating button in the bottom right, on computers. Tab title bar must be on!
+        type: class-toggle
+        default: true
+    -
+        id: hide-buttons-mobile
+        title: Hide tab-status-bar buttons on mobile
+        description: Hides buttons in the optional tab status bar, excluding the one used for the FAB. (Useful with Commander plugin)
+        type: class-toggle
+        default: true
     - 
         id: custom-page-header
         title: Customizable Page Header
-        description: Uses the first Customizable Page Header icon for the FAB
+        description: Uses the first button in the optional tab status bar for the FAB (Customize via Commander plugin)
         type: class-toggle
-    - 
-        id: advanced-toolbar-mode
-        title: Advanced toolbar mode
-        description: Adapts automatically to avanced mobile toolbar
-        type: class-toggle
-    - 
-        id: other-header
-        title: Misc settings
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: branding
-        title: Obsidian You branding
-        description: Toggles contrasting branding in the sidebars
-        type: class-toggle
-        default: true
+    -
 */

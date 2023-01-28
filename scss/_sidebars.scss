@@ -3,34 +3,7 @@
 /* # Sidebars */
 /* ------------- */
 
-/* Branding "Obsidian You" */
-body:not(:not(.branding)) .workspace-drawer-header {
-  padding: 10px 20px 0 10px;
-}
-
-body:not(:not(.branding)) .workspace-drawer-header::before {
-  content: "Obsidian ";
-  margin: 10px 12px 10px 12px;
-  font-size: var(--h4);
-  color: var(--primary-dark);
-  clear: right;
-  display: block;
-}
-
-body:not(:not(.branding)) .workspace-drawer-header::after {
-  content: "You";
-  margin: 10px;
-  font-weight: var(--bold);
-  font-size: var(--h4);
-  color: var(--secondary);
-  transform: translate(-15px, 0px);
-  clear: right;
-  display: block;
-}
-
-body:not(:not(.branding)) .workspace-drawer-header {
-  border-bottom: 1px solid var(--background-secondary-alt);
-}
+// Removed branding
 
 /* Title of 'File explorer' and the like */
 .workspace-drawer-active-tab-header {
@@ -88,12 +61,14 @@ body:not(:not(.branding)) .workspace-drawer-header {
 }
 
 /* Significantly simplify left and right bars */
-.nav-folder.mod-root > .nav-file-title,
-.nav-folder.mod-root > .nav-folder-title,
-.workspace-drawer-header-name,
-.workspace-drawer-header-icon,
-.workspace-drawer-header-left {
-  display: none;
+body.hide-sidebar-header {
+  .nav-folder.mod-root > .nav-file-title,
+  .nav-folder.mod-root > .nav-folder-title,
+  .workspace-drawer-header-name,
+  .workspace-drawer-header-icon,
+  .workspace-drawer-header-left {
+    display: none;
+  }
 }
 
 /* Right sidebar */
@@ -163,12 +138,36 @@ body:not(:not(.branding)) .workspace-drawer-header {
 }
 
 /* Highlighted file or backlink */
+
 .nav-file-title.is-active,
 .tree-item-self.is-clickable:hover,
 .nav-folder-title.is-active,
 body:not(.is-grabbing) .nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
-  background-color: var(--primary-faint);
-  color: var(--primary-dark);
-  border-radius: var(--small-radius);
+  background-color: var(--tertiaryContainer);
+  .nav-file-title-content {
+    color: var(--onTertiaryContainer);
+  }
+}
+
+.nav-file-title.is-active {
+  background-color: var(--surface);
+  .nav-file-title-content {
+      color: var(--onSurface);
+      font-weight: 600 !important;
+  }
+}
+
+.nav-file-title.is-active:hover {
+  background-color: var(--primaryContainer) !important;
+  .nav-file-title-content {
+    color: var(--onPrimaryContainer);
+    font-weight: 600;
+  }
+}
+
+.nav-folder-title .nav-folder-title-content {
+  color: var(--text-normal);
+  font-weight: 550;
+
 }

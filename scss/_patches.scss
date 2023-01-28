@@ -1,0 +1,304 @@
+
+// Auto-hide left bar (windows/linux, no mac)
+body.mod-windows.hide-toolbar-desktop, body.mod-linux.hide-toolbar-desktop {
+        /* .workspace-ribbon.side-dock-ribbon.mod-left {
+        padding-top: calc(var(--header-height) + 4px + 3px);
+    } */
+    .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed {
+        max-width: 0px;
+        margin: 0;
+        padding: 0;
+        margin-top: calc(var(--header-height)*2 + 3px);
+        padding-top: 4px;
+        padding-bottom: 12px;
+        overflow: hidden;
+        border: none;
+    }
+    .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed::before {
+        display: none;
+    }
+    .workspace-ribbon.side-dock-ribbon.mod-left {
+        transition-duration: 0s;
+    }
+    .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed:hover::after {
+        opacity: 0.4;
+    }
+    .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+        margin-left: var(--ribbon-width);
+    }
+    .mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed .side-dock-actions, 
+    .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed .side-dock-settings {
+        padding-left: 7px;
+        opacity: 0;
+        // transition: opacity 0.25s;
+    }
+
+    // .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed:hover .side-dock-actions, 
+    // .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed:hover .side-dock-settings {
+    //     opacity: 1;
+    // }
+
+    // /* excalidraw fixes */
+    // .mod-top-left-space .view-content.excalidraw-view .layer-ui__wrapper__footer-left,
+    // .mod-top-left-space .view-content.excalidraw-view .App-menu_top__left{
+    //     margin-left: var(--ribbon-width);
+    // }
+
+    // .mod-top-left-space .view-content.excalidraw-view .App-bottom-bar {
+    //     margin-left: calc(var(--ribbon-width) + 10px) !important;
+    // }
+}
+
+
+// Theme-specific fixes
+.is-phone .prompt {
+    position: absolute !important;
+    height: calc(100% - 40px) !important;
+}
+.is-phone .suggestion-prefix {
+    position: inherit !important;
+}
+
+.horizontal-tab-nav-item, .vertical-tab-nav-item {
+    padding-top: var(--size-4-2) !important;
+    padding-bottom: var(--size-4-2) !important;
+}
+
+.horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
+    color: #111;
+}
+
+// Tab header height 
+.view-header {
+    height: 41px;
+}
+.is-phone .view-header {
+    height: 50px;
+}
+
+
+
+.view-header-title {
+    font-size: larger;
+}
+
+
+/* Tabbar corners */
+.workspace-leaf-content {
+    border-top-right-radius: var(--radius-m);
+    border-top-left-radius: var(--radius-m);
+}
+body.show-view-header {
+    body:not(.hide-toolbar-desktop), .workspace-tabs:not(.mod-top-left-space)
+    {
+        .view-header {
+            border-top-left-radius: var(--radius-m);
+        }
+    }
+    .workspace-tabs:not(.mod-top-right-space) .view-header {
+        border-top-right-radius: var(--radius-m);
+    }
+
+    .workspace-leaf-content {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    
+}
+body:not(.show-view-header) {
+    --tab-background-active: var(--background-primary) !important;
+}
+
+
+// // Tab fix for rounding
+body:not(.hide-toolbar-desktop), .workspace-tabs:not(.mod-top-left-space) {
+    .mod-root .workspace-tab-header {
+        margin-bottom: -9px;
+        padding-bottom: 14px;
+        overflow: visible !important;
+        z-index: -1000 !important;
+    }
+}
+
+
+body:not(.hide-toolbar-desktop) .mod-root .workspace-tab-header.is-active:first-of-type,
+body.hide-toolbar-desktop .mod-root .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header.is-active:first-of-type {
+    margin-bottom: -9px;
+    padding-bottom: 13px;
+}
+//Trailing rounded edge
+
+body:not(.hide-toolbar-desktop)  .mod-root .workspace-tab-header.is-active:first-of-type::after,
+body.hide-toolbar-desktop  .mod-root .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header.is-active:first-of-type::after {
+    bottom: 9px;
+}
+
+.workspace-tab-header-container-inner {
+    margin-bottom: -10px;
+    padding-bottom: 9px !important;        
+}
+
+
+body:not(.is-phone) .view-action:not(.page-header-button) {
+    display: block;
+    padding: 4px 6px;
+    padding-bottom: 0;
+}
+
+// Fix new tab page on desktop
+.empty-state-title {
+    max-height: 100%;
+}
+.empty-state-title::before{
+    max-height: 100% !important;
+    width: 100%;
+    height: 20vh;
+    background-size: 15vh 15vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// More drag regions
+body.more-drag-desktop {
+    .view-header, .titlebar-inner, .workspace-ribbon.side-dock-ribbon {
+        -webkit-app-region: drag;
+    }
+}
+body.tab-drag-desktop {
+    .workspace-tab-header.is-active:first-of-type {
+        -webkit-app-region: drag;
+    }
+}
+.sidebar-toggle-button.mod-left {
+    -webkit-app-region: drag;
+}
+.workspace-tab-header-inner-close-button, .view-header-title-parent, .view-header-title, .clickable-icon {
+    -webkit-app-region: no-drag;
+}
+
+//Fade status bar, show on hover
+.status-bar {
+    opacity: 0.1;
+    transition: opacity 0.25s;
+}
+.status-bar:not(:hover) {
+    background: none;
+    border-color: transparent;
+}
+.status-bar:hover {
+    opacity: 1;
+}
+
+//Space Above headers
+body.space-above-headers .view-content {
+    .cm-editor .HyperMD-header::before {
+        content: "\A";
+        line-height: var(--line-height-normal);
+        font-size: var(--font-text-size);
+    }
+    
+    
+
+    .HyperMD-header {
+        display: block;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+}
+
+.cm-editor .HyperMD-header+.HyperMD-header::before {
+    content: "";
+}
+.HyperMD-header {
+    padding-top: 15px !important;
+    padding-bottom: 0px !important;
+    margin: 0 !important;
+}
+.markdown-reading-view {
+    h1,h2,h3,h4,h5,h6 {
+        padding-top: 15px !important;
+        padding-bottom: 0px !important;
+        margin: 0 !important;
+    }
+    hr {
+        display: block;
+        unicode-bidi: isolate;
+        margin-block-start: 0.5em;
+        margin-block-end: 0.5em;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        overflow: hidden;
+        border-style: inset;
+        border-width: 1px;
+        border: none;
+        border-top: var(--hr-thickness) solid;
+        border-color: var(--hr-color);
+        margin: 11px 0;
+    }
+    br {
+        display: none;
+    }
+    table {
+        margin-bottom: 0;
+    }
+}
+
+
+body.space-above-document {
+    .cm-sizer, .markdown-preview-sizer {
+        padding-top: 20vh;
+    }
+}
+
+.view-content {
+    //Header styles
+    .cm-header-1, h1 {
+        font-weight: 700;
+    }
+    .cm-header-2, h2 {
+        font-weight: 600;
+    }
+    .cm-header-3, h3 {
+        font-weight: 600;
+    }
+    // Colored h5 & 6
+    .cm-header-5, h5 {
+        color: var(--color-accent-2);
+    }
+    .cm-header-6, h6 {
+        color: var(--color-accent-2);
+    }
+    h1,h2,h3,h5,h6 {
+        letter-spacing: 0.009375rem;
+    }
+}
+
+body {
+    --h2: 20pt;
+    --h3: 16pt;
+    --h4: 15pt;
+    --h5: 14pt;
+    --h6: 12pt;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.markdown-embed {
+    padding-left: 0;
+}
+
+.clickable-icon.nav-action-button {
+    margin: 0;
+    padding: 5px 10px;
+}

@@ -351,21 +351,38 @@ span.cm-def.cm-hmd-frontmatter {
 /* Inline */
 .markdown-preview-view code,
 .cm-s-obsidian span.cm-inline-code,
-.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian .HyperMD-codeblock {
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight)
+ {
   @include body-medium();
   background-color: var(--surface-variant);
   color: var(--on-surface-variant);
   font-family: var(--font-monospace);
-  border-radius: 0;
+  border-radius: var(--radius-s);
+  margin: -2px;
+  padding: 2px;
+}
+// Not inline
+.cm-s-obsidian .HyperMD-codeblock {
+  @include body-medium();
+  // background-color: var(--surface-variant);
+  color: var(--on-surface-variant);
+  font-family: var(--font-monospace);
 }
 // Blocks
 .markdown-preview-view pre {
-  border-radius: var(--small-radius);
+  border-radius: var(--radius-l) !important;
   @include body-medium();
   background-color: var(--surface-variant);
   color: var(--on-surface-variant);
   font-family: var(--font-monospace);
+}
+div.HyperMD-codeblock-begin-bg {
+  border-top-left-radius: var(--radius-l) !important;
+  border-top-right-radius: var(--radius-l) !important;
+}
+div.HyperMD-codeblock-end-bg {
+  border-bottom-left-radius: var(--radius-l) !important;
+  border-bottom-right-radius: var(--radius-l) !important;
 }
 
 // Code Block in Live Preview
