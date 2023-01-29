@@ -35,6 +35,12 @@ settings:
         level: 2
         collapsed: true
     - 
+        id: vibrant
+        title: Increase Accent Color Vibrancy
+        description: Lets the fully saturated accent through on certain elements. May cause readability problems, depending on chosen accent color.
+        type: class-toggle
+        default: false
+    -
         id: space-above-document
         title: Add scroll space above document
         description: Adds some space above documents, so you can scroll them a little further down. Similar to Dropbox Paper.
@@ -114,8 +120,8 @@ settings:
         default: true
     - 
         id: custom-page-header
-        title: Customizable Page Header
-        description: Uses the first button in the optional tab status bar for the FAB (Customize via Commander plugin)
+        title: Customizable FAB action
+        description: Uses the first button in the optional tab status bar for the FAB. Set an item of your choice to appear first using the Commander plugin to customize the FAB action.
         type: class-toggle
     -
 */

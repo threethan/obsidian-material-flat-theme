@@ -374,6 +374,9 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-1 {
   font-weight: var(--medium);
   border-left: 3px solid var(--tertiary);
   background-color: var(--surface);
+  :before {
+
+  }
 }
 
 .cm-s-obsidian span.cm-quote {

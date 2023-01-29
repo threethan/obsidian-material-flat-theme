@@ -382,3 +382,27 @@ body.button-shapes-mobile.is-phone {
 .status-bar-item {
     mix-blend-mode: luminosity;
 }
+
+// Tweak status positioning
+.workspace-tab-header-container-inner {
+    padding-top: 2px !important;
+    padding-bottom: 7px !important;
+}
+
+.mod-root .workspace-tab-header-container-inner {
+    padding-top: 1px !important;
+    padding-bottom: 9px !important;
+}
+
+
+// Tweak windows titlebar
+body.mod-windows {
+    .titlebar-button-container .titlebar-button {
+        width: 46px;
+        svg {
+            width: 11px;
+            height: 11px;
+        }
+    }
+    --frame-right-space: 142px !important;
+}

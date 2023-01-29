@@ -1,12 +1,30 @@
+body:not(.vibrant).theme-dark {
+    --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
+    --secondary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
+    --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
+    --link-color-hover: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
+}
+body:not(.vibrant).theme-light {
+    --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 30%) !important;
+    --secondary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
+    --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
+    --link-color-hover:  hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 10%) !important;
+}
+
 body.theme-dark {
-    --primary: var(--color-accent);
     --onPrimary: var(--text-on-accent);
+
+    --primary: var(--color-accent);
     --primaryContainer: var(--color-accent-1);
     --onPrimaryContainer: var(--color-accent-2);
+
+    --secondary: var(--color-accent-2);
+
     --background: hsl(var(--accent-h), calc(var(--accent-s) * 0.06),  11.5%);
     --onBackground: #E5E1E5;
     --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.1),  15%);
     --surfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.08), 28%);
+    --surfaceMid: hsl(var(--accent-h), calc(var(--accent-s) * 0.09), 19%);
     --onSurfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.31),  80%);
     --outline: hsl(var(--accent-h), calc(var(--accent-s) * 0.5),  25%);
     --inverseOnSurface: #1C1B1E;
@@ -14,7 +32,6 @@ body.theme-dark {
 
     --tab-background-active: var(--surface);
 
-    --secondary: var(--color-accent-2);
     --onSecondary: var(--text-on-accent);
     --secondaryContainer: var(--text-on-accent);
     --onSecondaryContainer: var(--color-accent-1);
@@ -28,22 +45,24 @@ body.theme-dark {
     // --background-modifier-error: #9c2b2b !important;
 
 }
-  
+
 body.theme-light {
     --primary: var(--color-accent-2);
-    --onPrimary: var(--text-on-accent);
     --primaryContainer: var(--color-accent-1);
     --onPrimaryContainer: var(--color-accent);
+
+    --secondary: var(--color-accent-2);
+
     --background: hsl(var(--accent-h), calc(var(--accent-s) * 0.06),  90.5%);
     --onBackground: #111;
     --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.1),  95%);
     --surfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 85%);
+    --surfaceMid: hsl(var(--accent-h), calc(var(--accent-s) * 0.15), 93%);
     --onSurfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.30),  23%);
     --outline: hsl(var(--accent-h), calc(var(--accent-s) * 0.5),  85%);
     --inverseOnSurface: #EEE;
     --inverseSurface: #111;
 
-    --secondary: var(--color-accent-2);
     --onSecondary: var(--text-on-accent);
     --secondaryContainer: var(--text-on-accent);
     --onSecondaryContainer: var(--color-accent-1);

@@ -346,14 +346,6 @@ strong,
 }
 
 /* Checkboxes */
-input[type=checkbox]:checked {
-  filter: grayscale(100%);
-}
-
-.theme-dark .task-list-item-checkbox {
-  filter: invert(1);
-}
-
 /* Images */
 img {
   border-radius: var(--small-radius);
@@ -366,18 +358,60 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-1 {
 
 /* Callout boxes from Vileplume: https://github.com/hungsu/vileplume-obsidian */
 /* Blockquotes */
-.markdown-preview-view blockquote,
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-  line-height: 1.5rem;
-  font-size: 1rem;
-  letter-spacing: 0.009375rem;
-  font-weight: var(--medium);
-  border-left: 3px solid var(--tertiary);
-  background-color: var(--surface);
+  padding-top: 26px;
+  border: none;
+  background-color: transparent;
+  color: var(--on-surface-variant) !important;
+}
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote ::before {
+  background-color: var(--surface-variant);
+  display: block;
+  content: " ";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  left: 0px;
+  right: 0;
+  top: calc(-1 * var(--radius-l) + 26px);
+  bottom: calc(-1 * var(--radius-l));
+  border-radius: var(--radius-l);
+  z-index: -1;
 }
 
-.cm-s-obsidian span.cm-quote {
-  color: var(--tertiary);
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote + .HyperMD-quote {
+  padding-top: 0;
+}
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote + .HyperMD-quote ::before {
+  top: calc(-1 * var(--radius-l));
+}
+
+.markdown-preview-view blockquote {
+  border-radius: var(--radius-l);
+  border: none;
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant) !important;
+}
+
+.markdown-preview-view blockquote br {
+  display: block;
+  -moz-column-break-before: always;
+       break-before: always;
+  -moz-column-break-after: always;
+       break-after: always;
+}
+
+.markdown-preview-view blockquote::before,
+.markdown-preview-view blockquote::after {
+  display: block;
+  content: "\a";
+  height: 10px;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before, .markdown-source-view.mod-cm6 .cm-blockquote-border:before {
+  display: none;
 }
 
 /* Lists */
@@ -474,7 +508,16 @@ span.cm-def.cm-hmd-frontmatter {
   font-family: var(--font-monospace);
   border-radius: var(--radius-s);
   margin: -2px;
-  padding: 2px;
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+.cm-highlight, .markdown-preview-view mark {
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant) !important;
+  border-radius: var(--radius-s);
+  margin: -2px;
+  padding: 0 4px;
 }
 
 .cm-s-obsidian .HyperMD-codeblock {
@@ -745,6 +788,62 @@ a.tag:after {
   left: 0px;
   border-radius: 4px;
 } */
+.markdown-preview-view table thead tr th, .markdown-preview-view table tbody tr th,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr th,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr th {
+  background: var(--surface-variant);
+  color: var(--on-surface-variant);
+}
+.markdown-preview-view table thead tr td, .markdown-preview-view table tbody tr td,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr td,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr td {
+  background: var(--surface);
+  color: var(--on-surface);
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.markdown-preview-view table thead tr th, .markdown-preview-view table thead tr td, .markdown-preview-view table tbody tr th, .markdown-preview-view table tbody tr td,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr th,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr td,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr th,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr td {
+  border: 3px solid transparent;
+  height: var(--radius-l);
+  width: var(--radius-l);
+}
+.markdown-preview-view table thead tr th:first-of-type, .markdown-preview-view table tbody tr th:first-of-type,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr th:first-of-type,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr th:first-of-type {
+  border-top-left-radius: var(--radius-l);
+}
+.markdown-preview-view table thead tr th:last-of-type, .markdown-preview-view table tbody tr th:last-of-type,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr th:last-of-type,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr th:last-of-type {
+  border-top-right-radius: var(--radius-l);
+}
+.markdown-preview-view table thead tr:last-of-type td:first-of-type, .markdown-preview-view table tbody tr:last-of-type td:first-of-type,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr:last-of-type td:first-of-type,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: var(--radius-l);
+}
+.markdown-preview-view table thead tr:last-of-type td:last-of-type, .markdown-preview-view table tbody tr:last-of-type td:last-of-type,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr:last-of-type td:last-of-type,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: var(--radius-l);
+}
+.markdown-preview-view table thead tr:nth-child(even) tr, .markdown-preview-view table thead tr:nth-child(even) td, .markdown-preview-view table tbody tr:nth-child(even) tr, .markdown-preview-view table tbody tr:nth-child(even) td,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(even) tr,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(even) td,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(even) tr,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(even) td {
+  background-color: var(--surfaceMid);
+}
+
+.markdown-source-view.mod-cm6 .is-unresolved .cm-underline, .markdown-preview-view a {
+  -webkit-text-decoration-color: inherit !important;
+          text-decoration-color: inherit !important;
+}
+
 /* ------------- */
 /* # Title Bar */
 /* ------------- */
@@ -1864,21 +1963,57 @@ body.button-shapes-mobile.is-phone .nav-action-button {
   mix-blend-mode: luminosity;
 }
 
+.workspace-tab-header-container-inner {
+  padding-top: 2px !important;
+  padding-bottom: 7px !important;
+}
+
+.mod-root .workspace-tab-header-container-inner {
+  padding-top: 1px !important;
+  padding-bottom: 9px !important;
+}
+
+body.mod-windows {
+  --frame-right-space: 142px !important;
+}
+body.mod-windows .titlebar-button-container .titlebar-button {
+  width: 46px;
+}
+body.mod-windows .titlebar-button-container .titlebar-button svg {
+  width: 11px;
+  height: 11px;
+}
+
+body:not(.vibrant).theme-dark {
+  --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
+  --secondary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
+  --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
+  --link-color-hover: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
+}
+
+body:not(.vibrant).theme-light {
+  --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 30%) !important;
+  --secondary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
+  --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
+  --link-color-hover: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 10%) !important;
+}
+
 body.theme-dark {
-  --primary: var(--color-accent);
   --onPrimary: var(--text-on-accent);
+  --primary: var(--color-accent);
   --primaryContainer: var(--color-accent-1);
   --onPrimaryContainer: var(--color-accent-2);
+  --secondary: var(--color-accent-2);
   --background: hsl(var(--accent-h), calc(var(--accent-s) * 0.06), 11.5%);
   --onBackground: #E5E1E5;
   --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.1), 15%);
   --surfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.08), 28%);
+  --surfaceMid: hsl(var(--accent-h), calc(var(--accent-s) * 0.09), 19%);
   --onSurfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.31), 80%);
   --outline: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 25%);
   --inverseOnSurface: #1C1B1E;
   --inverseSurface: #E5E1E5;
   --tab-background-active: var(--surface);
-  --secondary: var(--color-accent-2);
   --onSecondary: var(--text-on-accent);
   --secondaryContainer: var(--text-on-accent);
   --onSecondaryContainer: var(--color-accent-1);
@@ -1889,18 +2024,18 @@ body.theme-dark {
 
 body.theme-light {
   --primary: var(--color-accent-2);
-  --onPrimary: var(--text-on-accent);
   --primaryContainer: var(--color-accent-1);
   --onPrimaryContainer: var(--color-accent);
+  --secondary: var(--color-accent-2);
   --background: hsl(var(--accent-h), calc(var(--accent-s) * 0.06), 90.5%);
   --onBackground: #111;
   --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.1), 95%);
   --surfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 85%);
+  --surfaceMid: hsl(var(--accent-h), calc(var(--accent-s) * 0.15), 93%);
   --onSurfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.30), 23%);
   --outline: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 85%);
   --inverseOnSurface: #EEE;
   --inverseSurface: #111;
-  --secondary: var(--color-accent-2);
   --onSecondary: var(--text-on-accent);
   --secondaryContainer: var(--text-on-accent);
   --onSecondaryContainer: var(--color-accent-1);
@@ -1947,6 +2082,12 @@ settings:
         level: 2
         collapsed: true
     - 
+        id: vibrant
+        title: Increase Accent Color Vibrancy
+        description: Lets the fully saturated accent through on certain elements. May cause readability problems, depending on chosen accent color.
+        type: class-toggle
+        default: false
+    -
         id: space-above-document
         title: Add scroll space above document
         description: Adds some space above documents, so you can scroll them a little further down. Similar to Dropbox Paper.
@@ -2026,8 +2167,8 @@ settings:
         default: true
     - 
         id: custom-page-header
-        title: Customizable Page Header
-        description: Uses the first button in the optional tab status bar for the FAB (Customize via Commander plugin)
+        title: Customizable FAB action
+        description: Uses the first button in the optional tab status bar for the FAB. Set an item of your choice to appear first using the Commander plugin to customize the FAB action.
         type: class-toggle
     -
 *//*# sourceMappingURL=theme.css.map */

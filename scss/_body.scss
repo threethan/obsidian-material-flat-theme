@@ -221,13 +221,13 @@ strong,
 }
 
 /* Checkboxes */
-input[type="checkbox"]:checked {
-  filter: grayscale(100%);
-}
+// input[type="checkbox"]:checked {
+//   filter: grayscale(100%);
+// }
 
-.theme-dark .task-list-item-checkbox {
-  filter: invert(1);
-}
+// .theme-dark .task-list-item-checkbox {
+//   filter: invert(1);
+// }
 
 /* Images */
 img {
@@ -258,15 +258,56 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-1
 // }
 
 /* Blockquotes */
-.markdown-preview-view blockquote,
+// .markdown-preview-view blockquote,
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-  @include body-large();
-  border-left: 3px solid var(--tertiary);
-  background-color: var(--surface);
+  // @include body-large();
+  padding-top: 26px;
+  border: none;
+  background-color: transparent;
+  color: var(--on-surface-variant) !important;
+  ::before {
+    background-color: var(--surface-variant);
+    display: block;
+    content: " ";
+    user-select: none;
+    position: absolute;
+    left: 0px; right: 0;
+    top: calc(-1 * var(--radius-l) + 26px);
+    bottom: calc(-1 * var(--radius-l));
+    border-radius: var(--radius-l);
+    z-index: -1;
+  }
 }
-.cm-s-obsidian span.cm-quote {
-  color: var(--tertiary);
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote+.HyperMD-quote {
+  padding-top: 0;
+  ::before {
+    top: calc(-1 * var(--radius-l));
+  }
 }
+
+.markdown-preview-view blockquote {
+  border-radius: var(--radius-l);
+  border: none;
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant) !important;
+}
+.markdown-preview-view blockquote br {
+  display: block;
+  break-before: always;
+  break-after: always;
+}
+.markdown-preview-view blockquote::before,
+.markdown-preview-view blockquote::after {
+  display: block;
+  content: "\A";
+  height: 10px;
+}
+
+// Hide line
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before, .markdown-source-view.mod-cm6 .cm-blockquote-border:before {
+  display: none;
+}
+
 /* Lists */
 ul > li::marker,
 ol > li::marker {
@@ -359,8 +400,19 @@ span.cm-def.cm-hmd-frontmatter {
   font-family: var(--font-monospace);
   border-radius: var(--radius-s);
   margin: -2px;
-  padding: 2px;
+  padding: 2px 4px;
+  vertical-align: text-bottom;
 }
+// Highlight (similar formatting)
+.cm-highlight, .markdown-preview-view mark {
+  // @include body-medium();
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant) !important;
+  border-radius: var(--radius-s);
+  margin: -2px;
+  padding: 0 4px;
+}
+
 // Not inline
 .cm-s-obsidian .HyperMD-codeblock {
   @include body-medium();
@@ -520,3 +572,56 @@ a.tag:after {
   left: 0px;
   border-radius: 4px;
 } */
+
+// Table
+.markdown-preview-view,
+.markdown-source-view.mod-cm6.is-live-preview {
+  table {
+    thead, tbody{
+      tr {
+        th {
+          background: var(--surface-variant);
+          color: var(--on-surface-variant);
+        }
+        td {
+          background: var(--surface);
+          color: var(--on-surface);
+          padding-top: 1px;
+          padding-bottom: 1px;
+        }
+        th, td {
+          border: 3px solid transparent;
+          height: var(--radius-l); //Actually min
+          width : var(--radius-l); //Actually min
+        }
+        th:first-of-type {
+          border-top-left-radius: var(--radius-l);
+        }
+        th:last-of-type {
+          border-top-right-radius: var(--radius-l);
+        }
+      }
+      tr:last-of-type {
+        td:first-of-type {
+          border-bottom-left-radius: var(--radius-l);
+        }
+        td:last-of-type {
+          border-bottom-right-radius: var(--radius-l);
+        }
+      }
+      tr:nth-child(even) {
+        tr, td {
+          background-color: var(--surfaceMid);
+        }
+      }
+    }
+  }
+}
+
+// .HyperMD-list-line-1 .list-bullet::after {
+//   background-color: var(--primary);
+// }
+
+.markdown-source-view.mod-cm6 .is-unresolved .cm-underline, .markdown-preview-view a {
+  text-decoration-color: inherit !important;
+}
