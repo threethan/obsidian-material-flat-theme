@@ -142,7 +142,7 @@ body {
   --background-primary-alt: var(--surface1);
   --background-secondary: var(--surface-variant);
   --background-secondary-alt: var(--surface3);
-  --background-modifier-border: var(--surface-variant);
+  --background-modifier-border: var(--surface);
   --background-modifier-form-field: #fff;
   --background-modifier-form-field-highlighted: #fff;
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
@@ -151,12 +151,12 @@ body {
   --background-modifier-error-rgb: 230, 135, 135;
   --background-modifier-error-hover: #b00020;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
-  --text-accent: var(--primary);
+  --text-accent: var(--primary-container);
   --text-accent-hover: var(--primary-container);
   --text-normal: var(--on-background);
   --text-muted: var(--on-surface-variant);
   --text-muted-rgb: 136, 136, 136;
-  --text-faint: var(--secondary);
+  --text-faint: var(--on-surface-variant);
   --text-error: #800000;
   --text-error-hover: #990000;
   --text-highlight-bg: var(--surface-variant);
@@ -197,7 +197,7 @@ body {
 --onTertiary: #482535;
 --tertiaryContainer: #623B4C;
 --onTertiaryContainer: #FFD9E8;
---error: #FFB4A9;
+--error: #9c2b2b;
 --errorContainer: #930006;
 --onError: #680003;
 --onErrorContainer: #FFDAD4;
@@ -277,7 +277,7 @@ body {
   --background-primary-alt: var(--surface1);
   --background-secondary: var(--surface-variant);
   --background-secondary-alt: var(--surface3);
-  --background-modifier-border: var(--surface-variant);
+  --background-modifier-border: var(--surface);
   --background-modifier-form-field: rgba(0, 0, 0, 0.3);
   --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
@@ -286,12 +286,11 @@ body {
   --background-modifier-error-rgb: 61, 0, 0;
   --background-modifier-error-hover: #470000;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
-  --text-accent: var(--primary);
+  --text-accent: var(--primary-container);
   --text-accent-hover: var(--primary-container);
   --text-normal: var(--on-background);
   --text-muted: var(--on-surface-variant);
   --text-muted-rgb: 153, 153, 153;
-  --text-faint: #666;
   --text-error: #cf6679;
   --text-error-hover: #990000;
   --text-highlight-bg: var(--surface-variant);
@@ -308,4 +307,6 @@ body {
   --scrollbar-bg: rgba(255, 255, 255, 0.05);
   --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
   --highlight-mix-blend-mode: lighten;
+
+  --text-faint: var(--on-surface-variant);
 }

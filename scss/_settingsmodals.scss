@@ -26,7 +26,7 @@
   padding-bottom: 10px;
   padding-top: 10px;
   border-color: var(--surface-variant);
-  border-radius: 0;
+  // border-radius: 0;
   @include body.body-large();
 
   // Command palette plugin names (WIP)
@@ -57,7 +57,7 @@
 }
 
 /* Height */
-.is-mobile .modal,
+// .is-mobile .modal,
 .is-mobile .prompt,
 .is-mobile .suggestion-container {
   height: calc(100% - 100px);
@@ -136,10 +136,15 @@ button.mod-cta {
 }
 
 /* Prompts (Quick switcher) */
-.is-mobile .modal,
+// .is-mobile .modal,
 .is-mobile .prompt,
 .is-mobile .suggestion-container {
   border-radius: var(--medium-radius) var(--medium-radius) 0 0;
+  padding: 15px 20px;
+}
+
+.is-mobile .modal {
+  border-radius: var(--medium-radius);
   padding: 15px 20px;
 }
 

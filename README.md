@@ -1,49 +1,35 @@
-# Notice
-This is a work in progress theme, based on the theme described below. The readme will be updated to reflect numerous changes once it is complete.
+# Material Flat, for Obsidian 🎨
+![Material Flat Preview](https://github.com/threethan/obsidian-material-flat-theme/screenshot.png)
 
-# Obsidian You 🎨
-![Obsidian You Overview](https://github.com/selfire1/obsidian-you-theme/blob/main/theme-picker.png?raw=true)
-
-**Take Obsidian on the go, your way.** A theme exclusively designed for mobile.
-
-✅ Available in Obsidian's Community themes.
+**Take Obsidian on the go, your way.**
+A theme that looks and works great - On all your devices.
 
 ## Goals
 * Reflecting Google's [Material Design Guidelines](https://m3.material.io/) to feel native on Android, and beautiful anywhere else. ✨ 
-
+* Look, and work, equally great on desktop and mobile.
+* Support a wide variety of layouts, settings, and plugins without the need for additional configuration.
+* Reduce visual clutter, not functionality. 
 ## Features
-### Tonal colour palettes & Adaptive type scale
-<img src="https://github.com/selfire1/obsidian-you-theme/blob/main/images/colour-typo.png?raw=true" width="500" />
+### Customizable Color Palette
+Just about every color in Material Flat is derived from your accent color, and will adapt to both light and dark themes with ease!
 
-Obsidian You is based on Google's [Colour System](https://m3.material.io/styles/color/the-color-system/) and [Typography](https://m3.material.io/styles/typography/overview). Carefully generated colour palettes make Obsidian beautiful, consistent and accessible. Light or dark mode alike. The M3 type scale makes sure all your text is styled consistently.
+No need for preset colors or complex menus, simply set your color in `Obsidian > Settings > Appearance` and enjoy.
+
+*Note: You might have readability issues if your color is very close to pure white or black*
 
 ### Floating Action Button
 <img src="https://github.com/selfire1/obsidian-you-theme/blob/main/images/floating-action-button.png?raw=true" width="500" />
 
-Skip the thumb-stretching. You can even customise the FAB command to your liking. Install the [Customizable Page Header Buttons](https://github.com/kometenstaub/customizable-page-header-buttons) plugin. The first custom button will be the FAB command. Have every command of Obsidian right at your fingertips! (And you can even pick a pretty icon)
+Skip the thumb-stretching. Access a button of your choice on the bottom-right. Install the [Commandar](https://github.com/phibr0/obsidian-commander) plugin to customise the FAB command to your liking. 
 
-### Dark Mode
-<img src="https://github.com/selfire1/obsidian-you-theme/blob/main/images/dark-mode.png?raw=true" width="500" />
-
-Reduce eye strain and save battery while you're up all night connecting. The tonal colour pallette automatically adapts to dark mode. For easy switching between modes on mobile, have a look at [Luna: Dark Mode Switcher](https://github.com/selfire1/obsidian-luna-dark-mode).
-
-## Supported plugins
-* [Style Settings](https://github.com/mgmeyers/obsidian-style-settings): Customise colour, fonts and additional settings.
-* [Obsidian Advanced Toolbar](https://github.com/phibr0/obsidian-advanced-toolbar): Activate in *Style Settings*.
-* [Customizable Page Header Buttons](https://github.com/kometenstaub/customizable-page-header-buttons): Customise the FAB
-* [Breadcrumbs](https://github.com/SkepticMystic/breadcrumbs)
-* [Cooklang Obsidian](https://github.com/deathau/cooklang-obsidian)
-
-## Additional tools
-* 🌝 [Luna – Dark Mode Helper](https://github.com/selfire1/obsidian-luna-dark-mode): An Obsidian Plugin that switches into Dark Mode based on time or sun position,supporting Mobile.
-* 📱 [Set Mobile Theme](https://github.com/selfire1/obsidian-set-mobile-theme): Load a seperate theme for Obsidian on Desktop and on Mobile.
-* 🎨 [Obsidian You](https://github.com/selfire1/obsidian-you-theme): A personal Obsidian theme designed exclusively for mobile.
+## Specially Supported Plugins
+* [Style Settings](https://github.com/mgmeyers/obsidian-style-settings): Customise layout, fonts and more!
+* [Commandar](https://github.com/phibr0/obsidian-commander): Customise the FAB
+* [Breadcrumbs](https://github.com/SkepticMystic/breadcrumbs): *Themed*
+* [Cooklang Obsidian](https://github.com/deathau/cooklang-obsidian) *Themed*
+* [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin) *Themed (NEW)*
 
 ## Acknowledgements
-* Thank you to [mgmeyers](https://github.com/mgmeyers) for providing valuable and detailed feedback,
-* thank you to `@Eleanor` and `@daggers` for test-driving this theme.
-
-## Support
-You can help me keep creating tools like this by [buying me a coffee](https://www.buymeacoffee.com/joschua). ☕️
-
-<a href="https://www.buymeacoffee.com/joschua" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height= "48" width="173"></a>
+* [Selfire1](https://github.com/selfire1) for [Obsidian You](https://github.com/selfire1/obsidian-you-theme), which this theme is largely based on.
+* You can support **THEM** here: [buying selfire1 a coffee](https://www.buymeacoffee.com/joschua). ☕️
+* They thank [mgmeyers](https://github.com/mgmeyers) for providing valuable and detailed feedback, and `@Eleanor` and `@daggers` for test-driving that theme.

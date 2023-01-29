@@ -168,12 +168,26 @@ body.more-drag-desktop {
     .view-header, .titlebar-inner, .workspace-ribbon.side-dock-ribbon {
         -webkit-app-region: drag;
     }
-}
-body.tab-drag-desktop {
-    .workspace-tab-header.is-active:first-of-type {
+
+    .mod-root .workspace-tab-header {
         -webkit-app-region: drag;
+        .workspace-tab-header-inner-title {
+            -webkit-app-region: no-drag;
+            margin-bottom: -5px;
+            padding-bottom: 5px;
+        }
     }
 }
+
+body.tab-drag-desktop {
+    .mod-root .workspace-tab-header.is-active {
+        -webkit-app-region: drag;
+        .workspace-tab-header-inner-title {
+            -webkit-app-region: drag;
+        }
+    }
+}
+
 .sidebar-toggle-button.mod-left {
     -webkit-app-region: drag;
 }
@@ -301,4 +315,70 @@ p {
 .clickable-icon.nav-action-button {
     margin: 0;
     padding: 5px 10px;
+}
+
+.view-header-title-container:not(.mod-at-start):before {
+    display: none !important;
+}
+
+.mobile-navbar {
+    color: var(--secondaryContainer);
+    .clickable-icon {
+        color: var(--onSecondaryContainer)
+    }
+}
+
+.view-header-breadcrumb {
+    text-overflow: ellipsis;
+    max-width: 10vw;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.mobile-navbar, .mobile-toolbar {
+    background: var(--surface);
+    .mobile-toolbar-option, .clickable-icon {
+        color: var(--onSurface);
+
+        div {
+            border-color: var(--onSurface);
+        }
+    }
+}
+
+body.button-shapes-mobile.is-phone {
+    .mobile-navbar .clickable-icon {
+        background-color: var(--surfaceVariant);
+        height: 30px;
+        width: 60px;
+        max-width: 15vw;
+        border-radius: 15px;
+    }
+    .mobile-toolbar {
+        height: 45px;
+    }
+    .mobile-toolbar-option {
+        background-color: var(--surfaceVariant);
+        height: 30px;
+        width: 50px;
+        margin: 7px 5px;
+        border-radius: 15px;
+    }
+
+    .nav-action-button {
+        background-color: var(--surface);
+        height: 40px;
+        min-width: 65px;
+        border-radius: 20px;
+        color: var(--onSurface);
+    }
+}
+
+.is-phone .nav-buttons-container {
+    flex-wrap: wrap !important;
+}
+
+// Overrides greyscale
+.status-bar-item {
+    mix-blend-mode: luminosity;
 }

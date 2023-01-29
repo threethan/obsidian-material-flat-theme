@@ -41,7 +41,7 @@ body:not(.is-popout-window) .workspace-tab-header-container, .workspace-tabs, .m
     background: none !important;
 }
 .workspace-tab-header {
-    border: none !important;
+    border: none;
 }
 
 .workspace-ribbon.side-dock-ribbon.mod-left::before {
@@ -49,7 +49,9 @@ body:not(.is-popout-window) .workspace-tab-header-container, .workspace-tabs, .m
 }
 
 .tooltip {
-    background: #222 !important;
+    background: var(--surfaceVariant) !important;
+    color: var(--onSurfaceVariant) !important;
+    border: 1px solid #000 !important;
 }
 
 body.theme-light {
@@ -128,4 +130,10 @@ body:not(.is-phone) {
     background-color: var(--background-secondary);
     border-radius: var(--radius-l);
     padding: 0 20px;
+}
+
+// Mobile popups
+.notice-container .notice {
+    background-color: var(--surfaceVariant) !important;
+    color: var(--onSurfaceVariant) !important;
 }

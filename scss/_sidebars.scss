@@ -7,7 +7,7 @@
 
 /* Title of 'File explorer' and the like */
 .workspace-drawer-active-tab-header {
-  margin: 20px -1px 20px 11px;
+  margin: 0;
 }
 
 .workspace-drawer-header-name-text {
@@ -131,11 +131,16 @@ body.hide-sidebar-header {
 /* Files */
 .is-mobile .nav-file-title,
 .is-mobile .tag-container {
-  padding: 1px 11px 0 11px;
+  // padding: 1px 11px 0 11px;
+  padding-left: 11px;
+  padding-right: 11px;
   color: var(--text-muted);
   font-size: var(--smaller);
   font-weight: var(--light);
 }
+// .nav-file, .nav-folder {
+//   padding: var(--nav-item-padding);
+// }
 
 /* Highlighted file or backlink */
 
@@ -152,22 +157,20 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 
 .nav-file-title.is-active {
   background-color: var(--surface);
-  .nav-file-title-content {
+  .nav-folder-title-content, .nav-file-title-content {
       color: var(--onSurface);
-      font-weight: 600 !important;
+      font-weight: 600;
   }
 }
 
 .nav-file-title.is-active:hover {
   background-color: var(--primaryContainer) !important;
-  .nav-file-title-content {
-    color: var(--onPrimaryContainer);
-    font-weight: 600;
+  .nav-folder-title-content, .nav-file-title-content {
+    color: var(--surface) !important;
   }
 }
 
 .nav-folder-title .nav-folder-title-content {
   color: var(--text-normal);
   font-weight: 550;
-
 }
