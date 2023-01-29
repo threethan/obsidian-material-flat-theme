@@ -1,5 +1,5 @@
 # Material Flat, for Obsidian 🎨
-![Material Flat Preview](https://raw.githubusercontent.com/threethan/obsidian-material-flat-theme/main/screenshot.png)
+![Material Flat Preview](https://raw.githubusercontent.com/threethan/obsidian-material-flat-theme/main/screenshot-hd.png)
 
 **Take Obsidian on the go, your way.**
 A theme that looks and works great - On all your devices.
