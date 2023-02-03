@@ -13,14 +13,12 @@ A theme that looks and works great - On all your devices.
 ### Customizable Color Palette
 Just about every color in Material Flat is derived from your accent color, and will adapt to both light and dark themes with ease!
 
-No need for preset colors or complex menus, simply set your color in `Obsidian > Settings > Appearance` and enjoy.
-
-*Note: You might have readability issues if your color is very close to pure white or black*
+No need for preset colors or complex menus, simply set your color of choice in `Obsidian > Settings > Appearance` and enjoy.
 
 ### Floating Action Button
 <img src="https://github.com/selfire1/obsidian-you-theme/blob/main/images/floating-action-button.png?raw=true" width="500" />
 
-Skip the thumb-stretching. Access a button of your choice on the bottom-right. Install the [Commandar](https://github.com/phibr0/obsidian-commander) plugin to customise the FAB command to your liking. 
+Skip the thumb-stretching. Access a button of your choice on the bottom-right. Install the [Commander](https://github.com/phibr0/obsidian-commander) plugin to customise the FAB command to your liking. 
 
 ## Specially Supported Plugins
 * [Style Settings](https://github.com/mgmeyers/obsidian-style-settings): Customise layout, fonts and more!

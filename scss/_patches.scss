@@ -208,26 +208,6 @@ body.tab-drag-desktop {
     opacity: 1;
 }
 
-//Space Above headers
-body.space-above-headers .view-content {
-    .cm-editor .HyperMD-header::before {
-        content: "\A";
-        line-height: var(--line-height-normal);
-        font-size: var(--font-text-size);
-    }
-    
-    
-
-    .HyperMD-header {
-        display: block;
-        margin-block-start: 0.67em;
-        margin-block-end: 0.67em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-weight: bold;
-    }
-}
-
 .cm-editor .HyperMD-header+.HyperMD-header::before {
     content: "";
 }
@@ -267,8 +247,14 @@ body.space-above-headers .view-content {
 
 
 body.space-above-document {
-    .cm-sizer, .markdown-preview-sizer {
-        padding-top: 20vh;
+    .cm-editor .cm-scroller .cm-sizer,
+    .markdown-reading-view .markdown-preview-view .markdown-preview-sizer {
+        padding-top: 25vh;
+    }  
+    .markdown-embed-content, .canvas-node-container {
+        .markdown-preview-sizer, .cm-sizer {
+            padding-top: inherit !important;
+        }
     }
 }
 
@@ -290,8 +276,16 @@ body.space-above-document {
     .cm-header-6, h6 {
         color: var(--color-accent-2);
     }
+    .cm-header-1.cm-strong, 
+    .cm-header-2.cm-strong, 
+    .cm-header-3.cm-strong {
+        font-weight: 900;
+    } 
     h1,h2,h3,h5,h6 {
-        letter-spacing: 0.009375rem;
+        letter-spacing: 0.009375em;
+        b {
+            font-weight: 900;
+        }
     }
 }
 

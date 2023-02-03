@@ -13,14 +13,14 @@ body {
   /* # TYPOGRAPHY */
   /* ------------- */
   /* ## Font Sizes */
-  --smallest: 0.75rem; /* Equal to px */
-  --smaller: 0.875rem; /* Equal to 14px */
-  --h1: 2.25rem;
-  --h2: 2rem;
-  --h3: 1.75rem;
-  --h4: 1.5rem;
-  --h5: 1.375rem;
-  --h6: 1rem;
+  --smallest: 0.75em; /* Equal to px */
+  --smaller: 0.875em; /* Equal to 14px */
+  --h1: 2.25em;
+  --h2: 2em;
+  --h3: 1.75em;
+  --h4: 1.5em;
+  --h5: 1.375em;
+  --h6: 1em;
   /* Roundness */
   --big-radius: 24px;
   --medium-radius: 16px;
@@ -282,7 +282,7 @@ body {
 .markdown-reading-view h1,
 .cm-s-obsidian .cm-header-1,
 .mod-cm6 .cm-editor .HyperMD-header-1 {
-  line-height: 2.75rem;
+  line-height: 2.75em;
   font-size: var(--h1);
   font-weight: var(--regular);
 }
@@ -290,7 +290,7 @@ body {
 .markdown-reading-view h2,
 .cm-s-obsidian .cm-header-2,
 .mod-cm6 .cm-editor .HyperMD-header-2 {
-  line-height: 2.5rem;
+  line-height: 2.5em;
   font-size: var(--h2);
   font-weight: var(--regular);
 }
@@ -298,7 +298,7 @@ body {
 .markdown-reading-view h3,
 .cm-s-obsidian .cm-header-3,
 .mod-cm6 .cm-editor .HyperMD-header-3 {
-  line-height: 2.25rem;
+  line-height: 2.25em;
   font-size: var(--h3);
   font-weight: var(--regular);
 }
@@ -306,7 +306,7 @@ body {
 .markdown-reading-view h4,
 .cm-s-obsidian .cm-header-4,
 .mod-cm6 .cm-editor .HyperMD-header-4 {
-  line-height: 2rem;
+  line-height: 2em;
   font-size: var(--h4);
   font-weight: var(--regular);
 }
@@ -314,7 +314,7 @@ body {
 .markdown-reading-view h5,
 .cm-s-obsidian .cm-header-5,
 .mod-cm6 .cm-editor .HyperMD-header-5 {
-  line-height: 1.75rem;
+  line-height: 1.75em;
   font-size: var(--h5);
   font-weight: var(--regular);
 }
@@ -322,21 +322,20 @@ body {
 .markdown-reading-view h6,
 .cm-s-obsidian .cm-header-6,
 .mod-cm6 .cm-editor .HyperMD-header-6 {
-  line-height: 1.5rem;
+  line-height: 1.5em;
   font-size: var(--h6);
-  letter-spacing: 0.009375rem;
+  letter-spacing: 0.009375em;
   font-weight: var(--medium);
 }
 
 /* ------------- */
 /* # Body */
 /* ------------- */
-.markdown-preview-view,
+Body Text .markdown-preview-view,
 .markdown-source-view,
 .cm-line {
-  line-height: 1.5rem;
-  font-size: 1rem;
-  letter-spacing: 0.009375rem;
+  line-height: 1.5em;
+  letter-spacing: 0.009375em;
   font-weight: var(--medium);
 }
 
@@ -356,7 +355,11 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-1 {
   color: var(--secondary);
 }
 
-/* Callout boxes from Vileplume: https://github.com/hungsu/vileplume-obsidian */
+/* callout boxes */
+.cm-callout, div.callout {
+  border-radius: var(--radius-l);
+}
+
 /* Blockquotes */
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
   padding-top: 26px;
@@ -437,9 +440,9 @@ ol > li::marker {
 pre.frontmatter[class*=language-yaml],
 span.cm-hmd-frontmatter,
 span.cm-def.cm-hmd-frontmatter {
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+  line-height: 1.25em;
+  font-size: 0.875em;
+  letter-spacing: 0.015625em;
   font-weight: var(--medium);
   color: var(--secondary);
   font-family: var(--default-font);
@@ -459,9 +462,9 @@ span.cm-def.cm-hmd-frontmatter {
 }
 .frontmatter-container .frontmatter-container-header {
   text-transform: none;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.00625rem;
+  line-height: 1.25em;
+  font-size: 0.875em;
+  letter-spacing: 0.00625em;
   font-weight: var(--medium);
   color: var(--secondary);
   border: none;
@@ -488,9 +491,9 @@ span.cm-def.cm-hmd-frontmatter {
 }
 
 .frontmatter-section {
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.03125rem;
+  line-height: 1em;
+  font-size: 0.75em;
+  letter-spacing: 0.03125em;
   font-weight: var(--medium);
 }
 
@@ -499,17 +502,13 @@ span.cm-def.cm-hmd-frontmatter {
 .markdown-preview-view code,
 .cm-s-obsidian span.cm-inline-code,
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  font-weight: var(--medium);
   background-color: var(--surface-variant);
   color: var(--on-surface-variant);
   font-family: var(--font-monospace);
   border-radius: var(--radius-s);
   margin: -2px;
   padding: 2px 4px;
-  vertical-align: text-bottom;
+  vertical-align: 2px;
 }
 
 .cm-highlight, .markdown-preview-view mark {
@@ -521,9 +520,9 @@ span.cm-def.cm-hmd-frontmatter {
 }
 
 .cm-s-obsidian .HyperMD-codeblock {
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+  line-height: 1.25em;
+  font-size: 0.875em;
+  letter-spacing: 0.015625em;
   font-weight: var(--medium);
   color: var(--on-surface-variant);
   font-family: var(--font-monospace);
@@ -531,9 +530,9 @@ span.cm-def.cm-hmd-frontmatter {
 
 .markdown-preview-view pre {
   border-radius: var(--radius-l) !important;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+  line-height: 1.25em;
+  font-size: 0.875em;
+  letter-spacing: 0.015625em;
   font-weight: var(--medium);
   background-color: var(--surface-variant);
   color: var(--on-surface-variant);
@@ -570,9 +569,8 @@ div.HyperMD-codeblock-end-bg {
 
 .empty-state-title {
   transform: translateY(-25px);
-  line-height: 1.5rem;
-  font-size: 1rem;
-  letter-spacing: 0.009375rem;
+  line-height: 1.5em;
+  letter-spacing: 0.009375em;
   font-weight: var(--medium);
   text-align: center;
   color: var(--on-surface);
@@ -583,15 +581,15 @@ div.HyperMD-codeblock-end-bg {
   background-color: var(--primary);
   color: var(--on-primary);
   text-transform: none;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.00625rem;
+  line-height: 1.25em;
+  font-size: 0.875em;
+  letter-spacing: 0.00625em;
   font-weight: var(--medium);
   height: 40px;
-  border-radius: 1.25rem;
+  border-radius: 1.25em;
   padding-top: 10px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   display: block;
   margin: auto;
   padding-left: 16px;
@@ -600,9 +598,9 @@ div.HyperMD-codeblock-end-bg {
 }
 .is-mobile .empty-state-action:nth-child(2)::before {
   content: "";
-  height: 1.125rem;
-  width: 1.125rem;
-  background-size: 1.125rem 1.125rem;
+  height: 1.125em;
+  width: 1.125em;
+  background-size: 1.125em 1.125em;
   background-position: center;
   background-color: var(--on-primary);
   display: inline-block;
@@ -621,17 +619,17 @@ div.HyperMD-codeblock-end-bg {
   background-color: inherit;
   color: var(--primary);
   text-transform: none;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.00625rem;
+  line-height: 1.25em;
+  font-size: 0.875em;
+  letter-spacing: 0.00625em;
   font-weight: var(--medium);
   height: 40px;
-  border-radius: 1.25rem;
-  border-width: 0.0625rem;
+  border-radius: 1.25em;
+  border-width: 0.0625em;
   border-color: var(--outline);
   padding-top: 9px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   display: block;
   margin: auto;
   padding-left: 16px;
@@ -640,9 +638,9 @@ div.HyperMD-codeblock-end-bg {
 }
 .is-mobile .empty-state-action:first-of-type::before {
   content: "";
-  height: 1.125rem;
-  width: 1.125rem;
-  background-size: 1.125rem 1.125rem;
+  height: 1.125em;
+  width: 1.125em;
+  background-size: 1.125em 1.125em;
   background-position: center;
   background-color: var(--primary);
   display: inline-block;
@@ -660,17 +658,17 @@ div.HyperMD-codeblock-end-bg {
   background-color: inherit;
   color: var(--primary);
   text-transform: none;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.00625rem;
+  line-height: 1.25em;
+  font-size: 0.875em;
+  letter-spacing: 0.00625em;
   font-weight: var(--medium);
   height: 40px;
-  border-radius: 1.25rem;
-  border-width: 0.0625rem;
+  border-radius: 1.25em;
+  border-width: 0.0625em;
   border-color: var(--outline);
   padding-top: 9px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   display: block;
   margin: auto;
   padding-left: 16px;
@@ -679,9 +677,9 @@ div.HyperMD-codeblock-end-bg {
 }
 .is-mobile .empty-state-action:nth-child(3)::before {
   content: "";
-  height: 1.125rem;
-  width: 1.125rem;
-  background-size: 1.125rem 1.125rem;
+  height: 1.125em;
+  width: 1.125em;
+  background-size: 1.125em 1.125em;
   background-position: center;
   background-color: var(--primary);
   display: inline-block;
@@ -724,13 +722,13 @@ progress::-webkit-progress-value {
 /* Adapted from https://github.com/kepano/obsidian-minimal/blob/master/obsidian.css */
 /* Preview */
 a.tag {
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+  line-height: 1.25em;
+  font-size: 0.875em;
+  letter-spacing: 0.015625em;
   font-weight: var(--medium);
   background-color: var(--tertiary-container);
   color: var(--on-tertiary-container);
-  padding: 3px 12px;
+  padding: 2px 7px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -740,17 +738,17 @@ a.tag {
 
 /* Editor */
 .cm-s-obsidian span.cm-hashtag {
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+  line-height: 1.25em;
+  font-size: 0.875em;
+  letter-spacing: 0.015625em;
   font-weight: var(--medium);
+  font-size: 0.875em !important;
   background-color: var(--tertiary-container);
   color: var(--on-tertiary-container);
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin: 2px 0;
-  vertical-align: middle;
   padding-top: 1px;
   border-left: none;
   border-right: none;
@@ -784,20 +782,20 @@ a.tag:after {
   content: " ";
   top: 0;
   bottom: 0;
-  width: 0.66rem;
+  width: 0.66em;
   left: 0px;
   border-radius: 4px;
 } */
 .markdown-preview-view table thead tr th, .markdown-preview-view table tbody tr th,
 .markdown-source-view.mod-cm6.is-live-preview table thead tr th,
 .markdown-source-view.mod-cm6.is-live-preview table tbody tr th {
-  background: var(--surface-variant);
+  background: var(--surface-variant) !important;
   color: var(--on-surface-variant);
 }
 .markdown-preview-view table thead tr td, .markdown-preview-view table tbody tr td,
 .markdown-source-view.mod-cm6.is-live-preview table thead tr td,
 .markdown-source-view.mod-cm6.is-live-preview table tbody tr td {
-  background: var(--surface);
+  background: var(--surface) !important;
   color: var(--on-surface);
   padding-top: 1px;
   padding-bottom: 1px;
@@ -831,12 +829,12 @@ a.tag:after {
 .markdown-source-view.mod-cm6.is-live-preview table tbody tr:last-of-type td:last-of-type {
   border-bottom-right-radius: var(--radius-l);
 }
-.markdown-preview-view table thead tr:nth-child(even) tr, .markdown-preview-view table thead tr:nth-child(even) td, .markdown-preview-view table tbody tr:nth-child(even) tr, .markdown-preview-view table tbody tr:nth-child(even) td,
-.markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(even) tr,
+.markdown-preview-view table thead tr:nth-child(even) th, .markdown-preview-view table thead tr:nth-child(even) td, .markdown-preview-view table tbody tr:nth-child(even) th, .markdown-preview-view table tbody tr:nth-child(even) td,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(even) th,
 .markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(even) td,
-.markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(even) tr,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(even) th,
 .markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(even) td {
-  background-color: var(--surfaceMid);
+  background-color: var(--surfaceMid) !important;
 }
 
 .markdown-source-view.mod-cm6 .is-unresolved .cm-underline, .markdown-preview-view a {
@@ -866,7 +864,7 @@ svg.three-horizontal-bars {
 }
 
 .view-header-title {
-  line-height: 1.75rem;
+  line-height: 1.75em;
   font-size: var(--h5);
   font-weight: var(--regular);
   color: var(--on-surface);
@@ -991,9 +989,8 @@ svg.pencil {
 .is-mobile input.prompt-input {
   background-color: var(--primary-container);
   border-radius: var(--big-radius);
-  line-height: 1.5rem;
-  font-size: 1rem;
-  letter-spacing: 0.009375rem;
+  line-height: 1.5em;
+  letter-spacing: 0.009375em;
   font-weight: var(--medium);
   color: var(--on-primary-container);
 }
@@ -1016,9 +1013,8 @@ svg.pencil {
   padding-bottom: 10px;
   padding-top: 10px;
   border-color: var(--surface-variant);
-  line-height: 1.5rem;
-  font-size: 1rem;
-  letter-spacing: 0.009375rem;
+  line-height: 1.5em;
+  letter-spacing: 0.009375em;
   font-weight: var(--medium);
 }
 .is-mobile .suggestion-item .suggestion-prefix {
@@ -1027,9 +1023,9 @@ svg.pencil {
   margin-top: 2px;
   margin-bottom: 2px;
   color: var(--secondary);
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.025rem;
+  line-height: 1em;
+  font-size: 0.75em;
+  letter-spacing: 0.025em;
   font-weight: var(--medium);
 }
 .is-mobile .suggestion-item.is-selected {
@@ -1130,9 +1126,9 @@ button.mod-cta {
   background-color: var(--secondary-container);
   color: var(--on-secondary-container);
   text-transform: none;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.00625rem;
+  line-height: 1.25em;
+  font-size: 0.875em;
+  letter-spacing: 0.00625em;
   font-weight: var(--medium);
 }
 
@@ -1140,9 +1136,9 @@ button.mod-cta {
   background-color: var(--primary);
   color: var(--on-primary);
   text-transform: none;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.00625rem;
+  line-height: 1.25em;
+  font-size: 0.875em;
+  letter-spacing: 0.00625em;
   font-weight: var(--medium);
 }
 
@@ -1264,7 +1260,6 @@ body.hide-sidebar-header .workspace-drawer-header-left {
 .workspace-drawer-tab-option-item-title,
 .workspace-drawer-active-tab-title {
   color: var(--text-normal);
-  font-size: var(--regular);
 }
 
 .workspace-drawer-tab-container > * {
@@ -1281,7 +1276,6 @@ body.hide-sidebar-header .workspace-drawer-header-left {
 
 .nav-file-title-content,
 .nav-folder-title-content {
-  font-size: var(--smaller);
   padding: 0px 0px;
   font-weight: var(--medium);
 }
@@ -1292,7 +1286,6 @@ body.hide-sidebar-header .workspace-drawer-header-left {
   padding-left: 11px;
   padding-right: 11px;
   color: var(--text-muted);
-  font-size: var(--smaller);
   font-weight: var(--light);
 }
 
@@ -1375,9 +1368,9 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
 /* Inspired by Minimal by kepano: https://github.com/kepano/obsidian-minimal/blob/master/obsidian.css */
 .BC-trail {
   margin-top: 5px !important;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.03125rem;
+  line-height: 1em;
+  font-size: 0.75em;
+  letter-spacing: 0.03125em;
   font-weight: var(--medium);
   color: var(--secondary);
 }
@@ -1393,9 +1386,9 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
 
 .cm-metadata,
 .cm-metadata-key {
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+  line-height: 1.25em;
+  font-size: 0.875em;
+  letter-spacing: 0.015625em;
   font-weight: var(--medium);
   color: var(--secondary);
   font-family: var(--font-monospace);
@@ -1430,6 +1423,10 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
 .view-content.excalidraw-view .undo-redo-buttons {
   background: var(--background-secondary) !important;
   box-shadow: 0 0 0 2px 2px rgba(0, 0, 0, 0.3333333333);
+}
+
+.view-content.excalidraw-view .ToolIcon svg {
+  mix-blend-mode: luminosity;
 }
 
 .view-content.excalidraw-view .library-button {
@@ -1468,6 +1465,14 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
   --color-selection: var(--color-accent);
   --icon-fill-color: var(--text-normal);
   --text-primary-color: var(--text-normal);
+  --island-bg-color: var(--surface);
+}
+.excalidraw div *, .excalidraw.theme--dark * {
+  border: none !important;
+}
+
+.excalidraw .dropdown-menu .dropdown-menu-item-base {
+  color: inherit !important;
 }
 
 .view-content.excalidraw-view .color-picker {
@@ -1496,6 +1501,7 @@ community:
 - obsidian-style-settings
 - cooklang-obsidian
 - breadcrumbs
+- obsidian-excalidraw-plugin
 */
 /* flat dark bg */
 body {
@@ -1562,14 +1568,18 @@ body.theme-dark {
   background-color: black;
 }
 
-body.mod-windows.main-window.enable-mica:not(.is-popout-window), body.mod-mac.enable-mica, body.mod-linux.enable-mica {
+body.mod-windows.enable-mica, body.mod-mac.enable-mica, body.mod-linux.enable-mica {
   background-color: transparent !important;
+}
+
+body.mod-windows.enable-mica.is-popout-window.theme-dark {
+  background: #202020 !important;
 }
 
 body:not(.is-phone) {
   --pane-separation: 6px;
 }
-body:not(.is-phone) .mod-root .workspace-tabs:not(:only-of-type) {
+body:not(.is-phone) .mod-root div.mod-top, body:not(.is-phone) .mod-root div.mod-horizontal .workspace-tabs {
   padding-right: var(--pane-separation);
 }
 body:not(.is-phone) .mod-root .mod-horizontal .workspace-leaf {
@@ -1577,15 +1587,12 @@ body:not(.is-phone) .mod-root .mod-horizontal .workspace-leaf {
   border-bottom-right-radius: var(--radius-m);
   margin-bottom: -5px;
 }
+body:not(.is-phone) .mod-root div:last-of-type.mod-top, body:not(.is-phone) .mod-root div:last-of-type.mod-horizontal .workspace-tabs {
+  padding-right: 1px;
+}
 body:not(.is-phone) hr.workspace-leaf-resize-handle {
   min-width: var(--pane-separation);
   min-height: var(--pane-separation);
-}
-body:not(.is-phone) .mod-root {
-  margin-right: calc(var(--pane-separation) * -1);
-}
-body:not(.is-phone) .mod-root .view-content:last-child {
-  padding-right: var(--pane-separation) !important;
 }
 
 .mod-stacked .workspace-tab-header {
@@ -1615,6 +1622,41 @@ body:not(.is-phone) .mod-root .view-content:last-child {
   background-color: var(--background-secondary);
   border-radius: var(--radius-l);
   padding: 0 20px;
+}
+
+.canvas-node-container .markdown-embed-content {
+  border-radius: inherit;
+  padding: inherit;
+  background-color: var(--background-secondary);
+}
+
+.canvas-node.is-themed .markdown-embed-content {
+  background-color: transparent;
+}
+
+body.theme-dark .canvas-wrapper .canvas-node {
+  box-shadow: rgba(0, 0, 0, 0.3764705882) 0px 3px 5px;
+  border-radius: var(--radius-l);
+}
+body.theme-dark .canvas-wrapper .canvas-node.is-themed .markdown-embed-content {
+  background-color: rgba(255, 255, 255, 0.062745098);
+}
+
+body.theme-light .canvas-wrapper {
+  --shadow-stationary: none;
+  --canvas-dot-pattern: #BBB;
+}
+body.theme-light .canvas-wrapper .canvas-node {
+  box-shadow: rgba(0, 0, 0, 0.1882352941) 0px 3px 10px;
+  border: none;
+  border-radius: var(--radius-l);
+}
+body.theme-light .canvas-wrapper .canvas-node-container {
+  border: none;
+}
+
+.mod-inside-iframe {
+  background-color: var(--background-secondary);
 }
 
 .notice-container .notice {
@@ -1794,24 +1836,6 @@ body.tab-drag-desktop .mod-root .workspace-tab-header.is-active .workspace-tab-h
   opacity: 1;
 }
 
-body.space-above-headers .view-content .cm-editor .HyperMD-header::before {
-  content: "\a";
-  line-height: var(--line-height-normal);
-  font-size: var(--font-text-size);
-}
-body.space-above-headers .view-content .HyperMD-header {
-  display: block;
-  -webkit-margin-before: 0.67em;
-          margin-block-start: 0.67em;
-  -webkit-margin-after: 0.67em;
-          margin-block-end: 0.67em;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
-  font-weight: bold;
-}
-
 .cm-editor .HyperMD-header + .HyperMD-header::before {
   content: "";
 }
@@ -1855,8 +1879,12 @@ body.space-above-headers .view-content .HyperMD-header {
   margin-bottom: 0;
 }
 
-body.space-above-document .cm-sizer, body.space-above-document .markdown-preview-sizer {
-  padding-top: 20vh;
+body.space-above-document .cm-editor .cm-scroller .cm-sizer,
+body.space-above-document .markdown-reading-view .markdown-preview-view .markdown-preview-sizer {
+  padding-top: 25vh;
+}
+body.space-above-document .markdown-embed-content .markdown-preview-sizer, body.space-above-document .markdown-embed-content .cm-sizer, body.space-above-document .canvas-node-container .markdown-preview-sizer, body.space-above-document .canvas-node-container .cm-sizer {
+  padding-top: inherit !important;
 }
 
 .view-content .cm-header-1, .view-content h1 {
@@ -1874,8 +1902,16 @@ body.space-above-document .cm-sizer, body.space-above-document .markdown-preview
 .view-content .cm-header-6, .view-content h6 {
   color: var(--color-accent-2);
 }
+.view-content .cm-header-1.cm-strong,
+.view-content .cm-header-2.cm-strong,
+.view-content .cm-header-3.cm-strong {
+  font-weight: 900;
+}
 .view-content h1, .view-content h2, .view-content h3, .view-content h5, .view-content h6 {
-  letter-spacing: 0.009375rem;
+  letter-spacing: 0.009375em;
+}
+.view-content h1 b, .view-content h2 b, .view-content h3 b, .view-content h5 b, .view-content h6 b {
+  font-weight: 900;
 }
 
 body {

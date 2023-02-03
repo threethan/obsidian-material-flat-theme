@@ -93,6 +93,10 @@
     box-shadow: 0 0 0 2px 2px #0005;
 
 }
+
+.view-content.excalidraw-view .ToolIcon svg{
+    mix-blend-mode: luminosity;
+}
 .view-content.excalidraw-view .library-button{
     height: 32px !important;
 }
@@ -127,7 +131,15 @@
     --color-selection: var(--color-accent);
     --icon-fill-color: var(--text-normal);
     --text-primary-color: var(--text-normal);
+    --island-bg-color: var(--surface);
 
+    * {
+        border: none !important;
+    }
+}
+
+.excalidraw .dropdown-menu .dropdown-menu-item-base {
+    color: inherit !important;
 }
 
 .view-content.excalidraw-view .color-picker {

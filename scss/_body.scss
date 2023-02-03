@@ -1,81 +1,82 @@
 // MIXINS
 @mixin display-s {
-  line-height: 2.75rem;
+  line-height: 2.75em;
   font-size: var(--h1);
   font-weight: var(--regular);
 }
 
 @mixin headline-l {
-  line-height: 2.5rem;
+  line-height: 2.5em;
   font-size: var(--h2);
   font-weight: var(--regular);
 }
 
 @mixin headline-m {
-  line-height: 2.25rem;
+  line-height: 2.25em;
   font-size: var(--h3);
   font-weight: var(--regular);
 }
 
 @mixin headline-s {
-  line-height: 2rem;
+  line-height: 2em;
   font-size: var(--h4);
   font-weight: var(--regular);
 }
 
 @mixin title-l {
-  line-height: 1.75rem;
+  line-height: 1.75em;
   font-size: var(--h5);
   font-weight: var(--regular);
 }
 
 @mixin title-m {
-  line-height: 1.5rem;
+  line-height: 1.5em;
   font-size: var(--h6);
-  letter-spacing: .009375rem;
+  letter-spacing: .009375em;
   font-weight: var(--medium);
 }
 
+// DEFAULT BODY TEXT
 @mixin body-large {
-  line-height: 1.5rem;
-  font-size: 1rem;
-  letter-spacing: .009375rem;
+  line-height: 1.5em;
+  // font-size: 1rem;
+  letter-spacing: .009375em;
   font-weight: var(--medium);
 }
 
 @mixin body-medium {
-  line-height: 1.25rem;
-  font-size: .875rem;
-  letter-spacing: .015625rem;
+  line-height: 1.25em;
+  font-size: .875em;
+  letter-spacing: .015625em;
   font-weight: var(--medium);
 }
 
 @mixin body-small {
-  line-height: 1rem;
-  font-size: .75rem;
-  letter-spacing: .025rem;
+  line-height: 1em;
+  font-size: .75em;
+  letter-spacing: .025em;
   font-weight: var(--medium);
 }
 
 @mixin label-large {
   text-transform: none;
-  line-height: 1.25rem;
-  font-size: .875rem;
-  letter-spacing: .00625rem;
+  line-height: 1.25em;
+  font-size: .875em;
+  letter-spacing: .00625em;
   font-weight: var(--medium);
 }
 
 @mixin label-medium {
-  line-height: 1rem;
-  font-size: .75rem;
-  letter-spacing: .03125rem;
+  line-height: 1em;
+  font-size: .75em;
+  letter-spacing: .03125em;
   font-weight: var(--medium);
 }
 
 @mixin label-small {
-  line-height: .375rem;
-  font-size: .6875rem;
-  letter-spacing: .03125rem;
+  line-height: .375em;
+  font-size: .6875em;
+  letter-spacing: .03125em;
   font-weight: var(--medium);
 }
 
@@ -85,16 +86,16 @@
   color: var(--on-primary);
   @include label-large();
   height: 40px;
-  border-radius: 1.25rem;
+  border-radius: 1.25em;
   padding-top: 10px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   display: block;
   margin: auto;
   
   @if $icon != "" {
     &::before {
-    $size: 1.125rem;
+    $size: 1.125em;
     content: '';
     height: $size;
     width: $size;
@@ -125,18 +126,18 @@
   color: var(--primary);
   @include label-large();
   height: 40px;
-  border-radius: 1.25rem;
-  border-width: .0625rem;
+  border-radius: 1.25em;
+  border-width: .0625em;
   border-color: var(--outline);
   padding-top: 9px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   display: block;
   margin: auto;
   
   @if $icon != "" {
     &::before {
-    $size: 1.125rem;
+    $size: 1.125em;
     content: '';
     height: $size;
     width: $size;
@@ -207,7 +208,7 @@
 /* ------------- */
 
 
-// Body Text
+Body Text
 .markdown-preview-view,
 .markdown-source-view,
 .cm-line {
@@ -241,21 +242,10 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-1
   color: var(--secondary);
 }
 
-/* Callout boxes from Vileplume: https://github.com/hungsu/vileplume-obsidian */
-// .markdown-preview-view blockquote,
-// .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-//   @include body-medium();
-//   border-radius: var(--big-radius);
-//   border: 1px solid rgba(255, 255, 255, 0.03);
-//   padding: 10px 20px;
-//   position: relative;
-//   box-shadow: 0.9px 0.9px 3.6px rgba(0, 0, 0, 0.017),
-//     2.5px 2.4px 10px rgba(0, 0, 0, 0.025), 6px 5.7px 24.1px rgba(0, 0, 0, 0.033),
-//     20px 19px 80px rgba(0, 0, 0, 0.05);
-
-//   background-color: var(--secondary-container) !important;
-//   color: var(--on-secondary-container);
-// }
+/* callout boxes */
+.cm-callout, div.callout {
+  border-radius: var(--radius-l);
+}
 
 /* Blockquotes */
 // .markdown-preview-view blockquote,
@@ -394,14 +384,14 @@ span.cm-def.cm-hmd-frontmatter {
 .cm-s-obsidian span.cm-inline-code,
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight)
  {
-  @include body-medium();
+  // @include body-medium();
   background-color: var(--surface-variant);
   color: var(--on-surface-variant);
   font-family: var(--font-monospace);
   border-radius: var(--radius-s);
   margin: -2px;
   padding: 2px 4px;
-  vertical-align: text-bottom;
+  vertical-align: 2px;
 }
 // Highlight (similar formatting)
 .cm-highlight, .markdown-preview-view mark {
@@ -514,7 +504,7 @@ a.tag {
   @include body-medium();
   background-color: var(--tertiary-container);
   color: var(--on-tertiary-container);
-  padding: 3px 12px;
+  padding: 2px 7px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -525,13 +515,13 @@ a.tag {
 /* Editor */
 .cm-s-obsidian span.cm-hashtag {
   @include body-medium();
+  font-size: .875em !important;
   background-color: var(--tertiary-container);
   color: var(--on-tertiary-container);
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin: 2px 0;
-  vertical-align: middle;
   padding-top: 1px;
   border-left: none;
   border-right: none;
@@ -568,7 +558,7 @@ a.tag:after {
   content: " ";
   top: 0;
   bottom: 0;
-  width: 0.66rem;
+  width: 0.66em;
   left: 0px;
   border-radius: 4px;
 } */
@@ -580,11 +570,11 @@ a.tag:after {
     thead, tbody{
       tr {
         th {
-          background: var(--surface-variant);
+          background: var(--surface-variant) !important;
           color: var(--on-surface-variant);
         }
         td {
-          background: var(--surface);
+          background: var(--surface) !important;
           color: var(--on-surface);
           padding-top: 1px;
           padding-bottom: 1px;
@@ -610,8 +600,8 @@ a.tag:after {
         }
       }
       tr:nth-child(even) {
-        tr, td {
-          background-color: var(--surfaceMid);
+        th, td {
+          background-color: var(--surfaceMid) !important;
         }
       }
     }

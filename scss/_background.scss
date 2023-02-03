@@ -60,8 +60,11 @@ body.theme-light {
 body.theme-dark {
     background-color: black;
 }
-body.mod-windows.main-window.enable-mica:not(.is-popout-window), body.mod-mac.enable-mica, body.mod-linux.enable-mica {
+body.mod-windows.enable-mica, body.mod-mac.enable-mica, body.mod-linux.enable-mica {
     background-color: transparent !important;
+}
+body.mod-windows.enable-mica.is-popout-window.theme-dark {
+    background: #202020 !important;
 }
 
 
@@ -70,7 +73,7 @@ body:not(.is-phone) {
 
 //V split separation
     .mod-root {
-        .workspace-tabs:not(:only-of-type){
+        div.mod-top, div.mod-horizontal .workspace-tabs{
             padding-right: var(--pane-separation);
         }
 
@@ -80,25 +83,16 @@ body:not(.is-phone) {
             margin-bottom: -5px;
         }
 
+        div:last-of-type.mod-top, div:last-of-type.mod-horizontal .workspace-tabs {
+            padding-right: 1px;
+        }
     }
 
     hr.workspace-leaf-resize-handle {
-        // right: 0 !important;
         min-width:  var(--pane-separation);
         min-height: var(--pane-separation);
-        // z-index: 999 !important;
-        // opacity: 0 !important;
     }
-    
-    .mod-root {
-        margin-right: calc(var(--pane-separation) * -1);
-    }
-    .mod-root .view-content:last-child {
-        padding-right: var(--pane-separation) !important;
-    }
-    
 }
-
 
 // Stacked tabs
 .mod-stacked .workspace-tab-header {
@@ -130,6 +124,44 @@ body:not(.is-phone) {
     background-color: var(--background-secondary);
     border-radius: var(--radius-l);
     padding: 0 20px;
+}
+.canvas-node-container {
+    .markdown-embed-content {
+        border-radius: inherit;
+        padding: inherit;
+        background-color: var(--background-secondary);
+    }
+}
+.canvas-node.is-themed {
+    .markdown-embed-content {
+        background-color: transparent;
+    }
+}
+body.theme-dark .canvas-wrapper {
+    .canvas-node {
+        box-shadow: #00000060 0px 3px 5px;
+        border-radius: var(--radius-l);
+    }
+    .canvas-node.is-themed {
+        .markdown-embed-content {
+            background-color: #FFFFFF10;
+        }
+    }
+}
+body.theme-light .canvas-wrapper {
+    .canvas-node {
+        box-shadow: #00000030 0px 3px 10px;
+        border: none;
+        border-radius: var(--radius-l);
+    }
+    .canvas-node-container {
+        border: none;
+    }
+    --shadow-stationary: none;
+    --canvas-dot-pattern: #BBB;
+}
+.mod-inside-iframe {
+    background-color: var(--background-secondary);
 }
 
 // Mobile popups
