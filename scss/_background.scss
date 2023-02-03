@@ -68,7 +68,7 @@ body:not(.is-popout-window) .workspace-tab-header-container, .workspace-tabs, .m
     border-bottom-color: transparent !important;
     border-top-color: var(--tooltip-color) !important;
 }
-body.disable-tooltip-animation {
+body.disable-tooltip-animation .tooltip {
     animation: none !important;
 }
 
