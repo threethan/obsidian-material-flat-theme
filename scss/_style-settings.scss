@@ -41,21 +41,27 @@ settings:
         type: class-toggle
         default: false
     -
+        id: dim-light-mode
+        title: Dim Light Mode
+        description: Uses a slightly tinted grey in light mode, instead of pure white, for backgrounds.
+        type: class-toggle
+        default: false
+    -
         id: space-above-document
         title: Add scroll space above document
         description: Adds some space above documents, so you can scroll them a little further down. Similar to Dropbox Paper.
         type: class-toggle
         default: false
     -
-        id: space-above-headers
-        title: Extra space above headers
-        description: Adds some space above headers. Bigger headers get bigger spaces. Intended to be used in place of new lines above headers. Live preview only!
+        id: disable-tooltip-animation
+        title: Disable tooltip animation
+        description: Disables the "pop-out" animation on tooltips.
         type: class-toggle
         default: false
-    - 
+    -
         id: enable-mica
         title: Enable transparency support (Desktop)
-        description: Make parts of the main window translucent. Both mac and windows require native frame to be set to system for this to work. Windows additionally requires Mica for Everyone, with the following settings for obsidian - Titlebar Color System, Backdrop Type Mica, Extend Frame into Client Area On
+        description: Make parts of the main window translucent. Use instead of built-in transparency option. Both mac and windows require native frame to be set to system for this to work. Windows additionally requires Mica for Everyone, with the following settings for obsidian - Titlebar Color System, Backdrop Type Mica, Extend Frame into Client Area On
         type: class-toggle
         default: false
     - 

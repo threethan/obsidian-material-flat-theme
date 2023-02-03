@@ -48,18 +48,41 @@ body:not(.is-popout-window) .workspace-tab-header-container, .workspace-tabs, .m
     background: none;
 }
 
+// Tooltips
 .tooltip {
-    background: var(--surfaceVariant) !important;
+    background: var(--tooltip-color) !important;
     color: var(--onSurfaceVariant) !important;
-    border: 1px solid #000 !important;
+}
+.tooltip .tooltip-arrow {
+    border-bottom-color: var(--tooltip-color) !important;
+}
+.tooltip.mod-right .tooltip-arrow {
+    border-bottom-color: transparent !important;
+    border-right-color: var(--tooltip-color) !important;
+}
+.tooltip.mod-left .tooltip-arrow {
+    border-bottom-color: transparent !important;
+    border-left-color: var(--tooltip-color) !important;
+}
+.tooltip.mod-top .tooltip-arrow {
+    border-bottom-color: transparent !important;
+    border-top-color: var(--tooltip-color) !important;
+}
+body.disable-tooltip-animation {
+    animation: none !important;
 }
 
+// Body background
 body.theme-light {
     background-color: var(--surfaceVariant);
+    --tooltip-color: white;
 }
+
 body.theme-dark {
     background-color: black;
+    --tooltip-color: var(--surfaceVariant);
 }
+
 body.mod-windows.enable-mica, body.mod-mac.enable-mica, body.mod-linux.enable-mica {
     background-color: transparent !important;
 }
@@ -123,8 +146,14 @@ body:not(.is-phone) {
 .markdown-embed-content {
     background-color: var(--background-secondary);
     border-radius: var(--radius-l);
-    padding: 0 20px;
 }
+
+.mod-root {
+    .markdown-embed-content {
+      padding: 0 20px;
+    }
+}
+
 .canvas-node-container {
     .markdown-embed-content {
         border-radius: inherit;

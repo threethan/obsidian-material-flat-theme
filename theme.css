@@ -123,7 +123,7 @@ body {
   --background-primary-alt: var(--surface1);
   --background-secondary: var(--surface-variant);
   --background-secondary-alt: var(--surface3);
-  --background-modifier-border: var(--surface);
+  --background-modifier-border: #fff;
   --background-modifier-form-field: #fff;
   --background-modifier-form-field-highlighted: #fff;
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
@@ -143,9 +143,8 @@ body {
   --text-highlight-bg: var(--surface-variant);
   --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
   --text-selection: rgba(204, 230, 255, 0.99);
-  --text-on-accent: #f2f2f2;
-  --interactive-normal: #f2f3f5;
-  --interactive-hover: #fcb2b2;
+  --interactive-normal: var(--surface-variant);
+  --interactive-hover: var(--surface-variant);
   --interactive-accent: var(--primary);
   --interactive-accent-rgb: var(--primary);
   --interactive-accent-hover: var(--primary);
@@ -156,6 +155,8 @@ body {
   --highlight-mix-blend-mode: darken;
   --focus: var(--surface4);
   --hover: var(--surface2);
+  --text-on-accent: var(--text-muted);
+  --on-accent: var(--text-muted);
 }
 
 .theme-dark {
@@ -261,9 +262,8 @@ body {
   --text-highlight-bg: var(--surface-variant);
   --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
   --text-selection: rgba(23, 48, 77, 0.99);
-  --text-on-accent: #dcddde;
-  --interactive-normal: #2a2a2a;
-  --interactive-hover: #303030;
+  --interactive-normal: var(--surface-variant);
+  --interactive-hover: var(--surface-variant);
   --interactive-accent: var(--primary);
   --interactive-accent-rgb: var(--primary);
   --interactive-accent-hover: var(--primary);
@@ -272,7 +272,8 @@ body {
   --scrollbar-bg: rgba(255, 255, 255, 0.05);
   --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
   --highlight-mix-blend-mode: lighten;
-  --text-faint: var(--on-surface-variant);
+  --text-on-accent: var(--background);
+  --on-accent: var(--background);
 }
 
 .cm-formatting-header {
@@ -1398,6 +1399,33 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
   color: var(--surface-variant) !important;
 }
 
+.excalidraw div, .excalidraw.theme--dark {
+  --color-primary-light: var(--color-accent);
+  --color-primary-darker: var(--icon-color-focused);
+  --color-primary-darkest: var(--color-accent);
+  --focus-highlight-color: var(--color-accent);
+  --select-highlight-color: var(--color-accent);
+  --color-selection: var(--color-accent);
+  --icon-fill-color: var(--text-normal);
+  --text-primary-color: var(--text-normal);
+  --island-bg-color: var(--background-primary);
+  --shadow-island: 0;
+}
+.excalidraw div *, .excalidraw.theme--dark * {
+  border: none !important;
+}
+
+.view-content.excalidraw-view .dropdown-menu .dropdown-menu-item-base {
+  color: inherit !important;
+}
+.view-content.excalidraw-view .HelpDialog__key {
+  color: var(--on-accent);
+}
+.view-content.excalidraw-view .color-picker {
+  border: 1px solid var(--window-border);
+  background: var(--background-secondary) !important;
+  border-radius: 8px;
+}
 .view-content.excalidraw-view .zoom-actions,
 .view-content.excalidraw-view .undo-redo-buttons,
 .view-content.excalidraw-view .layer-ui__wrapper__footer-right,
@@ -1406,7 +1434,6 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
   background: none;
   border: none !important;
 }
-
 .view-content.excalidraw-view .App-toolbar,
 .view-content.excalidraw-view .App-menu__left,
 .view-content.excalidraw-view .library-button,
@@ -1414,72 +1441,46 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
 .view-content.excalidraw-view .App-menu_top__left .menu-button,
 .view-content.excalidraw-view .layer-ui__wrapper__footer-right .ToolIcon__icon,
 .view-content.excalidraw-view .mobile-misc-tools-container {
-  background: var(--background-secondary) !important;
+  background: var(--surface) !important;
   overflow: visible;
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.4);
 }
-
 .view-content.excalidraw-view .zoom-actions,
 .view-content.excalidraw-view .undo-redo-buttons {
-  background: var(--background-secondary) !important;
-  box-shadow: 0 0 0 2px 2px rgba(0, 0, 0, 0.3333333333);
+  background: var(--surface) !important;
 }
-
 .view-content.excalidraw-view .ToolIcon svg {
   mix-blend-mode: luminosity;
 }
-
 .view-content.excalidraw-view .library-button {
-  height: 32px !important;
+  height: 36px !important;
+  width: 36px;
 }
-
+.view-content.excalidraw-view .library-button .library-button__label {
+  display: none;
+}
 .view-content.excalidraw-view .App-menu_top__left .menu-button,
-.view-content.excalidraw-view .layer-ui__wrapper__footer-right .ToolIcon__icon {
-  height: 38px;
-  width: 38px;
+.view-content.excalidraw-view .layer-ui__wrapper__footer-right .ToolIcon__icon,
+.view-content.excalidraw-view .ToolIcon_type_floating .ToolIcon__icon {
+  height: 36px;
+  width: 36px;
 }
-
 .view-content.excalidraw-view .App-bottom-bar .App-toolbar {
   margin-top: 0;
 }
-
-.view-header {
+.view-content.excalidraw-view .view-header {
   z-index: 2;
 }
-
 .view-content.excalidraw-view .mobile-misc-tools-container div {
   border: none !important;
   border-radius: 6px;
 }
-
 .view-content.excalidraw-view .App-toolbar {
   border-radius: 8px !important;
 }
-
-.excalidraw div, .excalidraw.theme--dark {
-  --color-primary-light: var(--color-accent-1);
-  --color-primary-darker: var(--icon-color-focused);
-  --color-primary-darkest: var(--color-accent);
-  --focus-highlight-color: var(--color-accent-2);
-  --select-highlight-color: var(--color-accent-2);
-  --color-selection: var(--color-accent);
-  --icon-fill-color: var(--text-normal);
-  --text-primary-color: var(--text-normal);
-  --island-bg-color: var(--surface);
-}
-.excalidraw div *, .excalidraw.theme--dark * {
-  border: none !important;
-}
-
-.excalidraw .dropdown-menu .dropdown-menu-item-base {
-  color: inherit !important;
-}
-
-.view-content.excalidraw-view .color-picker {
-  border: 1px solid var(--window-border);
-  background: var(--background-secondary) !important;
-  box-shadow: 0 0 0 2px 2px rgba(0, 0, 0, 0.3333333333);
-  border-radius: 8px;
+.view-content.excalidraw-view .dropdown-menu-button {
+  height: 36px;
+  width: 36px;
+  background-color: var(--surface);
 }
 
 /* @plugins
@@ -1555,17 +1556,42 @@ body:not(.is-popout-window) .workspace-tab-header-container, .workspace-tabs, .m
 }
 
 .tooltip {
-  background: var(--surfaceVariant) !important;
+  background: var(--tooltip-color) !important;
   color: var(--onSurfaceVariant) !important;
-  border: 1px solid #000 !important;
+}
+
+.tooltip .tooltip-arrow {
+  border-bottom-color: var(--tooltip-color) !important;
+}
+
+.tooltip.mod-right .tooltip-arrow {
+  border-bottom-color: transparent !important;
+  border-right-color: var(--tooltip-color) !important;
+}
+
+.tooltip.mod-left .tooltip-arrow {
+  border-bottom-color: transparent !important;
+  border-left-color: var(--tooltip-color) !important;
+}
+
+.tooltip.mod-top .tooltip-arrow {
+  border-bottom-color: transparent !important;
+  border-top-color: var(--tooltip-color) !important;
+}
+
+body.disable-tooltip-animation {
+  -webkit-animation: none !important;
+          animation: none !important;
 }
 
 body.theme-light {
   background-color: var(--surfaceVariant);
+  --tooltip-color: white;
 }
 
 body.theme-dark {
   background-color: black;
+  --tooltip-color: var(--surfaceVariant);
 }
 
 body.mod-windows.enable-mica, body.mod-mac.enable-mica, body.mod-linux.enable-mica {
@@ -1621,6 +1647,9 @@ body:not(.is-phone) hr.workspace-leaf-resize-handle {
 .markdown-embed-content {
   background-color: var(--background-secondary);
   border-radius: var(--radius-l);
+}
+
+.mod-root .markdown-embed-content {
   padding: 0 20px;
 }
 
@@ -2020,17 +2049,43 @@ body.mod-windows .titlebar-button-container .titlebar-button svg {
   height: 11px;
 }
 
+body {
+  --input-shadow: inherit !important;
+  --input-shadow-hover: inset 0 1000px 0 0 #FFFFFF20 !important;
+  --input-height: 32px;
+}
+
+.setting-hotkey {
+  padding-top: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background: var(--color-accent);
+  border: none;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  background: var(--icon-color-focused);
+  border: none;
+}
+
+body {
+  --slider-track-background: var(--surfaceVariant);
+}
+
 body:not(.vibrant).theme-dark {
   --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
+  --primary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
   --secondary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
   --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
   --link-color-hover: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
 }
 
 body:not(.vibrant).theme-light {
-  --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 30%) !important;
-  --secondary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
-  --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
+  --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 70%) !important;
+  --primary: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 70%) !important;
+  --secondary: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 70%) !important;
+  --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 50%) !important;
   --link-color-hover: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 10%) !important;
 }
 
@@ -2058,14 +2113,19 @@ body.theme-dark {
   --text-selection: hsl(var(--accent-h), calc(var(--accent-s) * 0.3), 20%);
 }
 
+body.theme-light.dim-light-mode {
+  --background: hsl(var(--accent-h), calc(var(--accent-s) * 0.15), 95%);
+  --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.10), 98%);
+}
+
 body.theme-light {
   --primary: var(--color-accent-2);
   --primaryContainer: var(--color-accent-1);
   --onPrimaryContainer: var(--color-accent);
   --secondary: var(--color-accent-2);
-  --background: hsl(var(--accent-h), calc(var(--accent-s) * 0.06), 90.5%);
+  --background: #fff;
   --onBackground: #111;
-  --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.1), 95%);
+  --surface: #fff;
   --surfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 85%);
   --surfaceMid: hsl(var(--accent-h), calc(var(--accent-s) * 0.15), 93%);
   --onSurfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.30), 23%);
@@ -2124,21 +2184,27 @@ settings:
         type: class-toggle
         default: false
     -
+        id: dim-light-mode
+        title: Dim Light Mode
+        description: Uses a slightly tinted grey in light mode, instead of pure white, for backgrounds.
+        type: class-toggle
+        default: false
+    -
         id: space-above-document
         title: Add scroll space above document
         description: Adds some space above documents, so you can scroll them a little further down. Similar to Dropbox Paper.
         type: class-toggle
         default: false
     -
-        id: space-above-headers
-        title: Extra space above headers
-        description: Adds some space above headers. Bigger headers get bigger spaces. Intended to be used in place of new lines above headers. Live preview only!
+        id: disable-tooltip-animation
+        title: Disable tooltip animation
+        description: Disables the "pop-out" animation on tooltips.
         type: class-toggle
         default: false
-    - 
+    -
         id: enable-mica
         title: Enable transparency support (Desktop)
-        description: Make parts of the main window translucent. Both mac and windows require native frame to be set to system for this to work. Windows additionally requires Mica for Everyone, with the following settings for obsidian - Titlebar Color System, Backdrop Type Mica, Extend Frame into Client Area On
+        description: Make parts of the main window translucent. Use instead of built-in transparency option. Both mac and windows require native frame to be set to system for this to work. Windows additionally requires Mica for Everyone, with the following settings for obsidian - Titlebar Color System, Backdrop Type Mica, Extend Frame into Client Area On
         type: class-toggle
         default: false
     - 

@@ -142,7 +142,7 @@ body {
   --background-primary-alt: var(--surface1);
   --background-secondary: var(--surface-variant);
   --background-secondary-alt: var(--surface3);
-  --background-modifier-border: var(--surface);
+  --background-modifier-border: #fff;
   --background-modifier-form-field: #fff;
   --background-modifier-form-field-highlighted: #fff;
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
@@ -162,9 +162,8 @@ body {
   --text-highlight-bg: var(--surface-variant);
   --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
   --text-selection: rgba(204, 230, 255, 0.99);
-  --text-on-accent: #f2f2f2;
-  --interactive-normal: #f2f3f5;
-  --interactive-hover: #fcb2b2;
+  --interactive-normal: var(--surface-variant);
+  --interactive-hover: var(--surface-variant);
   --interactive-accent: var(--primary);
   --interactive-accent-rgb: var(--primary);
   --interactive-accent-hover: var(--primary);
@@ -177,6 +176,9 @@ body {
   // Interaction states
   --focus: var(--surface4);
   --hover: var(--surface2);
+
+  --text-on-accent: var(--text-muted);
+  --on-accent: var(--text-muted);
 
 }
 
@@ -296,9 +298,8 @@ body {
   --text-highlight-bg: var(--surface-variant);
   --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
   --text-selection: rgba(23, 48, 77, 0.99);
-  --text-on-accent: #dcddde;
-  --interactive-normal: #2a2a2a;
-  --interactive-hover: #303030;
+  --interactive-normal: var(--surface-variant);
+  --interactive-hover: var(--surface-variant);
   --interactive-accent: var(--primary);
   --interactive-accent-rgb: var(--primary);
   --interactive-accent-hover: var(--primary);
@@ -308,5 +309,8 @@ body {
   --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
   --highlight-mix-blend-mode: lighten;
 
-  --text-faint: var(--on-surface-variant);
+  --text-on-accent: var(--background);
+  --on-accent: var(--background);
+
+
 }

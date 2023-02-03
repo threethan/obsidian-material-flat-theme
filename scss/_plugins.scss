@@ -52,113 +52,107 @@
 // ExcaliDraw (new addition)
 // --------------------------
 
-
-// .mod-root .cm-scroller {
-//     margin-top: calc(var(--header-height) * -1);
-//     height: calc(100% + var(--header-height));
-// }
-
-// .view-content.excalidraw-view .App-toolbar,
-// .view-content.excalidraw-view .App-menu_top__left,
-// .view-content.excalidraw-view .layer-ui__wrapper__top-right {
-//     margin-top: var(--header-height);
-// }
-.view-content.excalidraw-view .zoom-actions,
-.view-content.excalidraw-view .undo-redo-buttons,
-.view-content.excalidraw-view .layer-ui__wrapper__footer-right,
-.view-content.excalidraw-view .layer-ui__wrapper__footer-right div,
-.view-content.excalidraw-view .App-bottom-bar {
-   background: none;
-   border: none !important;
-}
-.view-content.excalidraw-view .App-toolbar,
-.view-content.excalidraw-view .App-menu__left,
-.view-content.excalidraw-view .library-button,
-.view-content.excalidraw-view .ToolIcon.ToolIcon_type_floating div,
-.view-content.excalidraw-view .App-menu_top__left .menu-button,
-.view-content.excalidraw-view .layer-ui__wrapper__footer-right .ToolIcon__icon,
-.view-content.excalidraw-view .mobile-misc-tools-container  {
-    // -webkit-backdrop-filter: blur(var(--blur-intensity));
-    // backdrop-filter: blur(var(--blur-intensity));
-    background: var(--background-secondary) !important;
-    // border: 1px solid var(--window-border);
-    overflow: visible;
-    box-shadow: 0 0 4px 1px #0006;
-}
-.view-content.excalidraw-view .zoom-actions,
-.view-content.excalidraw-view .undo-redo-buttons  {
-    // -webkit-backdrop-filter: blur(var(--blur-intensity));
-    // backdrop-filter: blur(var(--blur-intensity));
-    background: var(--background-secondary) !important;
-    box-shadow: 0 0 0 2px 2px #0005;
-
-}
-
-.view-content.excalidraw-view .ToolIcon svg{
-    mix-blend-mode: luminosity;
-}
-.view-content.excalidraw-view .library-button{
-    height: 32px !important;
-}
-.view-content.excalidraw-view .App-menu_top__left .menu-button,
-.view-content.excalidraw-view .layer-ui__wrapper__footer-right .ToolIcon__icon
- {
-    height: 38px;
-    width: 38px;
-}
-
-.view-content.excalidraw-view .App-bottom-bar .App-toolbar{
-    margin-top: 0;
-}
-.view-header{
-    z-index: 2;
-}
-
-.view-content.excalidraw-view .mobile-misc-tools-container div{
-    // width: 32px !important;
-    border: none !important;
-    border-radius: 6px;
-}
-.view-content.excalidraw-view .App-toolbar {
-    border-radius: 8px !important;
-}
 .excalidraw div, .excalidraw.theme--dark {
-    --color-primary-light: var(--color-accent-1);
+    --color-primary-light: var(--color-accent);
     --color-primary-darker: var(--icon-color-focused);
     --color-primary-darkest: var(--color-accent);
-    --focus-highlight-color: var(--color-accent-2);
-    --select-highlight-color: var(--color-accent-2);
+    --focus-highlight-color: var(--color-accent);
+    --select-highlight-color: var(--color-accent);
     --color-selection: var(--color-accent);
     --icon-fill-color: var(--text-normal);
     --text-primary-color: var(--text-normal);
-    --island-bg-color: var(--surface);
-
+    --island-bg-color: var(--background-primary);
+    --shadow-island: 0;
     * {
         border: none !important;
     }
 }
 
-.excalidraw .dropdown-menu .dropdown-menu-item-base {
-    color: inherit !important;
-}
+.view-content.excalidraw-view {
+    .dropdown-menu .dropdown-menu-item-base {
+        color: inherit !important;
+    }
+    .HelpDialog__key {
+        color: var(--on-accent);
+    }
 
-.view-content.excalidraw-view .color-picker {
-    // transform: translate(-45px, -110px);
-    border: 1px solid var(--window-border);
-    // -webkit-backdrop-filter: blur(var(--blur-intensity));
-    // backdrop-filter: blur(var(--blur-intensity));
-    background: var(--background-secondary) !important;
-    box-shadow: 0 0 0 2px 2px #0005;
+    .color-picker {
+        border: 1px solid var(--window-border);
+        // -webkit-backdrop-filter: blur(var(--blur-intensity));
+        // backdrop-filter: blur(var(--blur-intensity));
+        background: var(--background-secondary) !important;
+        // box-shadow: 0 0 0 2px 2px #0005;
+        border-radius: 8px;
+    }
 
-    border-radius: 8px;
+     .zoom-actions,
+    .undo-redo-buttons,
+    .layer-ui__wrapper__footer-right,
+    .layer-ui__wrapper__footer-right div,
+    .App-bottom-bar {
+    background: none;
+    border: none !important;
+    }
+    .App-toolbar,
+    .App-menu__left,
+    .library-button,
+    .ToolIcon.ToolIcon_type_floating div,
+    .App-menu_top__left .menu-button,
+    .layer-ui__wrapper__footer-right .ToolIcon__icon,
+    .mobile-misc-tools-container  {
+        // -webkit-backdrop-filter: blur(var(--blur-intensity));
+        // backdrop-filter: blur(var(--blur-intensity));
+        background: var(--surface) !important;
+        // border: 1px solid var(--window-border);
+        overflow: visible;
+        // box-shadow: 0 0 4px 1px #0006;
+    }
+    .zoom-actions,
+    .undo-redo-buttons  {
+        // -webkit-backdrop-filter: blur(var(--blur-intensity));
+        // backdrop-filter: blur(var(--blur-intensity));
+        background: var(--surface) !important;
+        // box-shadow: 0 0 0 2px 2px #0005;
+
+    }
+
+    .ToolIcon svg{
+        mix-blend-mode: luminosity;
+    }
+    .library-button{
+        height: 36px !important;
+        width: 36px;
+        .library-button__label {
+            display: none;
+        }
+    }
+    .App-menu_top__left .menu-button,
+    .layer-ui__wrapper__footer-right .ToolIcon__icon,
+    .ToolIcon_type_floating .ToolIcon__icon
+    {
+        height: 36px;
+        width: 36px;
+    }
+
+
+    .App-bottom-bar .App-toolbar{
+        margin-top: 0;
+    }
+    .view-header{
+        z-index: 2;
+    }
+
+    .mobile-misc-tools-container div{
+        // width: 32px !important;
+        border: none !important;
+        border-radius: 6px;
+    }
+    .App-toolbar {
+        border-radius: 8px !important;
+    }
+    .dropdown-menu-button {
+        height: 36px;
+        width: 36px;
+        background-color: var(--surface);
+    }
 }
-// .view-content.excalidraw-view .App-bottom-bar .color-picker {
-//     transform: none;
-// }
-// input[type=range]::-webkit-slider-thumb {
-//     background: var(--color-accent);
-// }
-// input[type=range]::-webkit-slider-thumb:hover {
-//     background: var(--icon-color-focused);
-//     border: none;
-// }

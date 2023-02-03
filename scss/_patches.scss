@@ -400,3 +400,26 @@ body.mod-windows {
     }
     --frame-right-space: 142px !important;
 }
+
+// Tweak buttons
+body {
+    --input-shadow: inherit !important;
+    --input-shadow-hover: inset 0 1000px 0 0 #FFFFFF20 !important;
+    --input-height: 32px;
+}
+.setting-hotkey {
+    padding-top: 5px;
+}
+
+// Sliders
+input[type=range]::-webkit-slider-thumb {
+    background: var(--color-accent);
+    border: none;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+    background: var(--icon-color-focused);
+    border: none;
+}
+body {
+    --slider-track-background: var(--surfaceVariant);
+}

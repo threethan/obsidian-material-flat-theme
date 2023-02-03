@@ -1,15 +1,18 @@
 body:not(.vibrant).theme-dark {
     --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
+    --primary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
     --secondary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
     --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
     --link-color-hover: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
 }
 body:not(.vibrant).theme-light {
-    --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 30%) !important;
-    --secondary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
-    --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
+    --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 70%) !important;
+    --primary: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 70%) !important;
+    --secondary: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 70%) !important;
+    --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 50%) !important;
     --link-color-hover:  hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 10%) !important;
 }
+
 
 body.theme-dark {
     --onPrimary: var(--text-on-accent);
@@ -46,6 +49,11 @@ body.theme-dark {
 
 }
 
+body.theme-light.dim-light-mode {
+    --background: hsl(var(--accent-h), calc(var(--accent-s) * 0.15),  95%);
+    --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.10),  98%);
+}
+
 body.theme-light {
     --primary: var(--color-accent-2);
     --primaryContainer: var(--color-accent-1);
@@ -53,9 +61,9 @@ body.theme-light {
 
     --secondary: var(--color-accent-2);
 
-    --background: hsl(var(--accent-h), calc(var(--accent-s) * 0.06),  90.5%);
+    --background: #fff;
     --onBackground: #111;
-    --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.1),  95%);
+    --surface: #fff;
     --surfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 85%);
     --surfaceMid: hsl(var(--accent-h), calc(var(--accent-s) * 0.15), 93%);
     --onSurfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.30),  23%);
