@@ -20,18 +20,30 @@ Obsidian's default translucency does not play well with themes, and causes serve
 ![Trans Preview](https://raw.githubusercontent.com/threethan/obsidian-material-flat-theme/main/images/translucency-mica.png)
 
 #### Translucency Setup Guide
-1. Set the following settings in *Settings -> Appearance*
+**1. Set the following settings in *Settings -> Appearance***
+
     *Base color scheme: Adapt to System*
+    
     *Translucent Window: Off*
+    
     *Window Frame Style: Native Frame (Requires restart)*
-2. Enable translucency in Style Settings *(Settings -> Style Settings -> Material Flat -> Appearance -> Enable Transparency Support)*
+    
+**2. Enable translucency in Style Settings *(Settings -> Style Settings -> Material Flat -> Appearance -> Enable Transparency Support)***
+
 **STEPS 3-5 ARE ONLY REQUIRED ON WINDOWS**
-3. Download and install [Mica for Everyone](https://github.com/MicaForEveryone/MicaForEveryone)
-4. Open Mica for [Mica for Everyone](https://github.com/MicaForEveryone/MicaForEveryone) and add a process rule for *Obsidian*
-5. Set the following for Obsidian in Mica for Everyone:
+
+**3. Download and install [Mica for Everyone](https://github.com/MicaForEveryone/MicaForEveryone)**
+
+**4. Open Mica for [Mica for Everyone](https://github.com/MicaForEveryone/MicaForEveryone) and add a process rule for *Obsidian***
+
+**5. Set the following for Obsidian in Mica for Everyone:**
+
     *Titlebar Color: System*
+    
     *Backdrop Type: Mica, Tabbed, or Acrylic (as desired)*
+    
     *Extend Frame Into Client Area: On*
+    
     *Blur Behind: Off (default)* 
     
 ### Specially Supported Plugins
