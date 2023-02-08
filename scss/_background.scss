@@ -85,11 +85,23 @@ body.theme-dark {
 
 body.mod-windows.enable-mica, body.mod-mac.enable-mica, body.mod-linux.enable-mica {
     background-color: transparent !important;
+    // Set backgrounds to allow for subpixel kerning. May cause unwanted overlaps
+    .cm-line:not(.HyperMD-quote, .HyperMD-codeblock) {
+        background-color: var(--background);
+    }
+    .cm-line.HyperMD-quote+.cm-line:not(.HyperMD-quote, .HyperMD-codeblock) {
+        background-color: transparent;
+    }
+    mjx-math *,mjx-math *::before { //Latex doesn't always work with subpixel
+        background-color: var(--background) !important;
+    }
 }
 body.mod-windows.enable-mica.is-popout-window.theme-dark {
     background: #202020 !important;
 }
-
+body.mod-windows.enable-mica.is-popout-window.theme-light {
+    background: var(--surfaceVariant) !important;
+}
 
 body:not(.is-phone) {
     --pane-separation: 6px;
@@ -198,3 +210,37 @@ body.theme-light .canvas-wrapper {
     background-color: var(--surfaceVariant) !important;
     color: var(--onSurfaceVariant) !important;
 }
+
+// Rounded corners
+body .workspace-leaf-content {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+body:not(.hide-toolbar-desktop), .workspace-tabs:not(.mod-top-left-space)
+{
+    .workspace-leaf-content {
+        border-top-left-radius: var(--radius-m);
+    }
+}
+.workspace-tabs:not(.mod-top-right-space) .workspace-leaf-content {
+    border-top-right-radius: var(--radius-m);
+}
+
+// Tabbar corners
+body.show-view-header {
+    body:not(.hide-toolbar-desktop), .workspace-tabs:not(.mod-top-left-space)
+    {
+        .view-header {
+            border-top-left-radius: var(--radius-m);
+        }
+    }
+    .workspace-tabs:not(.mod-top-right-space) .view-header {
+        border-top-right-radius: var(--radius-m);
+    }
+
+    .workspace-leaf-content {
+        border-top-right-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+    }
+}
+

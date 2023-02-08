@@ -63,9 +63,9 @@ body.theme-light {
 
     --background: #fff;
     --onBackground: #111;
-    --surface: #fff;
+    --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.25),  95%);
     --surfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 85%);
-    --surfaceMid: hsl(var(--accent-h), calc(var(--accent-s) * 0.15), 93%);
+    --surfaceMid: hsl(var(--accent-h), calc(var(--accent-s) * 0.35), 93%);
     --onSurfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.30),  23%);
     --outline: hsl(var(--accent-h), calc(var(--accent-s) * 0.5),  85%);
     --inverseOnSurface: #EEE;

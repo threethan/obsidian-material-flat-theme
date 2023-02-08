@@ -1,9 +1,7 @@
 
 // Auto-hide left bar (windows/linux, no mac)
 body.mod-windows.hide-toolbar-desktop, body.mod-linux.hide-toolbar-desktop {
-        /* .workspace-ribbon.side-dock-ribbon.mod-left {
-        padding-top: calc(var(--header-height) + 4px + 3px);
-    } */
+
     .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed {
         max-width: 0px;
         margin: 0;
@@ -35,23 +33,7 @@ body.mod-windows.hide-toolbar-desktop, body.mod-linux.hide-toolbar-desktop {
     .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed .side-dock-settings {
         padding-left: 7px;
         opacity: 0;
-        // transition: opacity 0.25s;
     }
-
-    // .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed:hover .side-dock-actions, 
-    // .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed:hover .side-dock-settings {
-    //     opacity: 1;
-    // }
-
-    // /* excalidraw fixes */
-    // .mod-top-left-space .view-content.excalidraw-view .layer-ui__wrapper__footer-left,
-    // .mod-top-left-space .view-content.excalidraw-view .App-menu_top__left{
-    //     margin-left: var(--ribbon-width);
-    // }
-
-    // .mod-top-left-space .view-content.excalidraw-view .App-bottom-bar {
-    //     margin-left: calc(var(--ribbon-width) + 10px) !important;
-    // }
 }
 
 
@@ -88,28 +70,8 @@ body.mod-windows.hide-toolbar-desktop, body.mod-linux.hide-toolbar-desktop {
 }
 
 
-/* Tabbar corners */
-.workspace-leaf-content {
-    border-top-right-radius: var(--radius-m);
-    border-top-left-radius: var(--radius-m);
-}
-body.show-view-header {
-    body:not(.hide-toolbar-desktop), .workspace-tabs:not(.mod-top-left-space)
-    {
-        .view-header {
-            border-top-left-radius: var(--radius-m);
-        }
-    }
-    .workspace-tabs:not(.mod-top-right-space) .view-header {
-        border-top-right-radius: var(--radius-m);
-    }
 
-    .workspace-leaf-content {
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
-    }
-    
-}
+
 body:not(.show-view-header) {
     --tab-background-active: var(--background-primary) !important;
 }
@@ -218,8 +180,8 @@ body.tab-drag-desktop {
 }
 .markdown-reading-view {
     h1,h2,h3,h4,h5,h6 {
-        padding-top: 15px !important;
-        padding-bottom: 0px !important;
+        padding-top: 17px !important;
+        padding-bottom: 8px !important;
         margin: 0 !important;
     }
     hr {
@@ -422,4 +384,11 @@ input[type=range]::-webkit-slider-thumb:hover {
 }
 body {
     --slider-track-background: var(--surfaceVariant);
+}
+
+// Settings fixes
+.vertical-tab-content-container .cm-scroller,
+.vertical-tab-content-container .cm-scroller * {
+    background-color: var(--background-secondary) !important;
+    color: var(--text-color);
 }
