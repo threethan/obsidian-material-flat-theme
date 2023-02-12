@@ -29,6 +29,12 @@ settings:
         type: class-toggle
         default: false
     -
+        id: pen-mode
+        title: Pen Mode
+        description: Currently only applies to Excalidraw plugin in tray mode. Moves the toolbar to the left for easier access.
+        type: class-toggle
+        default: false
+    -
         id: appearance-header
         title: Appearance
         type: heading

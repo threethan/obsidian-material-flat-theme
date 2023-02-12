@@ -1467,12 +1467,54 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
   border-radius: 6px;
 }
 .view-content.excalidraw-view .App-toolbar {
-  border-radius: 8px !important;
+  border-radius: 10px;
 }
 .view-content.excalidraw-view .dropdown-menu-button {
   height: 36px;
   width: 36px;
   background-color: var(--surface);
+}
+.view-content.excalidraw-view .App-bottom-bar div.Island:last-child {
+  margin-left: 8px !important;
+  padding: 5.5px;
+  background-color: var(--surface);
+  border-radius: 9px;
+}
+.view-content.excalidraw-view .App-top-bar .mobile-misc-tools-container {
+  right: -10px;
+}
+.view-content.excalidraw-view .App-top-bar .mobile-misc-tools-container .ToolIcon {
+  margin-left: 4px;
+  margin-bottom: 4px;
+}
+.view-content.excalidraw-view .App-top-bar .mobile-misc-tools-container .ToolIcon:first-child {
+  margin-left: inherit;
+  margin-bottom: -5px;
+}
+.view-content.excalidraw-view .App-top-bar .mobile-misc-tools-container .ToolIcon:first-child .ToolIcon__icon {
+  border-radius: 10px;
+}
+.view-content.excalidraw-view .layer-ui__wrapper__top-right .ToolIcon {
+  margin-right: 8px;
+}
+
+body.pen-mode .view-content.excalidraw-view .App-top-bar {
+  flex-direction: row !important;
+}
+body.pen-mode .view-content.excalidraw-view .App-top-bar .Stack_horizontal {
+  grid-auto-flow: row;
+}
+body.pen-mode .view-content.excalidraw-view .App-top-bar .Stack_vertical {
+  margin-bottom: 170px;
+}
+body.pen-mode .view-content.excalidraw-view .App-top-bar .mobile-misc-tools-container {
+  right: inherit;
+  top: inherit;
+  bottom: 0;
+  border-radius: 10px;
+}
+body.pen-mode .view-content.excalidraw-view .App-bottom-bar {
+  padding-left: 40px;
 }
 
 /* @plugins
@@ -2179,6 +2221,12 @@ settings:
         id: tab-drag-desktop
         title: Drag window with active tab (Desktop)
         description: When on, dragging an active tab will drag the entire window, instead of the tab itself.
+        type: class-toggle
+        default: false
+    -
+        id: pen-mode
+        title: Pen Mode
+        description: Currently only applies to Excalidraw plugin in tray mode. Moves the toolbar to the left for easier access.
         type: class-toggle
         default: false
     -

@@ -148,11 +148,66 @@
         border-radius: 6px;
     }
     .App-toolbar {
-        border-radius: 8px !important;
+        border-radius: 10px;
     }
     .dropdown-menu-button {
         height: 36px;
         width: 36px;
         background-color: var(--surface);
+    }
+    .App-bottom-bar {
+        div.Island:last-child {
+            margin-left: 8px !important;
+            padding: 5.5px;
+            background-color: var(--surface);
+            border-radius: 9px;
+        }
+    }
+
+    .App-top-bar .mobile-misc-tools-container {
+        .ToolIcon {
+            margin-left: 4px;
+            margin-bottom: 4px;
+        }
+        .ToolIcon:first-child {
+            margin-left: inherit;
+            .ToolIcon__icon {
+                border-radius: 10px;
+            }
+            margin-bottom: -5px;
+        }
+        right: -10px;
+        // padding-bottom: 4px;
+    }
+
+    .layer-ui__wrapper__top-right {
+        .ToolIcon {
+            margin-right: 8px;
+        }
+    }
+
+}
+
+body.pen-mode .view-content.excalidraw-view {
+    // Sidebar
+    .App-top-bar {
+        flex-direction: row !important;
+        .Stack_horizontal {
+            grid-auto-flow: row;
+
+        }
+        .Stack_vertical {
+            margin-bottom: 170px;
+        }
+        // Right bar
+        .mobile-misc-tools-container {
+            right: inherit;
+            top: inherit;
+            bottom: 0;
+            border-radius: 10px;
+        }
+    }
+    .App-bottom-bar {
+        padding-left: 40px;
     }
 }
