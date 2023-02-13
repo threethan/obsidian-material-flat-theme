@@ -186,6 +186,13 @@
         }
     }
 
+    .mobile-misc-tools-container .ToolIcon_type_floating:not(:first-child) .ToolIcon__icon { 
+        height: 24px;
+        width: 28px;
+        svg {
+            fill: var(--onSurface) !important;
+        }
+    }
 }
 
 body.pen-mode .view-content.excalidraw-view {
@@ -209,5 +216,15 @@ body.pen-mode .view-content.excalidraw-view {
     }
     .App-bottom-bar {
         padding-left: 40px;
+    }
+    .excalidraw--mobile .HintViewer span {
+        position: absolute !important;
+        top: auto !important;
+        bottom: 10px !important;
+        right: 10px !important;
+        opacity: 0.2;
+    }
+    .excalidraw--mobile .welcome-screen-center {
+        display: none !important;
     }
 }

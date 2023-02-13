@@ -1497,6 +1497,13 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
 .view-content.excalidraw-view .layer-ui__wrapper__top-right .ToolIcon {
   margin-right: 8px;
 }
+.view-content.excalidraw-view .mobile-misc-tools-container .ToolIcon_type_floating:not(:first-child) .ToolIcon__icon {
+  height: 24px;
+  width: 28px;
+}
+.view-content.excalidraw-view .mobile-misc-tools-container .ToolIcon_type_floating:not(:first-child) .ToolIcon__icon svg {
+  fill: var(--onSurface) !important;
+}
 
 body.pen-mode .view-content.excalidraw-view .App-top-bar {
   flex-direction: row !important;
@@ -1515,6 +1522,16 @@ body.pen-mode .view-content.excalidraw-view .App-top-bar .mobile-misc-tools-cont
 }
 body.pen-mode .view-content.excalidraw-view .App-bottom-bar {
   padding-left: 40px;
+}
+body.pen-mode .view-content.excalidraw-view .excalidraw--mobile .HintViewer span {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 10px !important;
+  right: 10px !important;
+  opacity: 0.2;
+}
+body.pen-mode .view-content.excalidraw-view .excalidraw--mobile .welcome-screen-center {
+  display: none !important;
 }
 
 /* @plugins
@@ -2225,10 +2242,10 @@ settings:
         default: false
     -
         id: pen-mode
-        title: Pen Mode
-        description: Currently only applies to Excalidraw plugin in tray mode. Moves the toolbar to the left for easier access.
+        title: Pen Mode (for Excalidraw)
+        description: Currently only applies to Excalidraw plugin in tray mode. Moves the toolbar to the left for easier access, and hides the welcome splash.
         type: class-toggle
-        default: false
+        default: true
     -
         id: appearance-header
         title: Appearance
