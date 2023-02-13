@@ -18,8 +18,8 @@
   width: 56px;
   height: 56px;
   border-radius: var(--medium-radius);
-  box-shadow: 0.8px 0.8px 4px rgba(0, 0, 0, 0.028),
-    2.7px 2.7px 13.4px rgba(0, 0, 0, 0.042), 12px 12px 60px rgba(0, 0, 0, 0.07);
+  box-shadow: 0.4px 0.8px 4px rgba(0, 0, 0, 0.03),
+    1.2px 2.7px 13.4px rgba(0, 0, 0, 0.15), 8px 18px 80px rgba(0, 0, 0, 0.4);
   // No idea how those numbers work but they give me 16px padding from the toolbar
   top: calc(100vh - 48px - 44px - 16px);
   // 44px to align to the right
@@ -59,8 +59,9 @@ body:not(.is-phone).fab-enabled-desktop:not(.custom-page-header) {
 }
 // -----------------
 // Custom page header mode ENABLED, target first action button
-body:not(:not(.custom-page-header)) {
-  .view-action.page-header-button:first-of-type {
+body.is-phone.fab-enabled-mobile.custom-page-header,
+body:not(.is-phone).fab-enabled-desktop.custom-page-header {
+  .view-action:first-child {
     @include fab-styling();
   }
   /* Advanced Mobile Toolbar Mode */
