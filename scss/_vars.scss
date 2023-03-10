@@ -181,7 +181,7 @@ body {
   --on-accent: var(--text-muted);
 
   //HR
-  --hr-color: var(--surfaceMid);
+  --hr-color: var(--surface-variant);
 }
 
 .theme-dark {
@@ -314,5 +314,7 @@ body {
   --text-on-accent: var(--background);
   --on-accent: var(--background);
 
+  //HR
+  --hr-color: var(--surface-variant);
 
 }

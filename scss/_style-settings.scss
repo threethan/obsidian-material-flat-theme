@@ -57,7 +57,7 @@ settings:
         title: Add scroll space above document
         description: Adds some space above documents, so you can scroll them a little further down. Similar to Dropbox Paper.
         type: class-toggle
-        default: false
+        default: true
     -
         id: disable-tooltip-animation
         title: Disable tooltip animation
@@ -68,6 +68,18 @@ settings:
         id: enable-mica
         title: Enable transparency support (Desktop)
         description: Make parts of the main window translucent. Use instead of built-in transparency option. Both mac and windows require native frame to be set to system for this to work. Windows additionally requires Mica for Everyone, with the following settings for obsidian - Titlebar Color System, Backdrop Type Mica, Extend Frame into Client Area On
+        type: class-toggle
+        default: false
+    -
+        id: win-menu
+        title: Native Windows Right-Click Menus (Desktop)
+        description: Makes right-click menus on Windows look like Windows 11 native menus. 
+        type: class-toggle
+        default: true
+    -
+        id: no-top-space
+        title: Remove top padding (Desktop)
+        description: Removes the bit of space above the tabs. Useful if using system titlebars.
         type: class-toggle
         default: false
     - 

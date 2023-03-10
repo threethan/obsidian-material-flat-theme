@@ -57,15 +57,17 @@ body.mod-windows.hide-toolbar-desktop, body.mod-linux.hide-toolbar-desktop {
 
 // Tab header height 
 .view-header {
-    height: 41px;
+    height: 35px;
+    padding: 6px;
+    padding-top: 7.5px;
+}
+.view-header-title {
+    font-size: medium;
 }
 .is-phone .view-header {
     height: 50px;
 }
-
-
-
-.view-header-title {
+.is-phone .view-header-title {
     font-size: larger;
 }
 
@@ -205,6 +207,12 @@ body.tab-drag-desktop {
     table {
         margin-bottom: 0;
     }
+    .markdown-rendered table {
+        margin-block-start: 1em;
+    }
+}
+.markdown-rendered table {
+    margin-block-start: 0;
 }
 
 
@@ -373,6 +381,8 @@ body {
     padding-top: 5px;
 }
 
+
+
 // Sliders
 input[type=range]::-webkit-slider-thumb {
     background: var(--color-accent);
@@ -391,4 +401,101 @@ body {
 .vertical-tab-content-container .cm-scroller * {
     background-color: var(--background-secondary) !important;
     color: var(--text-color);
+}
+
+// Remove top space
+body.no-top-space .app-container {
+    margin-top: -7px;
+    height: calc(100% + 7px);
+}
+
+// Win 11 Style menu
+body.mod-windows.win-menu div.menu {
+    background-color: #f8f8f8A0 !important;
+    border: 1px solid #36363612;
+    padding: 1px 5px;
+    backdrop-filter: blur(20px);
+    --menu-text-color: black;
+    --win-blue: #0078d4;
+    box-shadow: 0px 8px 8px 3px rgba(0,0,0,0.05), 0px 7px 9px -7px rgba(0,0,0,0.13);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .menu-item {
+        border-radius: 4px !important;
+        margin: 4px 0;
+        padding: 5px 8px;
+        font-size: 14px;
+        transition: 0.09s;
+        font-weight: 400;
+        border-radius: 4px;
+        .menu-item-icon {
+            color: var(--menu-text-color);
+            svg {
+                fill: white;
+                stroke-width: 1px;
+                transform: scale(1.2);
+                // Specific svg tweaks (blue accents)
+                path[d="m9 14 2 2 4-4"], //Paste check
+                path[d="M9 12v-1h6v1"], path[d="M11 17h2"], path[d="M12 11v6"], //Paste T
+                path[d="M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"], path[d="M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"], //Extract from selection
+                path[d="M21 14H11"], path[d="m15 10-4 4 4 4"], //Arrow on copy
+                path[d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"]//Pen on new
+                {
+                    color: var(--win-blue);
+                }
+                rect, circle {
+                    color: var(--win-blue);
+                }
+                rect[y="2"], rect[y="3"] {
+                    color: var(--menu-text-color);
+                }
+                path[d="M15 6a9 9 0 0 0-9 9"], path[d="m15 10-4 4 4 4"], polyline {
+                    fill: none;
+                }
+            }
+        }
+        .menu-item-title {
+            color: var(--menu-text-color);
+        }
+        .cmdr-menu-more-options {
+            color: var(--menu-text-color);
+            opacity: 0.5;
+        }
+        .cmdr-menu-more-options:hover {
+            opacity: 1.0;
+        
+        }
+    }
+    .menu-item.is-disabled {
+        opacity: 0.5;
+    }
+    .menu-item.selected:not(.is-disabled):not(.is-label) {
+        background-color: #3636360B;
+    }
+    .menu-separator {
+        border-color: #36363612;
+        margin: 6px 0 !important;
+    }
+}
+body.mod-windows.win-menu.theme-dark div.menu {
+    background-color: #201F21D5 !important;
+    border-color: #FFFFFF10;
+    .menu-item.selected:not(.is-disabled):not(.is-label) {
+        background-color: #FFFFFF10;
+    }
+    .menu-separator {
+        border-color: #FFFFFF10;
+    }
+    .menu-item {
+        --menu-text-color: white;
+        .menu-item-icon svg {
+            fill: none;
+        }
+    }
+}
+body.mod-windows.win-menu.enable-mica div.menu{
+    background-color: #fAfAfAF0 !important;
+    backdrop-filter: blur(8px) !important;
+}
+body.mod-windows.win-menu.enable-mica.theme-dark div.menu{
+    background-color: #272627F0 !important;
 }

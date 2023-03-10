@@ -157,7 +157,7 @@ body {
   --hover: var(--surface2);
   --text-on-accent: var(--text-muted);
   --on-accent: var(--text-muted);
-  --hr-color: var(--surfaceMid);
+  --hr-color: var(--surface-variant);
 }
 
 .theme-dark {
@@ -275,6 +275,7 @@ body {
   --highlight-mix-blend-mode: lighten;
   --text-on-accent: var(--background);
   --on-accent: var(--background);
+  --hr-color: var(--surface-variant);
 }
 
 .cm-formatting-header {
@@ -360,31 +361,37 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-1 {
 
 /* Blockquotes */
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-  padding-top: 26px;
-  border: none;
-  background-color: transparent;
-  color: var(--on-surface-variant) !important;
+  margin-top: 13px !important;
+  color: var(--on-surface-variant);
 }
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote ::before {
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote + .HyperMD-quote {
+  margin-top: 0 !important;
+}
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote::before {
   background-color: var(--surface-variant);
-  display: block;
-  content: " ";
+  display: block !important;
+  content: "test" !important;
+  border: none;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   position: absolute;
   left: 0px;
   right: 0;
-  top: calc(-1 * var(--radius-l) + 26px);
+  width: 100%;
+  top: calc(-1 * var(--radius-l));
   bottom: calc(-1 * var(--radius-l));
   border-radius: var(--radius-l);
   z-index: -1;
 }
+.markdown-source-view.mod-cm6.is-live-preview .cm-transparent {
+  color: transparent !important;
+}
 
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote + .HyperMD-quote {
-  padding-top: 0;
+  padding-top: inherit;
 }
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote + .HyperMD-quote ::before {
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote + .HyperMD-quote span:not(.math) ::before {
   top: calc(-1 * var(--radius-l));
 }
 
@@ -512,8 +519,16 @@ span.cm-def.cm-hmd-frontmatter {
   background-color: var(--surface-variant);
   color: var(--on-surface-variant) !important;
   border-radius: var(--radius-s);
-  margin: -2px;
+  margin: -2px 0;
   padding: 0 4px;
+}
+
+span.cm-highlight + img + span.math { /*Math in highlight*/
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant) !important;
+  border-radius: var(--radius-s);
+  margin: -2px -5px;
+  padding: 0 5px;
 }
 
 .cm-s-obsidian .HyperMD-codeblock {
@@ -1073,6 +1088,10 @@ svg.pencil {
 /* Style setting headers */
 .vertical-tab-header-group-title {
   padding: 6px 6px 6px 26px;
+}
+
+.nav-files-container {
+  padding-right: 2.5px;
 }
 
 /* Add divider line */
@@ -1658,9 +1677,6 @@ body.mod-windows.enable-mica .cm-line:not(.HyperMD-quote, .HyperMD-codeblock), b
 body.mod-windows.enable-mica .cm-line.HyperMD-quote + .cm-line:not(.HyperMD-quote, .HyperMD-codeblock), body.mod-mac.enable-mica .cm-line.HyperMD-quote + .cm-line:not(.HyperMD-quote, .HyperMD-codeblock), body.mod-linux.enable-mica .cm-line.HyperMD-quote + .cm-line:not(.HyperMD-quote, .HyperMD-codeblock) {
   background-color: transparent;
 }
-body.mod-windows.enable-mica mjx-math *, body.mod-windows.enable-mica mjx-math *::before, body.mod-mac.enable-mica mjx-math *, body.mod-mac.enable-mica mjx-math *::before, body.mod-linux.enable-mica mjx-math *, body.mod-linux.enable-mica mjx-math *::before {
-  background-color: var(--background) !important;
-}
 
 body.mod-windows.enable-mica.is-popout-window.theme-dark {
   background: #202020 !important;
@@ -1837,14 +1853,20 @@ body.mod-linux.hide-toolbar-desktop .workspace-ribbon.side-dock-ribbon.mod-left.
 }
 
 .view-header {
-  height: 41px;
+  height: 35px;
+  padding: 6px;
+  padding-top: 7.5px;
+}
+
+.view-header-title {
+  font-size: medium;
 }
 
 .is-phone .view-header {
   height: 50px;
 }
 
-.view-header-title {
+.is-phone .view-header-title {
   font-size: larger;
 }
 
@@ -1974,6 +1996,15 @@ body.tab-drag-desktop .mod-root .workspace-tab-header.is-active .workspace-tab-h
 }
 .markdown-reading-view table {
   margin-bottom: 0;
+}
+.markdown-reading-view .markdown-rendered table {
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+}
+
+.markdown-rendered table {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
 }
 
 body.space-above-document .cm-editor .cm-scroller .cm-sizer,
@@ -2147,6 +2178,103 @@ body {
   color: var(--text-color);
 }
 
+body.no-top-space .app-container {
+  margin-top: -7px;
+  height: calc(100% + 7px);
+}
+
+body.mod-windows.win-menu div.menu {
+  background-color: rgba(248, 248, 248, 0.6274509804) !important;
+  border: 1px solid rgba(54, 54, 54, 0.0705882353);
+  padding: 1px 5px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  --menu-text-color: black;
+  --win-blue: #0078d4;
+  box-shadow: 0px 8px 8px 3px rgba(0, 0, 0, 0.05), 0px 7px 9px -7px rgba(0, 0, 0, 0.13);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body.mod-windows.win-menu div.menu .menu-item {
+  border-radius: 4px !important;
+  margin: 4px 0;
+  padding: 5px 8px;
+  font-size: 14px;
+  transition: 0.09s;
+  font-weight: 400;
+  border-radius: 4px;
+}
+body.mod-windows.win-menu div.menu .menu-item .menu-item-icon {
+  color: var(--menu-text-color);
+}
+body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg {
+  fill: white;
+  stroke-width: 1px;
+  transform: scale(1.2);
+}
+body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg path[d="m9 14 2 2 4-4"],
+body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg path[d="M9 12v-1h6v1"], body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg path[d="M11 17h2"], body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg path[d="M12 11v6"],
+body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg path[d="M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"], body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg path[d="M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"],
+body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg path[d="M21 14H11"], body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg path[d="m15 10-4 4 4 4"],
+body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg path[d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"] {
+  color: var(--win-blue);
+}
+body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg rect, body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg circle {
+  color: var(--win-blue);
+}
+body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg rect[y="2"], body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg rect[y="3"] {
+  color: var(--menu-text-color);
+}
+body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg path[d="M15 6a9 9 0 0 0-9 9"], body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg path[d="m15 10-4 4 4 4"], body.mod-windows.win-menu div.menu .menu-item .menu-item-icon svg polyline {
+  fill: none;
+}
+body.mod-windows.win-menu div.menu .menu-item .menu-item-title {
+  color: var(--menu-text-color);
+}
+body.mod-windows.win-menu div.menu .menu-item .cmdr-menu-more-options {
+  color: var(--menu-text-color);
+  opacity: 0.5;
+}
+body.mod-windows.win-menu div.menu .menu-item .cmdr-menu-more-options:hover {
+  opacity: 1;
+}
+body.mod-windows.win-menu div.menu .menu-item.is-disabled {
+  opacity: 0.5;
+}
+body.mod-windows.win-menu div.menu .menu-item.selected:not(.is-disabled):not(.is-label) {
+  background-color: rgba(54, 54, 54, 0.0431372549);
+}
+body.mod-windows.win-menu div.menu .menu-separator {
+  border-color: rgba(54, 54, 54, 0.0705882353);
+  margin: 6px 0 !important;
+}
+
+body.mod-windows.win-menu.theme-dark div.menu {
+  background-color: rgba(32, 31, 33, 0.8352941176) !important;
+  border-color: rgba(255, 255, 255, 0.062745098);
+}
+body.mod-windows.win-menu.theme-dark div.menu .menu-item.selected:not(.is-disabled):not(.is-label) {
+  background-color: rgba(255, 255, 255, 0.062745098);
+}
+body.mod-windows.win-menu.theme-dark div.menu .menu-separator {
+  border-color: rgba(255, 255, 255, 0.062745098);
+}
+body.mod-windows.win-menu.theme-dark div.menu .menu-item {
+  --menu-text-color: white;
+}
+body.mod-windows.win-menu.theme-dark div.menu .menu-item .menu-item-icon svg {
+  fill: none;
+}
+
+body.mod-windows.win-menu.enable-mica div.menu {
+  background-color: rgba(250, 250, 250, 0.9411764706) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+          backdrop-filter: blur(8px) !important;
+}
+
+body.mod-windows.win-menu.enable-mica.theme-dark div.menu {
+  background-color: rgba(39, 38, 39, 0.9411764706) !important;
+}
+
 body:not(.vibrant).theme-dark {
   --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
   --primary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
@@ -2274,7 +2402,7 @@ settings:
         title: Add scroll space above document
         description: Adds some space above documents, so you can scroll them a little further down. Similar to Dropbox Paper.
         type: class-toggle
-        default: false
+        default: true
     -
         id: disable-tooltip-animation
         title: Disable tooltip animation
@@ -2285,6 +2413,18 @@ settings:
         id: enable-mica
         title: Enable transparency support (Desktop)
         description: Make parts of the main window translucent. Use instead of built-in transparency option. Both mac and windows require native frame to be set to system for this to work. Windows additionally requires Mica for Everyone, with the following settings for obsidian - Titlebar Color System, Backdrop Type Mica, Extend Frame into Client Area On
+        type: class-toggle
+        default: false
+    -
+        id: win-menu
+        title: Native Windows Right-Click Menus (Desktop)
+        description: Makes right-click menus on Windows look like Windows 11 native menus. 
+        type: class-toggle
+        default: true
+    -
+        id: no-top-space
+        title: Remove top padding (Desktop)
+        description: Removes the bit of space above the tabs. Useful if using system titlebars.
         type: class-toggle
         default: false
     - 

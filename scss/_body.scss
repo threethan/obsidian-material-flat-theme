@@ -246,29 +246,40 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-1
 
 /* Blockquotes */
 // .markdown-preview-view blockquote,
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-  // @include body-large();
-  padding-top: 26px;
-  border: none;
-  background-color: transparent;
-  color: var(--on-surface-variant) !important;
-  ::before {
+.markdown-source-view.mod-cm6.is-live-preview {
+  .HyperMD-quote {
+    margin-top: 13px !important;
+    color: var(--on-surface-variant)
+  }
+  .HyperMD-quote+.HyperMD-quote {
+    margin-top: 0 !important;
+  }
+  .HyperMD-quote::before {
     background-color: var(--surface-variant);
-    display: block;
-    content: " ";
+    display: block !important;
+    content: "test" !important;
+    border: none;
     user-select: none;
     position: absolute;
     left: 0px; right: 0;
-    top: calc(-1 * var(--radius-l) + 26px);
+    width: 100%;
+    top: calc(-1 * var(--radius-l));
+    // top: calc(-1 * var(--radius-l) + 26px);
     bottom: calc(-1 * var(--radius-l));
     border-radius: var(--radius-l);
     z-index: -1;
   }
+
+  .cm-transparent {
+    color: transparent !important;
+  }
 }
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote+.HyperMD-quote {
-  padding-top: 0;
-  ::before {
-    top: calc(-1 * var(--radius-l));
+  padding-top: inherit;
+  span:not(.math) {
+    ::before {
+      top: calc(-1 * var(--radius-l));
+    }
   }
 }
 
@@ -396,8 +407,15 @@ span.cm-def.cm-hmd-frontmatter {
   background-color: var(--surface-variant);
   color: var(--on-surface-variant) !important;
   border-radius: var(--radius-s);
-  margin: -2px;
+  margin: -2px 0;
   padding: 0 4px;
+}
+span.cm-highlight + img + span.math {/*Math in highlight*/
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant) !important;
+  border-radius: var(--radius-s);
+  margin: -2px -5px;
+  padding: 0 5px;
 }
 
 // Not inline

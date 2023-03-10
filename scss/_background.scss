@@ -92,9 +92,9 @@ body.mod-windows.enable-mica, body.mod-mac.enable-mica, body.mod-linux.enable-mi
     .cm-line.HyperMD-quote+.cm-line:not(.HyperMD-quote, .HyperMD-codeblock) {
         background-color: transparent;
     }
-    mjx-math *,mjx-math *::before { //Latex doesn't always work with subpixel
-        background-color: var(--background) !important;
-    }
+    // mjx-math *,mjx-math *::before { //Latex doesn't always work with subpixel
+    //     background-color: var(--background) !important;
+    // }
 }
 body.mod-windows.enable-mica.is-popout-window.theme-dark {
     background: #202020 !important;
