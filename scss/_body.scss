@@ -249,11 +249,12 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-1
 .markdown-source-view.mod-cm6.is-live-preview {
   .HyperMD-quote {
     margin-top: 13px !important;
-    color: var(--on-surface-variant)
+    color: var(--on-surface-variant);
+    margin-bottom: -13px !important;
   }
-  .HyperMD-quote+.HyperMD-quote {
-    margin-top: 0 !important;
-  }
+  // .HyperMD-quote+.HyperMD-quote {
+  //   margin-top: 0 !important;
+  // }
   .HyperMD-quote::before {
     background-color: var(--surface-variant);
     display: block !important;
@@ -263,9 +264,9 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-1
     position: absolute;
     left: 0px; right: 0;
     width: 100%;
-    top: calc(-1 * var(--radius-l));
+    top: calc(-1 * var(--radius-l) + 2px);
     // top: calc(-1 * var(--radius-l) + 26px);
-    bottom: calc(-1 * var(--radius-l));
+    bottom: calc(-1 * var(--radius-l) + 2px);
     border-radius: var(--radius-l);
     z-index: -1;
   }
@@ -288,6 +289,9 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-1
   border: none;
   background-color: var(--surface-variant);
   color: var(--on-surface-variant) !important;
+  margin-top: 1px;
+  margin-bottom: 6px;
+  padding-left: 15px;
 }
 .markdown-preview-view blockquote br {
   display: block;
@@ -298,7 +302,7 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-1
 .markdown-preview-view blockquote::after {
   display: block;
   content: "\A";
-  height: 10px;
+  height: 8px;
 }
 
 // Hide line
