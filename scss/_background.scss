@@ -51,7 +51,7 @@ body:not(.is-popout-window) .workspace-tab-header-container, .workspace-tabs, .m
 // Tooltips
 .tooltip {
     background: var(--tooltip-color) !important;
-    color: var(--onSurfaceVariant) !important;
+    color: var(--on-surface-variant) !important;
 }
 .tooltip .tooltip-arrow {
     border-bottom-color: var(--tooltip-color) !important;
@@ -74,13 +74,13 @@ body.disable-tooltip-animation .tooltip {
 
 // Body background
 body.theme-light {
-    background-color: var(--surfaceVariant);
+    background-color: var(--surface-variant);
     --tooltip-color: white;
 }
 
 body.theme-dark {
     background-color: black;
-    --tooltip-color: var(--surfaceVariant);
+    --tooltip-color: var(--surface-variant);
 }
 
 body.mod-windows.enable-mica, body.mod-mac.enable-mica, body.mod-linux.enable-mica {
@@ -100,7 +100,7 @@ body.mod-windows.enable-mica.is-popout-window.theme-dark {
     background: #202020 !important;
 }
 body.mod-windows.enable-mica.is-popout-window.theme-light {
-    background: var(--surfaceVariant) !important;
+    background: var(--surface-variant) !important;
 }
 
 body:not(.is-phone) {
@@ -131,7 +131,7 @@ body:not(.is-phone) {
 
 // Stacked tabs
 .mod-stacked .workspace-tab-header {
-    background: var(--surfaceVariant) !important;
+    background: var(--surface-variant) !important;
     border-top-left-radius: var(--radius-m) !important;
     border-bottom-left-radius: var(--radius-m) !important;
     margin-bottom: 0 !important;
@@ -207,8 +207,8 @@ body.theme-light .canvas-wrapper {
 
 // Mobile popups
 .notice-container .notice {
-    background-color: var(--surfaceVariant) !important;
-    color: var(--onSurfaceVariant) !important;
+    background-color: var(--surface-variant) !important;
+    color: var(--on-surface-variant) !important;
 }
 
 // Rounded corners

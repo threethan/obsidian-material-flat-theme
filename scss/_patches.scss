@@ -286,9 +286,9 @@ p {
 }
 
 .mobile-navbar {
-    color: var(--secondaryContainer);
+    color: var(--secondary-container);
     .clickable-icon {
-        color: var(--onSecondaryContainer)
+        color: var(--on-secondary-container)
     }
 }
 
@@ -312,7 +312,7 @@ p {
 
 body.button-shapes-mobile.is-phone {
     .mobile-navbar .clickable-icon {
-        background-color: var(--surfaceVariant);
+        background-color: var(--surface-variant);
         height: 30px;
         width: 60px;
         max-width: 15vw;
@@ -322,7 +322,7 @@ body.button-shapes-mobile.is-phone {
         height: 45px;
     }
     .mobile-toolbar-option {
-        background-color: var(--surfaceVariant);
+        background-color: var(--surface-variant);
         height: 30px;
         width: 50px;
         margin: 7px 5px;
@@ -393,7 +393,7 @@ input[type=range]::-webkit-slider-thumb:hover {
     border: none;
 }
 body {
-    --slider-track-background: var(--surfaceVariant);
+    --slider-track-background: var(--surface-variant);
 }
 
 // Settings fixes

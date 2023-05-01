@@ -592,8 +592,8 @@ a.tag:after {
           background: var(--surface-variant) !important;
           color: var(--on-surface-variant);
         }
-        td {
-          background: var(--surface) !important;
+        td, td:nth-of-type(even), td:nth-of-type(odd) {
+          background: var(--surface);
           color: var(--on-surface);
           padding-top: 1px;
           padding-bottom: 1px;
@@ -620,16 +620,26 @@ a.tag:after {
       }
       tr:nth-child(even) {
         th, td {
-          background-color: var(--surfaceMid) !important;
+          background-color: var(--surface-mid);
+        }
+        table {
+          th, td {
+            background-color: var(--surface);
+          }
+          margin-bottom: 10px;
+        }
+      }
+      tr:nth-child(odd) {
+        table {
+          th, td {
+            background-color: var(--surface-mid);
+          }
+          margin-bottom: 10px;
         }
       }
     }
   }
 }
-
-// .HyperMD-list-line-1 .list-bullet::after {
-//   background-color: var(--primary);
-// }
 
 .markdown-source-view.mod-cm6 .is-unresolved .cm-underline, .markdown-preview-view a {
   text-decoration-color: inherit !important;

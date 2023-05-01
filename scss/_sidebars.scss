@@ -149,9 +149,9 @@ body.hide-sidebar-header {
 .nav-folder-title.is-active,
 body:not(.is-grabbing) .nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
-  background-color: var(--tertiaryContainer);
+  background-color: var(--tertiary-container);
   .nav-file-title-content {
-    color: var(--onTertiaryContainer);
+    color: var(--on-tertiary-container);
   }
 }
 
@@ -164,7 +164,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 }
 
 .nav-file-title.is-active:hover {
-  background-color: var(--primaryContainer) !important;
+  background-color: var(--primary-container) !important;
   .nav-folder-title-content, .nav-file-title-content {
     color: var(--surface) !important;
   }

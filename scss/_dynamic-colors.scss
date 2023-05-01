@@ -15,32 +15,32 @@ body:not(.vibrant).theme-light {
 
 
 body.theme-dark {
-    --onPrimary: var(--text-on-accent);
+    --on-primary: var(--text-on-accent);
 
     --primary: var(--color-accent);
-    --primaryContainer: var(--color-accent-1);
-    --onPrimaryContainer: var(--color-accent-2);
+    --primary-container: var(--color-accent-1);
+    --on-primary-container: var(--color-accent-2);
 
     --secondary: var(--color-accent-2);
 
     --background: hsl(var(--accent-h), calc(var(--accent-s) * 0.06),  11.5%);
-    --onBackground: #E5E1E5;
+    --on-background: #E5E1E5;
     --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.1),  15%);
-    --surfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.08), 28%);
-    --surfaceMid: hsl(var(--accent-h), calc(var(--accent-s) * 0.09), 19%);
-    --onSurfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.31),  80%);
+    --surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.08), 28%);
+    --surface-mid: hsl(var(--accent-h), calc(var(--accent-s) * 0.09), 19%);
+    --on-surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.31),  80%);
     --outline: hsl(var(--accent-h), calc(var(--accent-s) * 0.5),  25%);
-    --inverseOnSurface: #1C1B1E;
-    --inverseSurface: #E5E1E5;
+    --inverse-on-surface: #1C1B1E;
+    --inverse-surface: #E5E1E5;
 
     --tab-background-active: var(--surface);
 
-    --onSecondary: var(--text-on-accent);
-    --secondaryContainer: var(--text-on-accent);
-    --onSecondaryContainer: var(--color-accent-1);
+    --on-secondary: var(--text-on-accent);
+    --secondary-container: var(--text-on-accent);
+    --on-secondary-container: var(--color-accent-1);
 
-    --tertiaryContainer: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 18%);
-    --onTertiaryContainer: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 78%);
+    --tertiary-container: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 18%);
+    --on-tertiary-container: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 78%);
 
     --text-selection: hsl(var(--accent-h), calc(var(--accent-s) * 0.3), 20%);
 
@@ -56,30 +56,43 @@ body.theme-light.dim-light-mode {
 
 body.theme-light {
     --primary: var(--color-accent-2);
-    --primaryContainer: var(--color-accent-1);
-    --onPrimaryContainer: var(--color-accent);
+    --primary-container: var(--color-accent-1);
+    --on-primary-container: var(--color-accent);
 
     --secondary: var(--color-accent-2);
 
     --background: #fff;
-    --onBackground: #111;
+    --on-background: #111;
     --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.25),  95%);
-    --surfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 85%);
-    --surfaceMid: hsl(var(--accent-h), calc(var(--accent-s) * 0.35), 93%);
-    --onSurfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.30),  23%);
+    --surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 85%);
+    --surface-mid: hsl(var(--accent-h), calc(var(--accent-s) * 0.35), 93%);
+    --on-surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.30),  23%);
     --outline: hsl(var(--accent-h), calc(var(--accent-s) * 0.5),  85%);
-    --inverseOnSurface: #EEE;
-    --inverseSurface: #111;
+    --inverse-on-surface: #EEE;
+    --inverse-surface: #111;
 
-    --onSecondary: var(--text-on-accent);
-    --secondaryContainer: var(--text-on-accent);
-    --onSecondaryContainer: var(--color-accent-1);
+    --on-secondary: var(--text-on-accent);
+    --secondary-container: var(--text-on-accent);
+    --on-secondary-container: var(--color-accent-1);
 
-    --tertiaryContainer: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 66%);
-    --onTertiaryContainer: hsl(var(--accent-h), calc(var(--accent-s) * 0.2), 12%);
+    --tertiary-container: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 66%);
+    --on-tertiary-container: hsl(var(--accent-h), calc(var(--accent-s) * 0.2), 12%);
 
     --interactive-hover: hsl(var(--accent-h), 15%,  85%);
 
     --text-selection: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 80%);
 
+}
+
+@media print {
+    body {
+        --surface-mid: #EFEFFA !important;
+        --surface: #F5F5FE !important;
+        --surface-variant: #E0E0EA !important;
+        --on-surface-variant: #101015 !important;
+        --outline: #E0E0EA !important;
+
+        --tertiary-container: #A8A8AD !important;
+        --on-tertiary-container: #080812 !important;
+    }
 }

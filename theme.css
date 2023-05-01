@@ -45,53 +45,53 @@ body {
   --primary-r: 95;
   --primary-g: 75;
   --primary-b: 189;
-  --onPrimary: #FFFFFF;
-  --primaryContainer: #E7DEFF;
-  --onPrimaryContainer: #1A0064;
+  --on-primary: #FFFFFF;
+  --primary-container: #E7DEFF;
+  --on-primary-container: #1A0064;
   --secondary: #605C71;
-  --onSecondary: #FFFFFF;
-  --secondaryContainer: #E6DFF9;
-  --onSecondaryContainer: #1C192C;
+  --on-secondary: #FFFFFF;
+  --secondary-container: #E6DFF9;
+  --on-secondary-container: #1C192C;
   --tertiary: #7C5264;
   --onTertiary: #FFFFFF;
-  --tertiaryContainer: #FFD9E8;
-  --onTertiaryContainer: #301020;
+  --tertiary-container: #FFD9E8;
+  --on-tertiary-container: #301020;
   --error: #BA1B1B;
   --errorContainer: #FFDAD4;
   --onError: #FFFFFF;
   --onErrorContainer: #410001;
   --background: #FFFBFF;
-  --onBackground: #1C1B1E;
+  --on-background: #1C1B1E;
   --surface: #FFFBFF;
   --surface-r: 255;
   --surface-g: 251;
   --surface-b: 255;
   --surface: #FFFBFF;
   --onSurface: #1C1B1E;
-  --surfaceVariant: #E5E0EB;
-  --onSurfaceVariant: #48454F;
+  --surface-variant: #E5E0EB;
+  --on-surface-variant: #48454F;
   --outline: #79767F;
-  --inverseOnSurface: #F4EFF4;
-  --inverseSurface: #313033;
+  --inverse-on-surface: #F4EFF4;
+  --inverse-surface: #313033;
   --primaryInverse: #CABEFF;
-  --on-primary: var(--onPrimary);
-  --primary-container: var(--primaryContainer);
-  --on-primary-container: var(--onPrimaryContainer);
-  --on-secondary: var(--onSecondary);
-  --secondary-container: var(--secondaryContainer);
-  --on-secondary-container: var(--onSecondaryContainer);
+  --on-primary: var(--on-primary);
+  --primary-container: var(--primary-container);
+  --on-primary-container: var(--on-primary-container);
+  --on-secondary: var(--on-secondary);
+  --secondary-container: var(--secondary-container);
+  --on-secondary-container: var(--on-secondary-container);
   --on-tertiary: var(--onTertiary);
-  --tertiary-container: var(--tertiaryContainer);
-  --on-tertiary-container: var(--onTertiaryContainer);
+  --tertiary-container: var(--tertiary-container);
+  --on-tertiary-container: var(--on-tertiary-container);
   --error-container: var(--errorContainer);
   --on-error: var(--onError);
   --on-error-container: var(--onErrorContainer);
-  --on-background: var(--onBackground);
+  --on-background: var(--on-background);
   --on-surface: var(--onSurface);
-  --surface-variant: var(--surfaceVariant);
-  --on-surface-variant: var(--onSurfaceVariant);
-  --inverse-on-surface: var(--inverseOnSurface);
-  --inverse-surface: var(--inverseSurface);
+  --surface-variant: var(--surface-variant);
+  --on-surface-variant: var(--on-surface-variant);
+  --inverse-on-surface: var(--inverse-on-surface);
+  --inverse-surface: var(--inverse-surface);
   --primary-inverse: var(--primaryInverse);
   --surface1: rgb(
     calc(var(--primary-r) * var(--elevation1) + var(--surface-r) * (1 - var(--elevation1))),
@@ -165,52 +165,52 @@ body {
   --primary-r: 202;
   --primary-g: 190;
   --primary-b: 255;
-  --onPrimary: #30128D;
-  --primaryContainer: #4731A4;
-  --onPrimaryContainer: #E7DEFF;
+  --on-primary: #30128D;
+  --primary-container: #4731A4;
+  --on-primary-container: #E7DEFF;
   --secondary: #C9C3DC;
-  --onSecondary: #312E41;
-  --secondaryContainer: #484459;
-  --onSecondaryContainer: #E6DFF9;
+  --on-secondary: #312E41;
+  --secondary-container: #484459;
+  --on-secondary-container: #E6DFF9;
   --tertiary: #EDB8CD;
   --onTertiary: #482535;
-  --tertiaryContainer: #623B4C;
-  --onTertiaryContainer: #FFD9E8;
+  --tertiary-container: #623B4C;
+  --on-tertiary-container: #FFD9E8;
   --error: #9c2b2b;
   --errorContainer: #930006;
   --onError: #680003;
   --onErrorContainer: #FFDAD4;
   --background: #1C1B1E;
-  --onBackground: #E5E1E5;
+  --on-background: #E5E1E5;
   --surface: #1C1B1E;
   --surface-r: 28;
   --surface-g: 27;
   --surface-b: 30;
   --onSurface: #E5E1E5;
-  --surfaceVariant: #48454F;
-  --onSurfaceVariant: #C9C4D0;
+  --surface-variant: #48454F;
+  --on-surface-variant: #C9C4D0;
   --outline: #938F99;
-  --inverseOnSurface: #1C1B1E;
-  --inverseSurface: #E5E1E5;
+  --inverse-on-surface: #1C1B1E;
+  --inverse-surface: #E5E1E5;
   --primaryInverse: #5F4BBD;
-  --on-primary: var(--onPrimary);
-  --primary-container: var(--primaryContainer);
-  --on-primary-container: var(--onPrimaryContainer);
-  --on-secondary: var(--onSecondary);
-  --secondary-container: var(--secondaryContainer);
-  --on-secondary-container: var(--onSecondaryContainer);
+  --on-primary: var(--on-primary);
+  --primary-container: var(--primary-container);
+  --on-primary-container: var(--on-primary-container);
+  --on-secondary: var(--on-secondary);
+  --secondary-container: var(--secondary-container);
+  --on-secondary-container: var(--on-secondary-container);
   --on-tertiary: var(--onTertiary);
-  --tertiary-container: var(--tertiaryContainer);
-  --on-tertiary-container: var(--onTertiaryContainer);
+  --tertiary-container: var(--tertiary-container);
+  --on-tertiary-container: var(--on-tertiary-container);
   --error-container: var(--errorContainer);
   --on-error: var(--onError);
   --on-error-container: var(--onErrorContainer);
-  --on-background: var(--onBackground);
+  --on-background: var(--on-background);
   --on-surface: var(--onSurface);
-  --surface-variant: var(--surfaceVariant);
-  --on-surface-variant: var(--onSurfaceVariant);
-  --inverse-on-surface: var(--inverseOnSurface);
-  --inverse-surface: var(--inverseSurface);
+  --surface-variant: var(--surface-variant);
+  --on-surface-variant: var(--on-surface-variant);
+  --inverse-on-surface: var(--inverse-on-surface);
+  --inverse-surface: var(--inverse-surface);
   --primary-inverse: var(--primaryInverse);
   --surface1: rgb(
     calc(var(--primary-r) * var(--elevation1) + var(--surface-r) * (1 - var(--elevation1))),
@@ -805,10 +805,14 @@ a.tag:after {
   background: var(--surface-variant) !important;
   color: var(--on-surface-variant);
 }
-.markdown-preview-view table thead tr td, .markdown-preview-view table tbody tr td,
+.markdown-preview-view table thead tr td, .markdown-preview-view table thead tr td:nth-of-type(even), .markdown-preview-view table thead tr td:nth-of-type(odd), .markdown-preview-view table tbody tr td, .markdown-preview-view table tbody tr td:nth-of-type(even), .markdown-preview-view table tbody tr td:nth-of-type(odd),
 .markdown-source-view.mod-cm6.is-live-preview table thead tr td,
-.markdown-source-view.mod-cm6.is-live-preview table tbody tr td {
-  background: var(--surface) !important;
+.markdown-source-view.mod-cm6.is-live-preview table thead tr td:nth-of-type(even),
+.markdown-source-view.mod-cm6.is-live-preview table thead tr td:nth-of-type(odd),
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr td,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr td:nth-of-type(even),
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr td:nth-of-type(odd) {
+  background: var(--surface);
   color: var(--on-surface);
   padding-top: 1px;
   padding-bottom: 1px;
@@ -847,7 +851,31 @@ a.tag:after {
 .markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(even) td,
 .markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(even) th,
 .markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(even) td {
-  background-color: var(--surfaceMid) !important;
+  background-color: var(--surface-mid);
+}
+.markdown-preview-view table thead tr:nth-child(even) table, .markdown-preview-view table tbody tr:nth-child(even) table,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(even) table,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(even) table {
+  margin-bottom: 10px;
+}
+.markdown-preview-view table thead tr:nth-child(even) table th, .markdown-preview-view table thead tr:nth-child(even) table td, .markdown-preview-view table tbody tr:nth-child(even) table th, .markdown-preview-view table tbody tr:nth-child(even) table td,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(even) table th,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(even) table td,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(even) table th,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(even) table td {
+  background-color: var(--surface);
+}
+.markdown-preview-view table thead tr:nth-child(odd) table, .markdown-preview-view table tbody tr:nth-child(odd) table,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(odd) table,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(odd) table {
+  margin-bottom: 10px;
+}
+.markdown-preview-view table thead tr:nth-child(odd) table th, .markdown-preview-view table thead tr:nth-child(odd) table td, .markdown-preview-view table tbody tr:nth-child(odd) table th, .markdown-preview-view table tbody tr:nth-child(odd) table td,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(odd) table th,
+.markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(odd) table td,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(odd) table th,
+.markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(odd) table td {
+  background-color: var(--surface-mid);
 }
 
 .markdown-source-view.mod-cm6 .is-unresolved .cm-underline, .markdown-preview-view a {
@@ -1313,14 +1341,14 @@ body.hide-sidebar-header .workspace-drawer-header-left {
 .nav-folder-title.is-active,
 body:not(.is-grabbing) .nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
-  background-color: var(--tertiaryContainer);
+  background-color: var(--tertiary-container);
 }
 .nav-file-title.is-active .nav-file-title-content,
 .tree-item-self.is-clickable:hover .nav-file-title-content,
 .nav-folder-title.is-active .nav-file-title-content,
 body:not(.is-grabbing) .nav-file-title:hover .nav-file-title-content,
 body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
-  color: var(--onTertiaryContainer);
+  color: var(--on-tertiary-container);
 }
 
 .nav-file-title.is-active {
@@ -1332,7 +1360,7 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
 }
 
 .nav-file-title.is-active:hover {
-  background-color: var(--primaryContainer) !important;
+  background-color: var(--primary-container) !important;
 }
 .nav-file-title.is-active:hover .nav-folder-title-content, .nav-file-title.is-active:hover .nav-file-title-content {
   color: var(--surface) !important;
@@ -1633,7 +1661,7 @@ body:not(.is-popout-window) .workspace-tab-header-container, .workspace-tabs, .m
 
 .tooltip {
   background: var(--tooltip-color) !important;
-  color: var(--onSurfaceVariant) !important;
+  color: var(--on-surface-variant) !important;
 }
 
 .tooltip .tooltip-arrow {
@@ -1660,13 +1688,13 @@ body.disable-tooltip-animation .tooltip {
 }
 
 body.theme-light {
-  background-color: var(--surfaceVariant);
+  background-color: var(--surface-variant);
   --tooltip-color: white;
 }
 
 body.theme-dark {
   background-color: black;
-  --tooltip-color: var(--surfaceVariant);
+  --tooltip-color: var(--surface-variant);
 }
 
 body.mod-windows.enable-mica, body.mod-mac.enable-mica, body.mod-linux.enable-mica {
@@ -1684,7 +1712,7 @@ body.mod-windows.enable-mica.is-popout-window.theme-dark {
 }
 
 body.mod-windows.enable-mica.is-popout-window.theme-light {
-  background: var(--surfaceVariant) !important;
+  background: var(--surface-variant) !important;
 }
 
 body:not(.is-phone) {
@@ -1707,7 +1735,7 @@ body:not(.is-phone) hr.workspace-leaf-resize-handle {
 }
 
 .mod-stacked .workspace-tab-header {
-  background: var(--surfaceVariant) !important;
+  background: var(--surface-variant) !important;
   border-top-left-radius: var(--radius-m) !important;
   border-bottom-left-radius: var(--radius-m) !important;
   margin-bottom: 0 !important;
@@ -1774,8 +1802,8 @@ body.theme-light .canvas-wrapper .canvas-node-container {
 }
 
 .notice-container .notice {
-  background-color: var(--surfaceVariant) !important;
-  color: var(--onSurfaceVariant) !important;
+  background-color: var(--surface-variant) !important;
+  color: var(--on-surface-variant) !important;
 }
 
 body .workspace-leaf-content {
@@ -2072,10 +2100,10 @@ p {
 }
 
 .mobile-navbar {
-  color: var(--secondaryContainer);
+  color: var(--secondary-container);
 }
 .mobile-navbar .clickable-icon {
-  color: var(--onSecondaryContainer);
+  color: var(--on-secondary-container);
 }
 
 .view-header-breadcrumb {
@@ -2096,7 +2124,7 @@ p {
 }
 
 body.button-shapes-mobile.is-phone .mobile-navbar .clickable-icon {
-  background-color: var(--surfaceVariant);
+  background-color: var(--surface-variant);
   height: 30px;
   width: 60px;
   max-width: 15vw;
@@ -2106,7 +2134,7 @@ body.button-shapes-mobile.is-phone .mobile-toolbar {
   height: 45px;
 }
 body.button-shapes-mobile.is-phone .mobile-toolbar-option {
-  background-color: var(--surfaceVariant);
+  background-color: var(--surface-variant);
   height: 30px;
   width: 50px;
   margin: 7px 5px;
@@ -2170,7 +2198,7 @@ input[type=range]::-webkit-slider-thumb:hover {
 }
 
 body {
-  --slider-track-background: var(--surfaceVariant);
+  --slider-track-background: var(--surface-variant);
 }
 
 .vertical-tab-content-container .cm-scroller,
@@ -2293,26 +2321,26 @@ body:not(.vibrant).theme-light {
 }
 
 body.theme-dark {
-  --onPrimary: var(--text-on-accent);
+  --on-primary: var(--text-on-accent);
   --primary: var(--color-accent);
-  --primaryContainer: var(--color-accent-1);
-  --onPrimaryContainer: var(--color-accent-2);
+  --primary-container: var(--color-accent-1);
+  --on-primary-container: var(--color-accent-2);
   --secondary: var(--color-accent-2);
   --background: hsl(var(--accent-h), calc(var(--accent-s) * 0.06), 11.5%);
-  --onBackground: #E5E1E5;
+  --on-background: #E5E1E5;
   --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.1), 15%);
-  --surfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.08), 28%);
-  --surfaceMid: hsl(var(--accent-h), calc(var(--accent-s) * 0.09), 19%);
-  --onSurfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.31), 80%);
+  --surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.08), 28%);
+  --surface-mid: hsl(var(--accent-h), calc(var(--accent-s) * 0.09), 19%);
+  --on-surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.31), 80%);
   --outline: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 25%);
-  --inverseOnSurface: #1C1B1E;
-  --inverseSurface: #E5E1E5;
+  --inverse-on-surface: #1C1B1E;
+  --inverse-surface: #E5E1E5;
   --tab-background-active: var(--surface);
-  --onSecondary: var(--text-on-accent);
-  --secondaryContainer: var(--text-on-accent);
-  --onSecondaryContainer: var(--color-accent-1);
-  --tertiaryContainer: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 18%);
-  --onTertiaryContainer: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 78%);
+  --on-secondary: var(--text-on-accent);
+  --secondary-container: var(--text-on-accent);
+  --on-secondary-container: var(--color-accent-1);
+  --tertiary-container: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 18%);
+  --on-tertiary-container: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 78%);
   --text-selection: hsl(var(--accent-h), calc(var(--accent-s) * 0.3), 20%);
 }
 
@@ -2323,27 +2351,38 @@ body.theme-light.dim-light-mode {
 
 body.theme-light {
   --primary: var(--color-accent-2);
-  --primaryContainer: var(--color-accent-1);
-  --onPrimaryContainer: var(--color-accent);
+  --primary-container: var(--color-accent-1);
+  --on-primary-container: var(--color-accent);
   --secondary: var(--color-accent-2);
   --background: #fff;
-  --onBackground: #111;
+  --on-background: #111;
   --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.25), 95%);
-  --surfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 85%);
-  --surfaceMid: hsl(var(--accent-h), calc(var(--accent-s) * 0.35), 93%);
-  --onSurfaceVariant: hsl(var(--accent-h), calc(var(--accent-s) * 0.30), 23%);
+  --surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 85%);
+  --surface-mid: hsl(var(--accent-h), calc(var(--accent-s) * 0.35), 93%);
+  --on-surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.30), 23%);
   --outline: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 85%);
-  --inverseOnSurface: #EEE;
-  --inverseSurface: #111;
-  --onSecondary: var(--text-on-accent);
-  --secondaryContainer: var(--text-on-accent);
-  --onSecondaryContainer: var(--color-accent-1);
-  --tertiaryContainer: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 66%);
-  --onTertiaryContainer: hsl(var(--accent-h), calc(var(--accent-s) * 0.2), 12%);
+  --inverse-on-surface: #EEE;
+  --inverse-surface: #111;
+  --on-secondary: var(--text-on-accent);
+  --secondary-container: var(--text-on-accent);
+  --on-secondary-container: var(--color-accent-1);
+  --tertiary-container: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 66%);
+  --on-tertiary-container: hsl(var(--accent-h), calc(var(--accent-s) * 0.2), 12%);
   --interactive-hover: hsl(var(--accent-h), 15%, 85%);
   --text-selection: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 80%);
 }
 
+@media print {
+  body {
+    --surface-mid: #EFEFFA !important;
+    --surface: #F5F5FE !important;
+    --surface-variant: #E0E0EA !important;
+    --on-surface-variant: #101015 !important;
+    --outline: #E0E0EA !important;
+    --tertiary-container: #A8A8AD !important;
+    --on-tertiary-container: #080812 !important;
+  }
+}
 /* Style Settings */
 /* @settings
 

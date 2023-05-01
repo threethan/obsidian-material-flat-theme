@@ -54,60 +54,60 @@ body {
 --primary-r: 95;
 --primary-g: 75;
 --primary-b: 189;
---onPrimary: #FFFFFF;
---primaryContainer: #E7DEFF;
---onPrimaryContainer: #1A0064;
+--on-primary: #FFFFFF;
+--primary-container: #E7DEFF;
+--on-primary-container: #1A0064;
 --secondary: #605C71;
---onSecondary: #FFFFFF;
---secondaryContainer: #E6DFF9;
---onSecondaryContainer: #1C192C;
+--on-secondary: #FFFFFF;
+--secondary-container: #E6DFF9;
+--on-secondary-container: #1C192C;
 --tertiary: #7C5264;
 --onTertiary: #FFFFFF;
---tertiaryContainer: #FFD9E8;
---onTertiaryContainer: #301020;
+--tertiary-container: #FFD9E8;
+--on-tertiary-container: #301020;
 --error: #BA1B1B;
 --errorContainer: #FFDAD4;
 --onError: #FFFFFF;
 --onErrorContainer: #410001;
 --background: #FFFBFF;
---onBackground: #1C1B1E;
+--on-background: #1C1B1E;
 --surface: #FFFBFF;
 --surface-r: 255;
 --surface-g: 251;
 --surface-b: 255;
 --surface: #FFFBFF;
 --onSurface: #1C1B1E;
---surfaceVariant: #E5E0EB;
---onSurfaceVariant: #48454F;
+--surface-variant: #E5E0EB;
+--on-surface-variant: #48454F;
 --outline: #79767F;
---inverseOnSurface: #F4EFF4;
---inverseSurface: #313033;
+--inverse-on-surface: #F4EFF4;
+--inverse-surface: #313033;
 --primaryInverse: #CABEFF;
 
 // Change camel case variabels into Hyphen Delimited Strings
---on-primary: var(--onPrimary);
---primary-container: var(--primaryContainer);
---on-primary-container: var(--onPrimaryContainer);
+--on-primary: var(--on-primary);
+--primary-container: var(--primary-container);
+--on-primary-container: var(--on-primary-container);
 
---on-secondary: var(--onSecondary);
---secondary-container: var(--secondaryContainer);
---on-secondary-container: var(--onSecondaryContainer);
+--on-secondary: var(--on-secondary);
+--secondary-container: var(--secondary-container);
+--on-secondary-container: var(--on-secondary-container);
 
 --on-tertiary: var(--onTertiary);
---tertiary-container: var(--tertiaryContainer);
---on-tertiary-container: var(--onTertiaryContainer);
+--tertiary-container: var(--tertiary-container);
+--on-tertiary-container: var(--on-tertiary-container);
 
 --error-container: var(--errorContainer);
 --on-error: var(--onError);
 --on-error-container: var(--onErrorContainer);
 
---on-background: var(--onBackground);
+--on-background: var(--on-background);
 --on-surface: var(--onSurface);
---surface-variant: var(--surfaceVariant);
---on-surface-variant: var(--onSurfaceVariant);
+--surface-variant: var(--surface-variant);
+--on-surface-variant: var(--on-surface-variant);
 
---inverse-on-surface: var(--inverseOnSurface);
---inverse-surface: var(--inverseSurface);
+--inverse-on-surface: var(--inverse-on-surface);
+--inverse-surface: var(--inverse-surface);
 --primary-inverse: var(--primaryInverse);
 
 // Calculating surface elevation
@@ -190,59 +190,59 @@ body {
 --primary-r: 202;
 --primary-g: 190;
 --primary-b: 255;
---onPrimary: #30128D;
---primaryContainer: #4731A4;
---onPrimaryContainer: #E7DEFF;
+--on-primary: #30128D;
+--primary-container: #4731A4;
+--on-primary-container: #E7DEFF;
 --secondary: #C9C3DC;
---onSecondary: #312E41;
---secondaryContainer: #484459;
---onSecondaryContainer: #E6DFF9;
+--on-secondary: #312E41;
+--secondary-container: #484459;
+--on-secondary-container: #E6DFF9;
 --tertiary: #EDB8CD;
 --onTertiary: #482535;
---tertiaryContainer: #623B4C;
---onTertiaryContainer: #FFD9E8;
+--tertiary-container: #623B4C;
+--on-tertiary-container: #FFD9E8;
 --error: #9c2b2b;
 --errorContainer: #930006;
 --onError: #680003;
 --onErrorContainer: #FFDAD4;
 --background: #1C1B1E;
---onBackground: #E5E1E5;
+--on-background: #E5E1E5;
 --surface: #1C1B1E;
 --surface-r: 28;
 --surface-g: 27;
 --surface-b: 30;
 --onSurface: #E5E1E5;
---surfaceVariant: #48454F;
---onSurfaceVariant: #C9C4D0;
+--surface-variant: #48454F;
+--on-surface-variant: #C9C4D0;
 --outline: #938F99;
---inverseOnSurface: #1C1B1E;
---inverseSurface: #E5E1E5;
+--inverse-on-surface: #1C1B1E;
+--inverse-surface: #E5E1E5;
 --primaryInverse: #5F4BBD;
 
 // Change camel case variabels into Hyphen Delimited Strings
---on-primary: var(--onPrimary);
---primary-container: var(--primaryContainer);
---on-primary-container: var(--onPrimaryContainer);
+--on-primary: var(--on-primary);
+--primary-container: var(--primary-container);
+--on-primary-container: var(--on-primary-container);
 
---on-secondary: var(--onSecondary);
---secondary-container: var(--secondaryContainer);
---on-secondary-container: var(--onSecondaryContainer);
+--on-secondary: var(--on-secondary);
+--secondary-container: var(--secondary-container);
+--on-secondary-container: var(--on-secondary-container);
 
 --on-tertiary: var(--onTertiary);
---tertiary-container: var(--tertiaryContainer);
---on-tertiary-container: var(--onTertiaryContainer);
+--tertiary-container: var(--tertiary-container);
+--on-tertiary-container: var(--on-tertiary-container);
 
 --error-container: var(--errorContainer);
 --on-error: var(--onError);
 --on-error-container: var(--onErrorContainer);
 
---on-background: var(--onBackground);
+--on-background: var(--on-background);
 --on-surface: var(--onSurface);
---surface-variant: var(--surfaceVariant);
---on-surface-variant: var(--onSurfaceVariant);
+--surface-variant: var(--surface-variant);
+--on-surface-variant: var(--on-surface-variant);
 
---inverse-on-surface: var(--inverseOnSurface);
---inverse-surface: var(--inverseSurface);
+--inverse-on-surface: var(--inverse-on-surface);
+--inverse-surface: var(--inverse-surface);
 --primary-inverse: var(--primaryInverse);
 
 // Calculating surface elevation
