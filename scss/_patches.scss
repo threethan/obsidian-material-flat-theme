@@ -302,10 +302,10 @@ p {
 .mobile-navbar, .mobile-toolbar {
     background: var(--surface);
     .mobile-toolbar-option, .clickable-icon {
-        color: var(--onSurface);
+        color: var(--on-surface);
 
         div {
-            border-color: var(--onSurface);
+            border-color: var(--on-surface);
         }
     }
 }
@@ -334,7 +334,7 @@ body.button-shapes-mobile.is-phone {
         height: 40px;
         min-width: 65px;
         border-radius: 20px;
-        color: var(--onSurface);
+        color: var(--on-surface);
     }
 }
 

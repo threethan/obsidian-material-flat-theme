@@ -27,6 +27,7 @@ body.theme-dark {
     --on-background: #E5E1E5;
     --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.1),  15%);
     --surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.08), 28%);
+    --surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.08), 28%);
     --surface-mid: hsl(var(--accent-h), calc(var(--accent-s) * 0.09), 19%);
     --on-surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.31),  80%);
     --outline: hsl(var(--accent-h), calc(var(--accent-s) * 0.5),  25%);
@@ -82,17 +83,4 @@ body.theme-light {
 
     --text-selection: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 80%);
 
-}
-
-@media print {
-    body {
-        --surface-mid: #EFEFFA !important;
-        --surface: #F5F5FE !important;
-        --surface-variant: #E0E0EA !important;
-        --on-surface-variant: #101015 !important;
-        --outline: #E0E0EA !important;
-
-        --tertiary-container: #A8A8AD !important;
-        --on-tertiary-container: #080812 !important;
-    }
 }

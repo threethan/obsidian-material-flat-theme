@@ -67,32 +67,13 @@ body {
   --surface-g: 251;
   --surface-b: 255;
   --surface: #FFFBFF;
-  --onSurface: #1C1B1E;
+  --on-surface: #1C1B1E;
   --surface-variant: #E5E0EB;
   --on-surface-variant: #48454F;
   --outline: #79767F;
   --inverse-on-surface: #F4EFF4;
   --inverse-surface: #313033;
   --primaryInverse: #CABEFF;
-  --on-primary: var(--on-primary);
-  --primary-container: var(--primary-container);
-  --on-primary-container: var(--on-primary-container);
-  --on-secondary: var(--on-secondary);
-  --secondary-container: var(--secondary-container);
-  --on-secondary-container: var(--on-secondary-container);
-  --on-tertiary: var(--onTertiary);
-  --tertiary-container: var(--tertiary-container);
-  --on-tertiary-container: var(--on-tertiary-container);
-  --error-container: var(--errorContainer);
-  --on-error: var(--onError);
-  --on-error-container: var(--onErrorContainer);
-  --on-background: var(--on-background);
-  --on-surface: var(--onSurface);
-  --surface-variant: var(--surface-variant);
-  --on-surface-variant: var(--on-surface-variant);
-  --inverse-on-surface: var(--inverse-on-surface);
-  --inverse-surface: var(--inverse-surface);
-  --primary-inverse: var(--primaryInverse);
   --surface1: rgb(
     calc(var(--primary-r) * var(--elevation1) + var(--surface-r) * (1 - var(--elevation1))),
     calc(var(--primary-g) * var(--elevation1) + var(--surface-g) * (1 - var(--elevation1))),
@@ -186,7 +167,7 @@ body {
   --surface-r: 28;
   --surface-g: 27;
   --surface-b: 30;
-  --onSurface: #E5E1E5;
+  --on-surface: #E5E1E5;
   --surface-variant: #48454F;
   --on-surface-variant: #C9C4D0;
   --outline: #938F99;
@@ -206,7 +187,7 @@ body {
   --on-error: var(--onError);
   --on-error-container: var(--onErrorContainer);
   --on-background: var(--on-background);
-  --on-surface: var(--onSurface);
+  --on-surface: var(--on-surface);
   --surface-variant: var(--surface-variant);
   --on-surface-variant: var(--on-surface-variant);
   --inverse-on-surface: var(--inverse-on-surface);
@@ -878,6 +859,22 @@ a.tag:after {
   background-color: var(--surface-mid);
 }
 
+@media print {
+  .markdown-preview-view table thead tr:nth-child(even) th, .markdown-preview-view table thead tr:nth-child(even) td, .markdown-preview-view table tbody tr:nth-child(even) th, .markdown-preview-view table tbody tr:nth-child(even) td,
+  .markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(even) th,
+  .markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(even) td,
+  .markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(even) th,
+  .markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(even) td {
+    background-color: var(--surface);
+  }
+  .markdown-preview-view table thead tr:nth-child(odd) th, .markdown-preview-view table thead tr:nth-child(odd) td, .markdown-preview-view table tbody tr:nth-child(odd) th, .markdown-preview-view table tbody tr:nth-child(odd) td,
+  .markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(odd) th,
+  .markdown-source-view.mod-cm6.is-live-preview table thead tr:nth-child(odd) td,
+  .markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(odd) th,
+  .markdown-source-view.mod-cm6.is-live-preview table tbody tr:nth-child(odd) td {
+    background-color: transparent;
+  }
+}
 .markdown-source-view.mod-cm6 .is-unresolved .cm-underline, .markdown-preview-view a {
   text-decoration-color: inherit !important;
 }
@@ -1355,7 +1352,7 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
   background-color: var(--surface);
 }
 .nav-file-title.is-active .nav-folder-title-content, .nav-file-title.is-active .nav-file-title-content {
-  color: var(--onSurface);
+  color: var(--on-surface);
   font-weight: 600;
 }
 
@@ -1555,7 +1552,7 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
   width: 28px;
 }
 .view-content.excalidraw-view .mobile-misc-tools-container .ToolIcon_type_floating:not(:first-child) .ToolIcon__icon svg {
-  fill: var(--onSurface) !important;
+  fill: var(--on-surface) !important;
 }
 
 body.pen-mode .view-content.excalidraw-view .App-top-bar {
@@ -2117,10 +2114,10 @@ p {
   background: var(--surface);
 }
 .mobile-navbar .mobile-toolbar-option, .mobile-navbar .clickable-icon, .mobile-toolbar .mobile-toolbar-option, .mobile-toolbar .clickable-icon {
-  color: var(--onSurface);
+  color: var(--on-surface);
 }
 .mobile-navbar .mobile-toolbar-option div, .mobile-navbar .clickable-icon div, .mobile-toolbar .mobile-toolbar-option div, .mobile-toolbar .clickable-icon div {
-  border-color: var(--onSurface);
+  border-color: var(--on-surface);
 }
 
 body.button-shapes-mobile.is-phone .mobile-navbar .clickable-icon {
@@ -2145,7 +2142,7 @@ body.button-shapes-mobile.is-phone .nav-action-button {
   height: 40px;
   min-width: 65px;
   border-radius: 20px;
-  color: var(--onSurface);
+  color: var(--on-surface);
 }
 
 .is-phone .nav-buttons-container {
@@ -2330,6 +2327,7 @@ body.theme-dark {
   --on-background: #E5E1E5;
   --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.1), 15%);
   --surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.08), 28%);
+  --surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.08), 28%);
   --surface-mid: hsl(var(--accent-h), calc(var(--accent-s) * 0.09), 19%);
   --on-surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.31), 80%);
   --outline: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 25%);
@@ -2372,17 +2370,6 @@ body.theme-light {
   --text-selection: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 80%);
 }
 
-@media print {
-  body {
-    --surface-mid: #EFEFFA !important;
-    --surface: #F5F5FE !important;
-    --surface-variant: #E0E0EA !important;
-    --on-surface-variant: #101015 !important;
-    --outline: #E0E0EA !important;
-    --tertiary-container: #A8A8AD !important;
-    --on-tertiary-container: #080812 !important;
-  }
-}
 /* Style Settings */
 /* @settings
 

@@ -641,6 +641,26 @@ a.tag:after {
   }
 }
 
+@media print {
+  .markdown-preview-view,
+  .markdown-source-view.mod-cm6.is-live-preview {
+    table {
+      thead, tbody{
+        tr:nth-child(even) {
+          th, td {
+            background-color: var(--surface);
+          }
+        }
+        tr:nth-child(odd) {
+          th, td {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
 .markdown-source-view.mod-cm6 .is-unresolved .cm-underline, .markdown-preview-view a {
   text-decoration-color: inherit !important;
 }
