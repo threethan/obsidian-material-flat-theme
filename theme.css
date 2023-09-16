@@ -1457,8 +1457,11 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
   border: none !important;
 }
 
-.view-content.excalidraw-view .dropdown-menu .dropdown-menu-item-base {
-  color: inherit !important;
+.view-content.excalidraw-view {
+  --excalidraw-button-size: 32px;
+}
+.view-content.excalidraw-view div, .view-content.excalidraw-view .dropdown-menu .dropdown-menu-item-base {
+  color: var(--text-normal) !important;
 }
 .view-content.excalidraw-view .HelpDialog__key {
   color: var(--on-accent);
@@ -1478,13 +1481,21 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
 }
 .view-content.excalidraw-view .App-toolbar,
 .view-content.excalidraw-view .App-menu__left,
-.view-content.excalidraw-view .library-button,
+.view-content.excalidraw-view .sidebar-trigger,
 .view-content.excalidraw-view .ToolIcon.ToolIcon_type_floating div,
 .view-content.excalidraw-view .App-menu_top__left .menu-button,
 .view-content.excalidraw-view .layer-ui__wrapper__footer-right .ToolIcon__icon,
 .view-content.excalidraw-view .mobile-misc-tools-container {
   background: var(--surface) !important;
-  overflow: visible;
+}
+.view-content.excalidraw-view .App-toolbar button:hover,
+.view-content.excalidraw-view .App-menu__left button:hover,
+.view-content.excalidraw-view .sidebar-trigger button:hover,
+.view-content.excalidraw-view .ToolIcon.ToolIcon_type_floating div button:hover,
+.view-content.excalidraw-view .App-menu_top__left .menu-button button:hover,
+.view-content.excalidraw-view .layer-ui__wrapper__footer-right .ToolIcon__icon button:hover,
+.view-content.excalidraw-view .mobile-misc-tools-container button:hover {
+  background: var(--surface-variant) !important;
 }
 .view-content.excalidraw-view .zoom-actions,
 .view-content.excalidraw-view .undo-redo-buttons {
@@ -1493,18 +1504,17 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
 .view-content.excalidraw-view .ToolIcon svg {
   mix-blend-mode: luminosity;
 }
-.view-content.excalidraw-view .library-button {
-  height: 36px !important;
-  width: 36px;
+.view-content.excalidraw-view .ToolIcon.Shape, .view-content.excalidraw-view .dropdown-menu-button {
+  height: var(--excalidraw-button-size) !important;
+  width: var(--excalidraw-button-size) !important;
+  background-color: var(--surface);
 }
-.view-content.excalidraw-view .library-button .library-button__label {
-  display: none;
+.view-content.excalidraw-view .ToolIcon.Shape :hover, .view-content.excalidraw-view .dropdown-menu-button :hover {
+  background: var(--surface-variant) !important;
 }
-.view-content.excalidraw-view .App-menu_top__left .menu-button,
-.view-content.excalidraw-view .layer-ui__wrapper__footer-right .ToolIcon__icon,
-.view-content.excalidraw-view .ToolIcon_type_floating .ToolIcon__icon {
-  height: 36px;
-  width: 36px;
+.view-content.excalidraw-view .ToolIcon__icon {
+  height: var(--excalidraw-button-size) !important;
+  width: var(--excalidraw-button-size) !important;
 }
 .view-content.excalidraw-view .App-bottom-bar .App-toolbar {
   margin-top: 0;
@@ -1519,42 +1529,86 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-file-title-content {
 .view-content.excalidraw-view .App-toolbar {
   border-radius: 10px;
 }
-.view-content.excalidraw-view .dropdown-menu-button {
-  height: 36px;
-  width: 36px;
-  background-color: var(--surface);
-}
 .view-content.excalidraw-view .App-bottom-bar div.Island:last-child {
   margin-left: 8px !important;
   padding: 5.5px;
   background-color: var(--surface);
   border-radius: 9px;
 }
+.view-content.excalidraw-view .App-bottom-bar button:hover {
+  background: var(--surface-variant) !important;
+}
+.view-content.excalidraw-view .ToolIcon__icon:hover {
+  background: var(--surface-variant) !important;
+}
 .view-content.excalidraw-view .App-top-bar .mobile-misc-tools-container {
   right: -10px;
 }
 .view-content.excalidraw-view .App-top-bar .mobile-misc-tools-container .ToolIcon {
   margin-left: 4px;
-  margin-bottom: 4px;
+  margin-right: 4px;
+  margin-bottom: 3px;
 }
 .view-content.excalidraw-view .App-top-bar .mobile-misc-tools-container .ToolIcon:first-child {
-  margin-left: inherit;
-  margin-bottom: -5px;
+  margin-top: 4px;
 }
 .view-content.excalidraw-view .App-top-bar .mobile-misc-tools-container .ToolIcon:first-child .ToolIcon__icon {
-  border-radius: 10px;
+  border-radius: 6px;
+}
+.view-content.excalidraw-view .App-top-bar .mobile-misc-tools-container .ToolIcon:last-child {
+  margin-bottom: 4px;
 }
 .view-content.excalidraw-view .layer-ui__wrapper__top-right .ToolIcon {
   margin-right: 8px;
 }
-.view-content.excalidraw-view .mobile-misc-tools-container .ToolIcon_type_floating:not(:first-child) .ToolIcon__icon {
-  height: 24px;
-  width: 28px;
-}
 .view-content.excalidraw-view .mobile-misc-tools-container .ToolIcon_type_floating:not(:first-child) .ToolIcon__icon svg {
   fill: var(--on-surface) !important;
 }
+.view-content.excalidraw-view .mobile-misc-tools-container label:not(.ToolIcon) {
+  width: var(--excalidraw-button-size);
+  padding: 0;
+  margin: 3px 4px;
+  margin-top: -1px;
+}
+.view-content.excalidraw-view .mobile-misc-tools-container label:not(.ToolIcon) :hover {
+  background: var(--surface-variant) !important;
+}
+.view-content.excalidraw-view .sidebar-trigger.default-sidebar-trigger {
+  height: var(--excalidraw-button-size);
+  width: var(--excalidraw-button-size);
+  margin: 0 !important;
+  padding: calc(var(--excalidraw-button-size) / 2 - 8px) !important;
+  display: block;
+}
+.view-content.excalidraw-view .sidebar-trigger.default-sidebar-trigger .library-button__label {
+  display: none;
+}
+.view-content.excalidraw-view .popover {
+  border-radius: 10px;
+  box-shadow: none;
+}
+.view-content.excalidraw-view .popover ul, .view-content.excalidraw-view .popover ol {
+  background-color: var(--surface) !important;
+}
+.view-content.excalidraw-view .popover li button:hover {
+  background-color: var(--surface-variant) !important;
+}
 
+@media only screen and (max-height: 700px) {
+  body.pen-mode .view-content.excalidraw-view {
+    --excalidraw-button-size: 25px;
+  }
+}
+@media only screen and (max-height: 580px) {
+  body.pen-mode .view-content.excalidraw-view {
+    --excalidraw-button-size: 20px;
+  }
+}
+@media only screen and (max-height: 500px) {
+  body.pen-mode .view-content.excalidraw-view {
+    --excalidraw-button-size: 15px;
+  }
+}
 body.pen-mode .view-content.excalidraw-view .App-top-bar {
   flex-direction: row !important;
 }
@@ -1570,8 +1624,12 @@ body.pen-mode .view-content.excalidraw-view .App-top-bar .mobile-misc-tools-cont
   bottom: 0;
   border-radius: 10px;
 }
+body.pen-mode .view-content.excalidraw-view .App-top-bar .App-toolbar__divider {
+  height: 1px;
+  width: auto;
+}
 body.pen-mode .view-content.excalidraw-view .App-bottom-bar {
-  padding-left: 40px;
+  padding-left: calc(var(--excalidraw-button-size) + 12px);
 }
 body.pen-mode .view-content.excalidraw-view .excalidraw--mobile .HintViewer span {
   position: absolute !important;
@@ -1582,6 +1640,9 @@ body.pen-mode .view-content.excalidraw-view .excalidraw--mobile .HintViewer span
 }
 body.pen-mode .view-content.excalidraw-view .excalidraw--mobile .welcome-screen-center {
   display: none !important;
+}
+body.pen-mode .view-content.excalidraw-view .App-toolbar__extra-tools-dropdown {
+  left: 0 !important;
 }
 
 /* @plugins
@@ -2001,14 +2062,10 @@ body.tab-drag-desktop .mod-root .workspace-tab-header.is-active .workspace-tab-h
 .markdown-reading-view hr {
   display: block;
   unicode-bidi: isolate;
-  -webkit-margin-before: 0.5em;
-          margin-block-start: 0.5em;
-  -webkit-margin-after: 0.5em;
-          margin-block-end: 0.5em;
-  -webkit-margin-start: auto;
-          margin-inline-start: auto;
-  -webkit-margin-end: auto;
-          margin-inline-end: auto;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
   overflow: hidden;
   border-style: inset;
   border-width: 1px;
@@ -2024,13 +2081,11 @@ body.tab-drag-desktop .mod-root .workspace-tab-header.is-active .workspace-tab-h
   margin-bottom: 0;
 }
 .markdown-reading-view .markdown-rendered table {
-  -webkit-margin-before: 1em;
-          margin-block-start: 1em;
+  margin-block-start: 1em;
 }
 
 .markdown-rendered table {
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
+  margin-block-start: 0;
 }
 
 body.space-above-document .cm-editor .cm-scroller .cm-sizer,
@@ -2077,10 +2132,8 @@ body {
 }
 
 p {
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .markdown-embed {

@@ -69,8 +69,10 @@
 }
 
 .view-content.excalidraw-view {
-    .dropdown-menu .dropdown-menu-item-base {
-        color: inherit !important;
+    --excalidraw-button-size: 32px;
+
+    div, .dropdown-menu .dropdown-menu-item-base {
+        color: var(--text-normal) !important;
     }
     .HelpDialog__key {
         color: var(--on-accent);
@@ -95,7 +97,7 @@
     }
     .App-toolbar,
     .App-menu__left,
-    .library-button,
+    .sidebar-trigger,
     .ToolIcon.ToolIcon_type_floating div,
     .App-menu_top__left .menu-button,
     .layer-ui__wrapper__footer-right .ToolIcon__icon,
@@ -104,8 +106,11 @@
         // backdrop-filter: blur(var(--blur-intensity));
         background: var(--surface) !important;
         // border: 1px solid var(--window-border);
-        overflow: visible;
+        // overflow: visible;
         // box-shadow: 0 0 4px 1px #0006;
+        button:hover {
+            background: var(--surface-variant) !important;
+        }
     }
     .zoom-actions,
     .undo-redo-buttons  {
@@ -119,21 +124,19 @@
     .ToolIcon svg{
         mix-blend-mode: luminosity;
     }
-    .library-button{
-        height: 36px !important;
-        width: 36px;
-        .library-button__label {
-            display: none;
+
+    .ToolIcon.Shape, .dropdown-menu-button {
+        height: var(--excalidraw-button-size) !important;
+        width: var(--excalidraw-button-size) !important;
+        background-color: var(--surface);
+        :hover {
+            background: var(--surface-variant) !important;
         }
     }
-    .App-menu_top__left .menu-button,
-    .layer-ui__wrapper__footer-right .ToolIcon__icon,
-    .ToolIcon_type_floating .ToolIcon__icon
-    {
-        height: 36px;
-        width: 36px;
+    .ToolIcon__icon {
+        height: var(--excalidraw-button-size) !important;
+        width: var(--excalidraw-button-size) !important;
     }
-
 
     .App-bottom-bar .App-toolbar{
         margin-top: 0;
@@ -150,11 +153,6 @@
     .App-toolbar {
         border-radius: 10px;
     }
-    .dropdown-menu-button {
-        height: 36px;
-        width: 36px;
-        background-color: var(--surface);
-    }
     .App-bottom-bar {
         div.Island:last-child {
             margin-left: 8px !important;
@@ -162,40 +160,91 @@
             background-color: var(--surface);
             border-radius: 9px;
         }
+        button:hover {
+            background: var(--surface-variant) !important;
+        }
+    }
+    .ToolIcon__icon:hover {
+        background: var(--surface-variant) !important;
     }
 
     .App-top-bar .mobile-misc-tools-container {
         .ToolIcon {
             margin-left: 4px;
-            margin-bottom: 4px;
+            margin-right: 4px;
+            margin-bottom: 3px;
         }
         .ToolIcon:first-child {
-            margin-left: inherit;
+            // margin-left: inherit;
+            margin-top: 4px;
             .ToolIcon__icon {
-                border-radius: 10px;
+                border-radius: 6px;
             }
-            margin-bottom: -5px;
+            // margin-bottom: -5px;
+        }
+        .ToolIcon:last-child {
+            margin-bottom: 4px;
         }
         right: -10px;
         // padding-bottom: 4px;
+
     }
 
-    .layer-ui__wrapper__top-right {
-        .ToolIcon {
-            margin-right: 8px;
-        }
+    .layer-ui__wrapper__top-right .ToolIcon {
+        margin-right: 8px;
     }
 
     .mobile-misc-tools-container .ToolIcon_type_floating:not(:first-child) .ToolIcon__icon { 
-        height: 24px;
-        width: 28px;
         svg {
             fill: var(--on-surface) !important;
+        }
+    }
+
+    // Library button container
+    .mobile-misc-tools-container label:not(.ToolIcon) {
+        width: var(--excalidraw-button-size);
+        padding: 0;
+        margin: 3px 4px;
+        margin-top: -1px;
+        :hover {
+            background: var(--surface-variant) !important;
+        }
+    }
+    .sidebar-trigger.default-sidebar-trigger {
+        height: var(--excalidraw-button-size);
+        width: var(--excalidraw-button-size);
+        margin: 0 !important;
+        padding: calc(var(--excalidraw-button-size) / 2 - 8px) !important;
+        display: block;
+        .library-button__label {
+            display: none;
+        }
+    }
+
+    // Right-click
+    .popover {
+        border-radius: 10px;
+        box-shadow: none;
+        ul, ol {
+            background-color: var(--surface) !important;
+        }
+        li button:hover {
+            background-color: var(--surface-variant) !important;
         }
     }
 }
 
 body.pen-mode .view-content.excalidraw-view {
+    @media only screen and (max-height: 700px) {
+        --excalidraw-button-size: 25px;
+    }
+    @media only screen and (max-height: 580px) {
+        --excalidraw-button-size: 20px;
+    }
+    @media only screen and (max-height: 500px) {
+        --excalidraw-button-size: 15px;
+    }
+
     // Sidebar
     .App-top-bar {
         flex-direction: row !important;
@@ -213,9 +262,13 @@ body.pen-mode .view-content.excalidraw-view {
             bottom: 0;
             border-radius: 10px;
         }
+        .App-toolbar__divider {
+            height: 1px;
+            width: auto;
+        }
     }
     .App-bottom-bar {
-        padding-left: 40px;
+        padding-left: calc(var(--excalidraw-button-size) + 12px);
     }
     .excalidraw--mobile .HintViewer span {
         position: absolute !important;
@@ -226,5 +279,8 @@ body.pen-mode .view-content.excalidraw-view {
     }
     .excalidraw--mobile .welcome-screen-center {
         display: none !important;
+    }
+    .App-toolbar__extra-tools-dropdown {
+        left: 0 !important;
     }
 }
