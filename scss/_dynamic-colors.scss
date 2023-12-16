@@ -1,16 +1,19 @@
 body:not(.vibrant).theme-dark {
-    --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
-    --primary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
+    --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 70%) !important;
+    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s) * 0.7), 80%) !important;
+    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s) * 0.8), 90%) !important;
+    --primary: hsl(var(--accent-h), calc(var(--accent-s) * 0.75), 80%) !important;
     --secondary: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 70%) !important;
     --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
-    --link-color-hover: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
+    --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 90%) !important;
 }
 body:not(.vibrant).theme-light {
-    --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 70%) !important;
-    --primary: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 70%) !important;
+    --color-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.8), 75%) !important;
+    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s) * 0.7), 80%) !important;
+    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 85%) !important;
+    --primary: hsl(var(--accent-h), calc(var(--accent-s) * 0.86), 73%) !important;
     --secondary: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 70%) !important;
     --text-accent: hsl(var(--accent-h), calc(var(--accent-s) * 0.6), 50%) !important;
-    --link-color-hover:  hsl(var(--accent-h), calc(var(--accent-s) * 0.4), 10%) !important;
 }
 
 
@@ -64,10 +67,10 @@ body.theme-light {
 
     --background: #fff;
     --on-background: #111;
-    --surface: hsl(var(--accent-h), calc(var(--accent-s) * 0.25),  95%);
-    --surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.5), 85%);
+    --surface: #FFF;
+    --surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.75), 93%);
     --surface-mid: hsl(var(--accent-h), calc(var(--accent-s) * 0.35), 93%);
-    --on-surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.30),  23%);
+    --on-surface-variant: hsl(var(--accent-h), calc(var(--accent-s) * 0.30),  20%);
     --outline: hsl(var(--accent-h), calc(var(--accent-s) * 0.5),  85%);
     --inverse-on-surface: #EEE;
     --inverse-surface: #111;

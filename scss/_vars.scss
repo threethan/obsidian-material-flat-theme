@@ -1,10 +1,10 @@
 body {
   /* ## Fonts */
-  --font-text-theme: Roboto, "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  --font-text-theme: "Inter", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
   --font-monospace-theme: "Roboto Mono", monospace, Menlo, SFMono-Regular, Consolas;
-  --font-interface-theme: var(--font-text-theme);
+  --font-interface-theme: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Inter", sans-serif
 }
 
 :root {
@@ -46,6 +46,12 @@ body {
 --elevation3: 0.11;
 --elevation4: 0.12;
 --elevation5: 0.14;
+
+--titlebar-text-color-focused: var(--text-normal);
+
+--link-color-hover:  hsl(var(--accent-h), calc(var(--accent-s) * 0.8), 80%) !important;
+--link-external-color-hover:  hsl(var(--accent-h), calc(var(--accent-s) * 0.8), 80%) !important;
+
 }
 
 .theme-light {
@@ -290,5 +296,4 @@ body {
 
   //HR
   --hr-color: var(--surface-variant);
-
 }
