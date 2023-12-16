@@ -79,9 +79,9 @@ settings:
     -
         id: no-top-space
         title: Remove top padding (Desktop)
-        description: Removes the bit of space above the tabs. Useful if using system titlebars.
+        description: Removes the bit of space above the tabs.
         type: class-toggle
-        default: false
+        default: true
     - 
         id: hide-sidebar-header
         title: Hide sidebar header (Mobile)

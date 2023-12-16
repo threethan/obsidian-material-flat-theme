@@ -75,6 +75,11 @@ body:not(.is-phone).fab-enabled-desktop.custom-page-header {
     }
   }
 }
+body:not(.is-phone).fab-enabled-desktop.custom-page-header:has(.titlebar) {
+  .view-action:first-child {
+    top: calc(100vh - 48px - 44px - 16px - 40px);
+  }
+}
 // -----------------
 /* Pencil SVG */
 svg.pencil > path {

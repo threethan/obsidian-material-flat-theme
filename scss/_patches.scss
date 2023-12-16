@@ -201,9 +201,6 @@ body.tab-drag-desktop {
         border-color: var(--hr-color);
         margin: 11px 0;
     }
-    br {
-        display: none;
-    }
     table {
         margin-bottom: 0;
     }
@@ -358,9 +355,22 @@ body.button-shapes-mobile.is-phone {
     padding-bottom: 9px !important;
 }
 
+// Hide new titlebar background
+div.titlebar {
+    background-color: transparent !important;
+    .titlebar-text {
+        opacity: 1;
+        font-weight: normal;
+    }
+}
 
 // Tweak windows titlebar
 body.mod-windows {
+    .titlebar-text {
+        justify-content: start;
+        padding-left: 50px;
+        padding-top: 4px;
+    }
     .titlebar-button-container .titlebar-button {
         width: 46px;
         svg {
