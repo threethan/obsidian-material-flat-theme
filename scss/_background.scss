@@ -28,8 +28,9 @@ body{
 .view-header {
     background: var(--tab-background-active) !important;
 }
-.workspace-tab-header-container {
+.workspace-tab-header-container, .mod-sidedock, .workspace-sidedock-vault-profile {
     background: none;
+    background-color: transparent !important;
 }
 
 .workspace-tab-header-container-inner{
