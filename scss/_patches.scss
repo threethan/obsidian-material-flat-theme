@@ -429,6 +429,8 @@ body.mod-windows.win-menu div.menu {
     --win-blue: #0078d4;
     box-shadow: 0px 8px 8px 3px rgba(0,0,0,0.05), 0px 7px 9px -7px rgba(0,0,0,0.13);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -6px;
+    margin-left: -4px;
     .menu-item {
         border-radius: 4px !important;
         margin: 4px 0;
@@ -483,7 +485,7 @@ body.mod-windows.win-menu div.menu {
     }
     .menu-separator {
         border-color: #36363612;
-        margin: 6px 0 !important;
+        margin: 1px 0 !important;
     }
 }
 body.mod-windows.win-menu.theme-dark div.menu {
@@ -500,6 +502,9 @@ body.mod-windows.win-menu.theme-dark div.menu {
         .menu-item-icon svg {
             fill: none;
         }
+    }
+    .menu-scroll {
+        padding: 0;
     }
 }
 body.mod-windows.win-menu.enable-mica div.menu{

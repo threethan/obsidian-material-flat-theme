@@ -25,6 +25,17 @@ body{
     right: -1px;
 }
 
+.setting-group .setting-items {
+    background-color: var(--surface);
+    --background-modifier-border: var(--background-secondary);
+}
+.vertical-tab-nav-item, .horizontal-tab-nav-item {
+    color: var(--on-surface-variant);
+}
+.horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
+    color: var(--text-normal) !important;
+}
+
 .view-header {
     background: var(--tab-background-active) !important;
 }
@@ -33,8 +44,18 @@ body{
     background-color: transparent !important;
 }
 
-.workspace-tab-header-container-inner{
-    margin-left: -15px;
+.workspace-tab-header-container-inner {
+    margin-left: -23px;
+}
+.workspace-tabs.mod-top.mod-top-left-space .workspace-tab-header-container-inner {
+    padding-left: 8px;
+}
+.workspace-tab-header-container .sidebar-toggle-button.mod-left:first-child {
+    margin-right: 23px;
+}
+
+body.mod-windows.hide-toolbar-desktop .workspace-tabs.mod-top-left-space .workspace-tab-header-container, body.mod-linux.hide-toolbar-desktop .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+    margin-left: calc(var(--ribbon-width) * 1.2) !important;
 }
 
 body:not(.is-popout-window) .workspace-tab-header-container, .workspace-tabs, .mod-root, .app-container, 
